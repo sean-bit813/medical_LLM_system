@@ -69,7 +69,7 @@ class TestMedicalQASystem(unittest.TestCase):
         """测试知识库检索异常"""
         mock_search.side_effect = Exception("Knowledge base error")
         messages = [
-            {"role": "user", "content": "治疗肥胖症胃绕道手术步骤，无其他基础疾病"}
+            {"role": "user", "content": "治疗肥胖症胃绕道手术步骤，无其他基础疾病以及过敏，年龄29， 性别男， BMI45，术前正常"}
         ]
         response = pipeline(messages)
         self.assertIsNotNone(response)
