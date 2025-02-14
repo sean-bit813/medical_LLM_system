@@ -42,7 +42,7 @@ def init_system():
 
 def main():
     manager = init_system()
-    print("医疗助手: 您好,我是您的智能医疗助手,请问有什么可以帮您?")
+    print("医疗助手： 您好,我是您的医疗助手。我将逐步指引您完成问诊流程，接下来会询问您一些基本信息，请回复“开始”（或除“退出”外任何词汇）进行咨询，回复“退出”将离开本次咨询")
 
     while True:
         user_input = input("患者: ").strip()
