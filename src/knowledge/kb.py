@@ -2,7 +2,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import pandas as pd
 import chardet
 from sentence_transformers import SentenceTransformer
-from rag.faiss_store import FAISSStore
+from .vector_store import FAISSStore
 import os
 
 os.environ['HF_HUB_DISABLE_SYMLINKS_WARNING'] = '1' #windows符号链接限制会有warning,这里把warning忽略让程序正常运行

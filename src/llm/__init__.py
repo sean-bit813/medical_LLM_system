@@ -1,0 +1,1 @@
+from .api import generate_response
