@@ -76,6 +76,7 @@ class DialogueManager:
 
     def process_message(self, message: str) -> (str, None):
         if self._should_end_conversation():
+            self.context.state = DialogueState.ENDED
             return self._format_final_response()
 
         self.context.update(turn_count=self.context.turn_count + 1)

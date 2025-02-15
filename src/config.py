@@ -1,0 +1,18 @@
+# src/config.py
+from typing import Dict
+
+# 对话配置
+DIALOGUE_CONFIG = {
+    "max_turns": 100,  # 最大对话轮次
+    "timeout": 500,   # 对话超时时间(秒)
+    "min_confidence": 0.7  # 最小置信度阈值
+}
+
+# LLM配置
+LLM_CONFIG = {
+    "temperature": 0.1,
+    "max_tokens": 500,
+    "model": "ep-20250214162948-b226w",
+    "api_key": "efb0fc3c-e520-4527-8026-7d8272bde1cd",
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3"
+}
