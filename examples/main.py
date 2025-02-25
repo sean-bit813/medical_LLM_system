@@ -1,11 +1,13 @@
-# main.py
+# examples/main.py
 import os
 import sys
 import os
+
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.dialogue.manager import DialogueManager
 from src.knowledge.kb import KnowledgeBase
+from src.config import DIALOGUE_CONFIG
 
 
 # 加载或初始化向量存储
@@ -22,27 +24,40 @@ def init_knowledge_base(csv_path=None, index_path=None):
             kb.save_index(index_path)
 
 
-def init_system():
+def init_system(use_llm_flow=None):
+    """
+    初始化系统
+
+    Args:
+        use_llm_flow: 是否使用LLM驱动的流程，None表示使用配置文件中的设置
+    """
     # 初始化知识库
     init_knowledge_base(
         csv_path='../data/knowledge_base/sample_IM_5000-6000_utf8.csv',
         index_path='../data/vector_store/sample_IM_5000-6000_utf8.index'
     )
 
-    # data_sources = [
-    # {'type': 'csv', 'path': 'data/knowledge_base/medical_qa.csv'},
-    # {'type': 'medical_book', 'path': 'data/knowledge_base/textbook.json'},
-    # {'type': 'qa', 'path': 'data/knowledge_base/qa_data.json'}
-    # ]
-    # kb.load_data_from_multiple_sources(data_sources)
-
     # 初始化对话管理器
-    return DialogueManager(kb)
+    manager = DialogueManager(kb)
+
+    # 设置是否使用LLM驱动的流程
+    if use_llm_flow is not None:
+        manager.set_use_llm_flow(use_llm_flow)
+    else:
+        manager.set_use_llm_flow(DIALOGUE_CONFIG.get("use_llm_flow", True))
+
+    return manager
 
 
-def main():
-    manager = init_system()
-    print("医疗助手： 您好,我是您的医疗助手。我将逐步指引您完成问诊流程，接下来会询问您一些基本信息，请回复“开始”（或除“退出”外任何词汇）进行咨询，回复“退出”将离开本次咨询")
+def main(use_llm_flow=None):
+    """
+    主程序入口
+
+    Args:
+        use_llm_flow: 是否使用LLM驱动的流程，None表示使用配置文件中的设置
+    """
+    manager = init_system(use_llm_flow)
+    print("医疗助手： 您好,我是您的医疗助手。有什么可以帮您？")
 
     while True:
         user_input = input("患者: ").strip()
@@ -55,9 +70,16 @@ def main():
         # 打印调试信息
         if manager.context.state.value == 'ended':
             print("\n对话结束,感谢您的使用\n")
-            #print(manager.get_context_summary())
             break
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description='医疗问答系统')
+    parser.add_argument('--llm', action='store_true', help='使用LLM驱动的对话流程')
+    parser.add_argument('--no-llm', dest='llm', action='store_false', help='不使用LLM驱动的对话流程')
+    parser.set_defaults(llm=None)
+
+    args = parser.parse_args()
+    main(use_llm_flow=args.llm)

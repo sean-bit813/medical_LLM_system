@@ -1,6 +1,7 @@
 # src/dialogue/manager.py
 from typing import Dict, Optional, List
 from datetime import datetime
+import logging
 
 from .utils import format_medical_info
 from ..prompts.medical_prompts import MEDICAL_PROMPTS
@@ -9,6 +10,9 @@ from .flows import FLOW_MAPPING
 from ..config import DIALOGUE_CONFIG
 from ..llm.api import generate_response
 from ..knowledge.kb import KnowledgeBase
+
+# 设置日志
+logger = logging.getLogger(__name__)
 
 
 class DialogueManager:
@@ -21,6 +25,7 @@ class DialogueManager:
         )
         self.current_flow = None
         self.kb = knowledge_base
+        self.use_llm_flow = True  # 默认启用LLM驱动的对话流程
 
     def _check_timeout(self) -> bool:
         elapsed = (datetime.now() - self.context.start_time).seconds
@@ -40,8 +45,12 @@ class DialogueManager:
 
         next_state = self.current_flow.get_next_state(self.context)
         if next_state and next_state != self.context.state:
+            logger.info(f"状态转换: {self.context.state.value} -> {next_state.value}")
             self.context.state = next_state
-            self.current_flow = (FLOW_MAPPING[next_state]() if next_state in FLOW_MAPPING else None)
+            self.current_flow = FLOW_MAPPING[next_state]() if next_state in FLOW_MAPPING else None
+            # 为新创建的Flow设置LLM开关
+            if self.current_flow and hasattr(self.current_flow, "use_llm_flow"):
+                self.current_flow.use_llm_flow = self.use_llm_flow
 
     def _format_final_response(self) -> str:
         if self._check_timeout():
@@ -56,7 +65,7 @@ class DialogueManager:
             results = self.kb.search(query, k=3)
             return "\n".join([doc['text'] for doc in results])
         except Exception as e:
-            print(f"Knowledge retrieval error: {e}")
+            logger.error(f"知识库检索错误: {e}")
             return ""
 
     def _prepare_response_context(self, message: str) -> None:
@@ -74,27 +83,43 @@ class DialogueManager:
                 'formatted_info': formatted_info
             })
 
-    def process_message(self, message: str) -> (str, None):
+    def process_message(self, message: str) -> str:
+        """处理用户消息，返回系统回复"""
         if self._should_end_conversation():
             self.context.state = DialogueState.ENDED
             return self._format_final_response()
 
-        self.context.update(turn_count=self.context.turn_count + 1)
+        self.context.turn_count += 1
+        logger.info(f"处理消息: {message}, 当前轮次: {self.context.turn_count}, 当前状态: {self.context.state.value}")
 
         # 初始状态处理
-
         if self.context.state == DialogueState.INITIAL:
-            self.context.state = DialogueState.COLLECTING_BASE_INFO
-            self.current_flow = FLOW_MAPPING[DialogueState.COLLECTING_BASE_INFO]()
-            # return MEDICAL_PROMPTS["initial"]
+            logger.info("从初始状态转换到基本信息收集状态")
+            self.context.state = DialogueState.COLLECTING_COMBINED_INFO
+            self.current_flow = FLOW_MAPPING[DialogueState.COLLECTING_COMBINED_INFO]()
+            # 设置LLM流程开关
+            if hasattr(self.current_flow, "use_llm_flow"):
+                self.current_flow.use_llm_flow = self.use_llm_flow
+            logger.info(f"初始化Flow: {self.current_flow.__class__.__name__}")
+
+            # 对于第一次交互，直接返回欢迎问题
+            if self.context.turn_count == 1:
+                return "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？"
 
         # 处理消息
         if self.current_flow:
+            logger.info(f"当前Flow: {self.current_flow.__class__.__name__}, use_llm_flow={self.current_flow.use_llm_flow}")
 
+            # 处理用户回复
             is_emergency = self.current_flow.process_response(message, self.context)
 
-            if is_emergency: # 更改当前flow
+            if is_emergency:  # 更改当前flow
+                logger.info("检测到紧急情况，转换到转诊流程")
+                self.context.state = DialogueState.REFERRAL
                 self.current_flow = FLOW_MAPPING[DialogueState.REFERRAL]()
+                # 设置LLM流程开关
+                if hasattr(self.current_flow, "use_llm_flow"):
+                    self.current_flow.use_llm_flow = self.use_llm_flow
 
             # diagnosis, medical_advice, referral, education阶段只需要输出
             response = None
@@ -105,21 +130,36 @@ class DialogueManager:
                 self._prepare_response_context(message)
                 response = generate_response(self.context)
 
-            # 转换状态
-            self._transition_state()
-
-            # 检查是否还有问题
+            # 获取下一个问题
             next_question = None
-            if self.current_flow:
+            if not response and self.current_flow:
+                # 不立即转换状态，而是先获取下一个问题
                 next_question = self.current_flow.get_next_question(self.context)
+                logger.info(f"下一个问题: {next_question}")
 
-            #output = ""
-            #if self.context.medical_info and len(self.context.medical_info) > 0:
-             #   for index, (key, value) in enumerate(self.context.medical_info.items()):
-              #      output += "KEY:" + str(key) + "VALUE:" + str(value)
+                # 如果有下一个问题，直接返回它
+                if next_question:
+                    return next_question
+
+            # 如果没有下一个问题，才考虑转换状态
+            if not next_question:
+                self._transition_state()
+
+                # 如果状态已转换，获取新状态的第一个问题
+                if self.current_flow:
+                    next_question = self.current_flow.get_next_question(self.context)
+                    logger.info(f"状态转换后的下一个问题: {next_question}")
 
             if response is None and next_question is None:
                 return "已收集到您的信息，正在生成下一阶段建议，输入任意内容继续"
             return next_question if next_question else response + "\n 正在生成下一阶段建议，输入任意内容继续"
 
         return "抱歉，当前无法处理您的请求。"
+
+    def set_use_llm_flow(self, use_llm: bool) -> None:
+        """设置是否使用LLM驱动的流程"""
+        logger.info(f"设置use_llm_flow={use_llm}")
+        self.use_llm_flow = use_llm
+        # 更新当前Flow的设置
+        if self.current_flow and hasattr(self.current_flow, "use_llm_flow"):
+            self.current_flow.use_llm_flow = use_llm

@@ -4,10 +4,10 @@ from typing import Dict, Optional
 from dataclasses import dataclass
 from datetime import datetime
 
-
 class DialogueState(Enum):
     """对话状态枚举"""
     INITIAL = "initial"
+    COLLECTING_COMBINED_INFO = "collecting_combined_info"  # 新增合并状态
     COLLECTING_BASE_INFO = "collecting_base_info"
     COLLECTING_SYMPTOMS = "collecting_symptoms"
     LIFE_STYLE = "life_style"
@@ -27,6 +27,7 @@ class StateContext:
     start_time: datetime
     turn_count: int = 0
     last_update: Optional[datetime] = None
+    last_question_field: Optional[str] = None
 
     def update(self, **kwargs) -> None:
         """更新上下文"""
@@ -38,13 +39,12 @@ class StateContext:
 
 
 STATE_TRANSITIONS = {
-    DialogueState.INITIAL: [DialogueState.COLLECTING_BASE_INFO],
-    DialogueState.COLLECTING_BASE_INFO: [DialogueState.COLLECTING_SYMPTOMS],
-    DialogueState.COLLECTING_SYMPTOMS: [DialogueState.LIFE_STYLE, DialogueState.REFERRAL],
-    DialogueState.LIFE_STYLE: [DialogueState.DIAGNOSIS],
-    DialogueState.DIAGNOSIS: [DialogueState.MEDICAL_ADVICE, DialogueState.REFERRAL],
-    DialogueState.MEDICAL_ADVICE: [DialogueState.EDUCATION],
-    DialogueState.REFERRAL: [DialogueState.EDUCATION],
-    DialogueState.EDUCATION: [DialogueState.ENDED],
-    DialogueState.ENDED: [DialogueState.ENDED]
+    DialogueState.INITIAL: [DialogueState.COLLECTING_COMBINED_INFO],
+    DialogueState.COLLECTING_COMBINED_INFO: [DialogueState.LIFE_STYLE, DialogueState.REFERRAL],
+    DialogueState.LIFE_STYLE: [DialogueState.DIAGNOSIS],  # 保持不变
+    DialogueState.DIAGNOSIS: [DialogueState.MEDICAL_ADVICE, DialogueState.REFERRAL],  # 保持不变
+    DialogueState.MEDICAL_ADVICE: [DialogueState.EDUCATION],  # 保持不变
+    DialogueState.REFERRAL: [DialogueState.EDUCATION],  # 保持不变
+    DialogueState.EDUCATION: [DialogueState.ENDED],  # 保持不变
+    DialogueState.ENDED: [DialogueState.ENDED]  # 保持不变
 }
