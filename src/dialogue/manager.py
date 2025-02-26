@@ -7,9 +7,10 @@ from .utils import format_medical_info
 from ..prompts.medical_prompts import MEDICAL_PROMPTS
 from .states import DialogueState, StateContext
 from .flows import FLOW_MAPPING
-from ..config import DIALOGUE_CONFIG
+from ..app_config import DIALOGUE_CONFIG
 from ..llm.api import generate_response
 from ..knowledge.kb import KnowledgeBase
+from ..config.loader import ConfigLoader
 
 # 设置日志
 logger = logging.getLogger(__name__)

@@ -1,0 +1,1744 @@
+[
+  {
+    "timestamp": "2025-02-25T21:21:10.103119",
+    "step": "用户输入",
+    "data": {
+      "message": "您好"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:21:10.103370",
+    "step": "处理前状态",
+    "data": {
+      "state": "initial",
+      "turn_count": 0,
+      "collected_info": {}
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:21:10.103887",
+    "step": "处理结果",
+    "data": {
+      "response": "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？",
+      "state_changed": true,
+      "before_state": "initial",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:21:10.104000",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:21:23.108457",
+    "step": "用户输入",
+    "data": {
+      "message": "我这两天胃不太舒服"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:21:23.108657",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 1,
+      "collected_info": {}
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:21:23.108779",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:22:06.317148",
+    "step": "处理结果",
+    "data": {
+      "response": "除了胃不舒服，您还有其他伴随的症状吗？比如恶心、呕吐或者腹泻？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:22:06.317330",
+    "step": "字段变化",
+    "data": {
+      "持续时间": {
+        "change_type": "added",
+        "new_value": "两天"
+      },
+      "severity": {
+        "change_type": "added",
+        "new_value": "3"
+      },
+      "主要症状": {
+        "change_type": "added",
+        "new_value": "胃不太舒服"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:22:06.317499",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:22:06.317624",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "3",
+      "severity_numeric": 3
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:23:09.233789",
+    "step": "用户输入",
+    "data": {
+      "message": "没什么特别的，就是这两天感觉有点累，可能是因为胃不舒服，晚上睡眠也不是很好。偶尔会觉得有点反酸，但不是很明显。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:23:09.234022",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 2,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "3"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:23:09.234413",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:04.406394",
+    "step": "处理结果",
+    "data": {
+      "response": "请问您的年龄是多少？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:04.406523",
+    "step": "字段变化",
+    "data": {
+      "severity": {
+        "change_type": "modified",
+        "old_value": "3",
+        "new_value": "4"
+      },
+      "associated": {
+        "change_type": "added",
+        "new_value": "这两天"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:04.406624",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:04.406708",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "4",
+      "severity_numeric": 4
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:43.827077",
+    "step": "用户输入",
+    "data": {
+      "message": "我今年35了，马上要36了，属猪的。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:43.827359",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 3,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "4",
+        "associated": "这两天"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:25:43.827532",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:26:33.678772",
+    "step": "处理结果",
+    "data": {
+      "response": "您的胃部不适是持续性的还是间歇性的？有没有伴随烧心或反酸的感觉？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:26:33.678887",
+    "step": "字段变化",
+    "data": {
+      "severity": {
+        "change_type": "modified",
+        "old_value": "4",
+        "new_value": "1"
+      },
+      "age": {
+        "change_type": "added",
+        "new_value": "35岁"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:26:33.678989",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:26:33.679080",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "1",
+      "severity_numeric": 1
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:28:37.425986",
+    "step": "用户输入",
+    "data": {
+      "message": "嗯，不是一直都疼，主要是吃完饭后会难受一会儿，饿的时候反而好一些。有时候晚上睡觉前也会有点不舒服。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:28:37.426217",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 4,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:28:37.426352",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.082870",
+    "step": "处理结果",
+    "data": {
+      "response": "请问您的性别是？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.082978",
+    "step": "字段变化",
+    "data": {
+      "pattern": {
+        "change_type": "added",
+        "new_value": "饭后难受，饥饿时缓解，睡前不适"
+      },
+      "severity": {
+        "change_type": "modified",
+        "old_value": "1",
+        "new_value": "4"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.083062",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.083135",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "4",
+      "severity_numeric": 4
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.083246",
+    "step": "用户输入",
+    "data": {
+      "message": ""
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.083333",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 5,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "4",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:24.083402",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:46.608831",
+    "step": "处理结果",
+    "data": {
+      "response": "除了饭后和饥饿时的情况，有没有其他因素会让您的症状加重或减轻？比如特定食物、姿势变化或情绪波动？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:46.608946",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:46.609087",
+    "step": "用户输入",
+    "data": {
+      "message": "女的，我是女的。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:46.609183",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 6,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "4",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:29:46.609260",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:16.919791",
+    "step": "处理结果",
+    "data": {
+      "response": "请问您目前正在服用哪些药物或补充剂？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:16.919914",
+    "step": "字段变化",
+    "data": {
+      "factors": {
+        "change_type": "added",
+        "new_value": "女性"
+      },
+      "severity": {
+        "change_type": "modified",
+        "old_value": "4",
+        "new_value": "1"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:16.920013",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:16.920104",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "1",
+      "severity_numeric": 1
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:34.730814",
+    "step": "用户输入",
+    "data": {
+      "message": "最近没吃什么药，就前两天胃疼了，自己去药店买了点胃舒平，吃了一天。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:34.731019",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 7,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:30:34.731126",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:00.754305",
+    "step": "处理结果",
+    "data": {
+      "response": "请问您过去是否有过胃溃疡、胃炎或其他消化系统疾病的病史呢？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:00.754409",
+    "step": "字段变化",
+    "data": {
+      "severity": {
+        "change_type": "modified",
+        "old_value": "1",
+        "new_value": "3"
+      },
+      "medication": {
+        "change_type": "added",
+        "new_value": "胃舒平（使用一天）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:00.754497",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:00.754571",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "3",
+      "severity_numeric": 3
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:26.952583",
+    "step": "用户输入",
+    "data": {
+      "message": "我啊，之前身体还不错，没有什么大病，就是有点轻微的甲状腺问题，医生说是亚健康，也没怎么吃药。哦对了，十年前做过一个阑尾炎手术，不是很大的手术。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:26.952786",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 8,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "3",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:32:26.952898",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:33:33.330562",
+    "step": "处理结果",
+    "data": {
+      "response": "请问您是否有药物或食物过敏史？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:33:33.330660",
+    "step": "字段变化",
+    "data": {
+      "severity": {
+        "change_type": "modified",
+        "old_value": "3",
+        "new_value": "2"
+      },
+      "medical_history": {
+        "change_type": "added",
+        "new_value": "轻微的甲状腺问题，十年前阑尾炎手术"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:33:33.330749",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:33:33.330822",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "2",
+      "severity_numeric": 2
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:34:03.717268",
+    "step": "用户输入",
+    "data": {
+      "message": "青霉素过敏，吃了会起疹子，挺难受的。还有海鲜不能吃太多，吃多了也容易过敏。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:34:03.717500",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 9,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "2",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:34:03.717622",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:05.914432",
+    "step": "处理结果",
+    "data": {
+      "response": "您能具体描述一下胃不舒服的感觉吗？比如是隐痛、灼烧感还是胀闷感？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:05.914593",
+    "step": "字段变化",
+    "data": {
+      "severity": {
+        "change_type": "modified",
+        "old_value": "2",
+        "new_value": "4"
+      },
+      "allergy": {
+        "change_type": "added",
+        "new_value": "青霉素，海鲜"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:05.914735",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:05.914856",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "4",
+      "severity_numeric": 4
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:24.345449",
+    "step": "用户输入",
+    "data": {
+      "message": "就是这里，胃这个位置，吃东西的时候有点隐隐作痛，不是很剧烈，但挺不舒服的，有时候还会胀胀的。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:24.345672",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 10,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "4",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:35:24.345784",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:36:41.861753",
+    "step": "处理结果",
+    "data": {
+      "response": "已收集到您的信息，正在生成下一阶段建议，输入任意内容继续",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:36:41.861916",
+    "step": "字段变化",
+    "data": {
+      "severity": {
+        "change_type": "modified",
+        "old_value": "4",
+        "new_value": "3"
+      },
+      "main": {
+        "change_type": "added",
+        "new_value": "吃东西时"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:36:41.862052",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:36:41.862173",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "3",
+      "severity_numeric": 3
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:37:07.411819",
+    "step": "用户输入",
+    "data": {
+      "message": ""
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:37:07.412038",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 11,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "3",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:37:07.412165",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:38:39.726315",
+    "step": "处理结果",
+    "data": {
+      "response": "为了更准确评估您的状况，请问您的性别是男性还是女性？",
+      "state_changed": false,
+      "before_state": "collecting_combined_info",
+      "after_state": "collecting_combined_info"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:38:39.726437",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:38:58.447967",
+    "step": "用户输入",
+    "data": {
+      "message": "女的，我是女性"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:38:58.448182",
+    "step": "处理前状态",
+    "data": {
+      "state": "collecting_combined_info",
+      "turn_count": 12,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "3",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:38:58.448285",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "CombinedInfoFlow",
+      "required_info": [
+        "main",
+        "duration",
+        "severity",
+        "age",
+        "gender",
+        "pattern",
+        "factors",
+        "associated",
+        "medical_history",
+        "allergy",
+        "medication"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:07.373290",
+    "step": "处理结果",
+    "data": {
+      "response": "您最近的饮食规律吗？比如有没有经常吃辛辣、油腻的食物，或者经常外出就餐？",
+      "state_changed": true,
+      "before_state": "collecting_combined_info",
+      "after_state": "life_style"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:07.373442",
+    "step": "字段变化",
+    "data": {
+      "gender": {
+        "change_type": "added",
+        "new_value": "女性"
+      },
+      "severity": {
+        "change_type": "modified",
+        "old_value": "3",
+        "new_value": "1"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:07.373523",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:07.373598",
+    "step": "严重程度评估",
+    "data": {
+      "severity": "1",
+      "severity_numeric": 1
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:18.684779",
+    "step": "用户输入",
+    "data": {
+      "message": "说实话，我饮食不太规律，工作忙起来经常忘记吃饭，有时候中午就随便吃个快餐，晚上回家太晚了，也懒得做饭，就点个外卖，经常吃些烧烤啊火锅啊这些。平时也爱喝咖啡，提提神。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:18.685050",
+    "step": "处理前状态",
+    "data": {
+      "state": "life_style",
+      "turn_count": 13,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:18.685201",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:53.257077",
+    "step": "处理结果",
+    "data": {
+      "response": "您平时有吸烟或饮酒的习惯吗？如果有的话，大概的频率是怎样的呢？",
+      "state_changed": false,
+      "before_state": "life_style",
+      "after_state": "life_style"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:53.257229",
+    "step": "字段变化",
+    "data": {
+      "diet": {
+        "change_type": "added",
+        "new_value": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡"
+      },
+      "work": {
+        "change_type": "added",
+        "new_value": "工作忙"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:40:53.257363",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:41:17.725371",
+    "step": "用户输入",
+    "data": {
+      "message": "我不抽烟，但偶尔会喝点酒，特别是和客户应酬的时候，一周可能有一两次吧，不过不会喝很多。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:41:17.725603",
+    "step": "处理前状态",
+    "data": {
+      "state": "life_style",
+      "turn_count": 14,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性",
+        "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡",
+        "work": "工作忙"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:41:17.725705",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:10.426363",
+    "step": "处理结果",
+    "data": {
+      "response": "您最近的睡眠情况怎么样？比如每天睡几个小时，有没有入睡困难或者多梦的情况？",
+      "state_changed": false,
+      "before_state": "life_style",
+      "after_state": "life_style"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:10.426454",
+    "step": "字段变化",
+    "data": {
+      "smoke_drink": {
+        "change_type": "added",
+        "new_value": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:10.426534",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:16.256417",
+    "step": "用户输入",
+    "data": {
+      "message": "最近睡得不太好，工作比较忙，通常半夜12点多才睡，早上7点就得起，大概六个小时吧。有时候半夜会醒一下，可能是胃不舒服的原因。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:16.256639",
+    "step": "处理前状态",
+    "data": {
+      "state": "life_style",
+      "turn_count": 15,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性",
+        "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡",
+        "work": "工作忙",
+        "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:16.256739",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:55.933711",
+    "step": "处理结果",
+    "data": {
+      "response": "您平时有没有规律运动的习惯？比如每周会做些跑步、游泳之类的锻炼吗？",
+      "state_changed": false,
+      "before_state": "life_style",
+      "after_state": "life_style"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:55.933816",
+    "step": "字段变化",
+    "data": {
+      "work": {
+        "change_type": "modified",
+        "old_value": "工作忙",
+        "new_value": "比较忙"
+      },
+      "sleep": {
+        "change_type": "added",
+        "new_value": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:42:55.933908",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:43:15.540644",
+    "step": "用户输入",
+    "data": {
+      "message": "平时挺少运动的，主要是没什么时间。偶尔周末会去公园走走，但是很不规律，最近一个月好像都没怎么运动了。"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:43:15.540925",
+    "step": "处理前状态",
+    "data": {
+      "state": "life_style",
+      "turn_count": 16,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性",
+        "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡",
+        "work": "比较忙",
+        "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）",
+        "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:43:15.541049",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "LifeStyleFlow",
+      "required_info": [
+        "sleep",
+        "diet",
+        "exercise",
+        "work",
+        "smoke_drink"
+      ],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:44:10.104731",
+    "step": "处理结果",
+    "data": {
+      "response": "\n\n### 1. 症状详细分析  \n患者以**餐后胃部不适**为主诉，症状在**进食后加重、空腹时缓解**，且**夜间睡前加重**，符合**消化性溃疡（尤其是十二指肠溃疡）**的典型疼痛节律。结合以下特点：  \n- **饮食因素**：长期摄入高脂、辛辣食物（外卖、烧烤、火锅）及咖啡，可能刺激胃酸分泌、损伤胃黏膜。  \n- **作息紊乱**：睡眠不足、缺乏运动、工作压力大，可能加重胃肠功能紊乱。  \n- **药物使用**：胃舒平（抗酸药）短期使用可能暂时缓解症状，但未针对潜在病因（如幽门螺杆菌感染或溃疡）治疗。  \n\n### 2. 可能的病因  \n- **消化性溃疡**（十二指肠溃疡可能性大）：饥饿痛、夜间痛是典型表现，需排查幽门螺杆菌感染。  \n- **",
+      "state_changed": true,
+      "before_state": "life_style",
+      "after_state": "diagnosis"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:44:10.104850",
+    "step": "字段变化",
+    "data": {
+      "exercise": {
+        "change_type": "added",
+        "new_value": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:44:10.104922",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "DiagnosisFlow",
+      "required_info": [],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:44:30.165621",
+    "step": "用户输入",
+    "data": {
+      "message": "继续"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:44:30.165854",
+    "step": "处理前状态",
+    "data": {
+      "state": "diagnosis",
+      "turn_count": 17,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性",
+        "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡",
+        "work": "比较忙",
+        "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）",
+        "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒",
+        "exercise": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:44:30.165953",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "DiagnosisFlow",
+      "required_info": [],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:45:27.679776",
+    "step": "处理结果",
+    "data": {
+      "response": "\n\n1. 用药注意事项和药物相互作用  \n- 胃舒平（铝碳酸镁）需餐后1-2小时或睡前嚼服，避免与以下药物同服：  \n  - **四环素类抗生素**（如多西环素）、**铁剂**、**喹诺酮类**（如左氧氟沙星）：需间隔2小时以上服用  \n  - **甲状腺激素**（如左甲状腺素钠）：铝剂可能影响吸收，需间隔4小时  \n- 长期使用可能引起低磷血症（需监测血磷）和便秘，连续使用不超过14天  \n- 避免与酸性饮料（如果汁）同服  \n\n2. 生活方式调整建议  \n**饮食**：  \n- 规律三餐，少量多餐（每餐6-7分饱）  \n- 避免辛辣、高脂（烧烤/火锅）、过烫食物及咖啡因（尤其空腹时）  \n- ",
+      "state_changed": true,
+      "before_state": "diagnosis",
+      "after_state": "medical_advice"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:45:27.679897",
+    "step": "字段变化",
+    "data": {
+      "formatted_info": {
+        "change_type": "added",
+        "new_value": "基本信息:\nage: 35岁\ngender: 女性\n\n病史信息:\nmedical_history: 轻微的甲状腺问题，十年前阑尾炎手术\nallergy: 青霉素，海鲜\nmedication: 胃舒平（使用一天）\n\n症状信息:\nmain: 吃东西时\nseverity: 1\npattern: 饭后难受，饥饿时缓解，睡前不适\nfactors: 女性\nassociated: 这两天\n\n生活习惯:\nsleep: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒\ndiet: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡\nexercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）\nwork: 比较忙\nsmoke_drink: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"
+      },
+      "relevant_knowledge": {
+        "change_type": "added",
+        "new_value": "科室：消化科 主题：为什么饭时会胃胀呢? 问：当吃晚饭吃到一定程度时，就会胃胀，吃不下饭的了，其实根本还没吃饱，但就是因胃胀，吃不下...这样的情况已有一段时间了 答：你好！你的情况拥有胃动力不足。你可以试试看以下方法来调养：1.菊苣根、宽叶莴苣或菊莴苣。都是传统的缓胃秘方。堪用这些蔬菜加水煮10分钟熬水喝2.吃水果。葡萄、橙子、木瓜和菠萝都是健康水果，大街上也很容易买到食用这种水果对于缓胃利吸收都有良好的效用\n科室：消化科 主题：胃胀饭后想吐怎么办？ 问：胃胀吃了一粒晚上吃的西餐感觉想吐吃了了能吃健胃消食片吗 答：根据你的情况，胃胀气，吃了，可以再吃健胃消食片，不干扰。建议你平时留意恰当饮食，吃易消化食物，防止吃太多，增强体育锻炼，动态仔细观察。胃胀患者在及时救治之外，患者在生活中还需要有留意始终保持恰当饮食的好习惯，消化身体营养。此外还需要建议多加注意休息不能吃辛辣刺激的食物。\n科室：消化科 主题：吃了饭后就胃胀怎么办？ 问：只要吃点东西胃就胀，饿一餐下餐再吃就好点但也只好吃3成饱。如果每餐都吃的话胃就特别张如这时不停餐胃就又胀还有点疼不想吃晚饭也不觉着饿。口气特别重自己都能感觉到。您好是何病 答：您好！根据您的叙述，吃点东西胃就胀，应该是由于胃炎或消化不良引来的，在中医相信可能与脾虚夹气滞关于的，胃炎症状有上腹饱闷感、嗳气、反酸、恶心、烧心、隐痛、食欲下降等。建议您最好是做下胃镜仔细检查，此外，胃胀患者在救治期间，患者的饮食状况和护理也是很重要的，患者一定要消化维生素，预防工作闹肚子，并且清淡饮食，以免引发不必要的伤害"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:45:27.679962",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "MedicalAdviceFlow",
+      "required_info": [],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:46:22.758496",
+    "step": "用户输入",
+    "data": {
+      "message": "继续"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:46:22.758759",
+    "step": "处理前状态",
+    "data": {
+      "state": "medical_advice",
+      "turn_count": 18,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性",
+        "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡",
+        "work": "比较忙",
+        "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）",
+        "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒",
+        "exercise": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）",
+        "relevant_knowledge": "科室：消化科 主题：为什么饭时会胃胀呢? 问：当吃晚饭吃到一定程度时，就会胃胀，吃不下饭的了，其实根本还没吃饱，但就是因胃胀，吃不下...这样的情况已有一段时间了 答：你好！你的情况拥有胃动力不足。你可以试试看以下方法来调养：1.菊苣根、宽叶莴苣或菊莴苣。都是传统的缓胃秘方。堪用这些蔬菜加水煮10分钟熬水喝2.吃水果。葡萄、橙子、木瓜和菠萝都是健康水果，大街上也很容易买到食用这种水果对于缓胃利吸收都有良好的效用\n科室：消化科 主题：胃胀饭后想吐怎么办？ 问：胃胀吃了一粒晚上吃的西餐感觉想吐吃了了能吃健胃消食片吗 答：根据你的情况，胃胀气，吃了，可以再吃健胃消食片，不干扰。建议你平时留意恰当饮食，吃易消化食物，防止吃太多，增强体育锻炼，动态仔细观察。胃胀患者在及时救治之外，患者在生活中还需要有留意始终保持恰当饮食的好习惯，消化身体营养。此外还需要建议多加注意休息不能吃辛辣刺激的食物。\n科室：消化科 主题：吃了饭后就胃胀怎么办？ 问：只要吃点东西胃就胀，饿一餐下餐再吃就好点但也只好吃3成饱。如果每餐都吃的话胃就特别张如这时不停餐胃就又胀还有点疼不想吃晚饭也不觉着饿。口气特别重自己都能感觉到。您好是何病 答：您好！根据您的叙述，吃点东西胃就胀，应该是由于胃炎或消化不良引来的，在中医相信可能与脾虚夹气滞关于的，胃炎症状有上腹饱闷感、嗳气、反酸、恶心、烧心、隐痛、食欲下降等。建议您最好是做下胃镜仔细检查，此外，胃胀患者在救治期间，患者的饮食状况和护理也是很重要的，患者一定要消化维生素，预防工作闹肚子，并且清淡饮食，以免引发不必要的伤害",
+        "formatted_info": "基本信息:\nage: 35岁\ngender: 女性\n\n病史信息:\nmedical_history: 轻微的甲状腺问题，十年前阑尾炎手术\nallergy: 青霉素，海鲜\nmedication: 胃舒平（使用一天）\n\n症状信息:\nmain: 吃东西时\nseverity: 1\npattern: 饭后难受，饥饿时缓解，睡前不适\nfactors: 女性\nassociated: 这两天\n\n生活习惯:\nsleep: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒\ndiet: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡\nexercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）\nwork: 比较忙\nsmoke_drink: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:46:22.758865",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "MedicalAdviceFlow",
+      "required_info": [],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:47:15.218835",
+    "step": "处理结果",
+    "data": {
+      "response": "\n\n### 一、预防和保健建议  \n1. **饮食调整**：  \n   - **规律进食**：每日定时定量进餐，避免过饥过饱，可采用“少量多餐”（每餐5-7分饱，每日4-5餐）。  \n   - **减少刺激**：避免辛辣、油腻（如烧烤、火锅）、高咖啡因（咖啡）、过冷过热食物；减少产气食物（如豆类、碳酸饮料）。  \n   - **易消化饮食**：选择粥、面条、蒸煮蔬菜、低脂蛋白质（如鱼肉、鸡胸肉）等。  \n   - **餐后管理**：进食后避免立即平卧或剧烈运动，可散步10-15分钟促进胃肠蠕动。  \n\n2. **生活习惯改善**：  \n   - **睡眠优化**：提前至23:00前入睡，保证7小时睡眠，避免睡前2小时进食。  \n   - **运动建议**",
+      "state_changed": true,
+      "before_state": "medical_advice",
+      "after_state": "education"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:47:15.219033",
+    "step": "更新后Flow信息",
+    "data": {
+      "flow_type": "EducationFlow",
+      "required_info": [],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:48:09.385307",
+    "step": "用户输入",
+    "data": {
+      "message": "继续"
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:48:09.385591",
+    "step": "处理前状态",
+    "data": {
+      "state": "education",
+      "turn_count": 19,
+      "collected_info": {
+        "主要症状": "胃不太舒服",
+        "持续时间": "两天",
+        "severity": "1",
+        "associated": "这两天",
+        "age": "35岁",
+        "pattern": "饭后难受，饥饿时缓解，睡前不适",
+        "factors": "女性",
+        "medication": "胃舒平（使用一天）",
+        "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术",
+        "allergy": "青霉素，海鲜",
+        "main": "吃东西时",
+        "gender": "女性",
+        "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡",
+        "work": "比较忙",
+        "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）",
+        "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒",
+        "exercise": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）",
+        "relevant_knowledge": "科室：消化科 主题：为什么饭时会胃胀呢? 问：当吃晚饭吃到一定程度时，就会胃胀，吃不下饭的了，其实根本还没吃饱，但就是因胃胀，吃不下...这样的情况已有一段时间了 答：你好！你的情况拥有胃动力不足。你可以试试看以下方法来调养：1.菊苣根、宽叶莴苣或菊莴苣。都是传统的缓胃秘方。堪用这些蔬菜加水煮10分钟熬水喝2.吃水果。葡萄、橙子、木瓜和菠萝都是健康水果，大街上也很容易买到食用这种水果对于缓胃利吸收都有良好的效用\n科室：消化科 主题：胃胀饭后想吐怎么办？ 问：胃胀吃了一粒晚上吃的西餐感觉想吐吃了了能吃健胃消食片吗 答：根据你的情况，胃胀气，吃了，可以再吃健胃消食片，不干扰。建议你平时留意恰当饮食，吃易消化食物，防止吃太多，增强体育锻炼，动态仔细观察。胃胀患者在及时救治之外，患者在生活中还需要有留意始终保持恰当饮食的好习惯，消化身体营养。此外还需要建议多加注意休息不能吃辛辣刺激的食物。\n科室：消化科 主题：吃了饭后就胃胀怎么办？ 问：只要吃点东西胃就胀，饿一餐下餐再吃就好点但也只好吃3成饱。如果每餐都吃的话胃就特别张如这时不停餐胃就又胀还有点疼不想吃晚饭也不觉着饿。口气特别重自己都能感觉到。您好是何病 答：您好！根据您的叙述，吃点东西胃就胀，应该是由于胃炎或消化不良引来的，在中医相信可能与脾虚夹气滞关于的，胃炎症状有上腹饱闷感、嗳气、反酸、恶心、烧心、隐痛、食欲下降等。建议您最好是做下胃镜仔细检查，此外，胃胀患者在救治期间，患者的饮食状况和护理也是很重要的，患者一定要消化维生素，预防工作闹肚子，并且清淡饮食，以免引发不必要的伤害",
+        "formatted_info": "基本信息:\nage: 35岁\ngender: 女性\n\n病史信息:\nmedical_history: 轻微的甲状腺问题，十年前阑尾炎手术\nallergy: 青霉素，海鲜\nmedication: 胃舒平（使用一天）\n\n症状信息:\nmain: 吃东西时\nseverity: 1\npattern: 饭后难受，饥饿时缓解，睡前不适\nfactors: 女性\nassociated: 这两天\n\n生活习惯:\nsleep: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒\ndiet: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡\nexercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）\nwork: 比较忙\nsmoke_drink: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:48:09.385670",
+    "step": "当前Flow信息",
+    "data": {
+      "flow_type": "EducationFlow",
+      "required_info": [],
+      "current_index": 0,
+      "use_llm_flow": true
+    }
+  },
+  {
+    "timestamp": "2025-02-25T21:48:38.056529",
+    "step": "处理结果",
+    "data": {
+      "response": "\n\n根据您描述的餐后胃胀、食欲下降、口气重等症状，结合医学知识库信息为您整理以下指导建议：\n\n【日常调养指南】\n1. 饮食可尝试\"三三原则\"：每餐吃三成饱，每日分三次加餐（如上午10点、下午3点、睡前1小时）\n2. 烹饪时加入陈皮、山楂片（各3克）煮水作汤底，帮助食物消化\n3. 饭后半小时内避免平躺，建议采取靠墙站立法（脚跟离墙10cm，后脑勺贴墙）\n\n【需要警惕的预警信号】\n当出现以下情况时建议24小时内就诊：\n□ 夜间胀醒超过3次/周\n□ 晨起口苦伴随咽喉灼热\n□ 大便出现未消化的菜叶/肉粒\n□ 体重每月下降超过2公斤\n\n【简单自测方法】\n试试\"苹果试验\"：晨起空腹吃半个苹果（不去皮），若1小时后仍感觉胃部发胀，可能存在胃排空障碍。此测试每周不超过2次，连续2次阳性应就诊。\n\n您目前最困扰的是餐后饱胀影响正常进食，请问这种情况在吃流质食物（如粥、汤面）时也会出现吗？这有助于判断是功能性消化不良还是器质性问题。\n 正在生成下一阶段建议，输入任意内容继续",
+      "state_changed": true,
+      "before_state": "education",
+      "after_state": "ended"
+    }
+  }
+]

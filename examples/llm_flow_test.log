@@ -5408,3 +5408,1789 @@ age: 31...
 2025-02-25 01:44:21,916 [INFO] - 状态转换: education -> ended
 2025-02-25 01:44:21,916 [INFO] - [处理结果] {"response": "\n\n针对癫痫患者，以下是根据您的需求整理的信息：\n\n1. 预防和保健建议：\n- 保持规律作息，每天保证7-8小时睡眠，避免熬夜和过度疲劳\n- 饮食均衡，适当补充镁、钙含量高的食物（如坚果、绿叶蔬菜）\n- 避免饮用含酒精、咖啡因的饮品\n- 洗澡时建议使用淋浴，水温不超过40℃\n- 外出时随身携带病情卡片，注明发作特征及紧急联系人\n\n2. 需要警惕的紧急症状：\n⚠️ 出现以下情况请立即就医：\n① 单次发作持续超过5分钟\n② 两次发作间隔期间意识未恢复\n③ 发作时发生严重外伤或呛咳\n④ 孕妇或糖尿病患者突发抽搐\n⑤ 首次不明原因抽搐发作\n\n3. 日常自我监测建议：\n- 使用手机备忘录记录每次发作的：\n1）具体时间（精确到分钟）\n2）发作前兆（如视物模糊、闻到异味）\n3）发作时的肢体表现（左侧/右侧抽动）\n4）持续时间（可用秒表计时）\n5）发作后状态（是否嗜睡、头痛）\n- 每月测量并记录血压、静息心率\n\n4. 健康科普小知识：\n癫痫发作本质是脑细胞异常放电，就像\"大脑电路短路\"。虽然目前无法完全根治，但通过规范治疗：\n√ 约70%患者发作可完全控制\n√ 50%儿童患者青春期后可能停药\n√ 新型抗癫痫药副作用较传统药物降低60%\n建议每3-6个月复查脑电图和血药浓度检测，药物调整需在神经科医生指导下进行。\n 正在生成下一阶段建议，输入任意内容继续", "state_changed": true, "before_state": "education", "after_state": "ended"}
 2025-02-25 01:44:21,916 [INFO] - [字段变化] {"relevant_knowledge": {"change_type": "modified", "old_value": "科室：呼吸科 主题：支气管炎过敏源检测要注意什么？ 问：我志愿仔细检查出的后有支气管炎像的一种症状，很严重，您好支气管炎过敏源检验要注意什么？ 答：一般仔细检查过敏原的话，没什么特别注意的事项，现在仔细检查过敏原，只要抽血带到检测中心去仔细检查就可以了。这种情况并没有什么要注意的事项。一般支气管炎主要是细菌病毒感染引来的，和过敏的关系并不大，只有支气管哮喘才和过敏造成呢。所以平时有过敏的患者可以去仔细检查过敏原，看一看对什么过敏，以后注意不要接触过敏原就能以防复发。\n科室：消化科 主题：幽门螺杆菌能转阴性吗？ 问：幽门螺杆菌抗体阳性，吃完饭后会有反胃打隔的情况，现在大便黄色的而且也挺臭的,怎么办？ 答：根治幽门螺杆菌抗体是比较容易的，幽门螺旋杆菌会通过口-口，粪-口途径散播目前临床诊断上根治幽门螺杆菌一般采取联手疗法，临床诊断上常将抗酸排泄剂、抗生素和铋剂联手运用。多采取PPI（如奥美拉唑、兰索拉唑）而且克拉霉素、阿莫西林，或四环素、甲硝唑和呋喃唑酮等抗生素中的两种组合而成三联疗法。疗程一般7天幽门螺杆菌对患者们带给的伤害是非常大的。\n科室：消化科 主题：幽门螺杆菌的药敏检查是怎么回事? 问：我是的患者，已经5年的病史。幽门螺杆菌的指标还是很高是怎么回事? 答：这个主要考量是炎症传染的情况的。这个主要是对抗生素产生耐药性的情况的，这个可以考量喝点中药调理几下的，主要是祛湿为基础的。除了正规救治幽门螺杆菌外，患者还需要有看重护理方面，比如饮食清淡，防止辛辣打击食物。与此同时患者还要留意决定一家三甲医院诊病，这样才能获得良好的治疗效果。", "new_value": "科室：神经科 主题：我想了解癫痫病是怎么引起的？ 问：同事最近有突然抽动的情去仔细检查后说是癫所以我想问一下癫痫病是怎么引来的？ 答：癫痫患者应持乐观立树起打败疾病的信念信一定要坚持长期救缓解年限长些再停常用药物有卡马西平、丙戊酸钠和癫健安片等。癫痫是一种慢性疾如不及时有效地实施救可致成数所以癫痫患者一定要积极互相配合医生救遵从医嘱实施救完全有只求自愈的。致使患上癫痫病的病因有良无明确病因者为原发性癫继发于颅内肿瘤、外伤、传染、寄生虫病、脑血管病、全身分解代谢病等引来者为继发性癫痫。\n科室：肝病科 主题：肝硬化用什么药? 问：三系减低后转院，经过20多天救治后转好出院。 答：从你的讲述来看你拥有肝硬化引发脾大令得食道静脉血管曲张引来大出血而实施了食管套扎术和切脾术，目前肝硬化还没有特效药，一般需要有精神调养，平时不要生气，不要疲劳，保持良好的精神状态并且一定要愉快。其次要留意饮食调养，总的原则是食用含有维生素，高蛋白，低脂肪，低淀粉的食物，食用许多杂粮如黑米，小米，豆浆，如果条件容许最好每天能食用许多蛋白粉。特别注意不要吃极冷油腻和辛辣刺激的食物。\n科室：神经科 主题：癫痫病治疗的比较好方法是什么？ 问：阿姨患癫痫病已经4，5年用了许多方法都自愈不好。这两个月经常复发。我您好一下癫痫病治疗的最好方法是什么？严不严重? 答：你好，从你提供的资料你是个热心肠好同首先癫痫病的救首先是口服药物压当然药物治疗是不能治愈只好长期服药压除了假如有前提可以去大型综合评价病院手术救当然手术费也比较除了治愈率的题有时手术做了病不一定自当然这些你可以与患者家属交流几不要对病人说太多。"}}
+2025-02-25 21:15:44,792 [INFO] - Use pytorch device_name: mps
+2025-02-25 21:15:44,793 [INFO] - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-02-25 21:15:47,729 [INFO] - 成功加载知识库索引
+2025-02-25 21:15:47,729 [INFO] - 设置use_llm_flow=True
+2025-02-25 21:20:58,556 [INFO] - Use pytorch device_name: mps
+2025-02-25 21:20:58,556 [INFO] - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-02-25 21:21:00,619 [INFO] - 成功加载知识库索引
+2025-02-25 21:21:00,619 [INFO] - 设置use_llm_flow=True
+2025-02-25 21:21:10,102 [INFO] - [用户输入] {"message": "您好"}
+2025-02-25 21:21:10,103 [INFO] - [处理前状态] {"state": "initial", "turn_count": 0, "collected_info": {}}
+2025-02-25 21:21:10,103 [INFO] - 处理消息: 您好, 当前轮次: 1, 当前状态: initial
+2025-02-25 21:21:10,103 [INFO] - 从初始状态转换到基本信息收集状态
+2025-02-25 21:21:10,103 [INFO] - 初始化Flow: CombinedInfoFlow
+2025-02-25 21:21:10,103 [INFO] - [处理结果] {"response": "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？", "state_changed": true, "before_state": "initial", "after_state": "collecting_combined_info"}
+2025-02-25 21:21:10,103 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:21:23,108 [INFO] - [用户输入] {"message": "我这两天胃不太舒服"}
+2025-02-25 21:21:23,108 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 1, "collected_info": {}}
+2025-02-25 21:21:23,108 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:21:23,108 [INFO] - 处理消息: 我这两天胃不太舒服, 当前轮次: 2, 当前状态: collecting_combined_info
+2025-02-25 21:21:23,108 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:21:23,109 [INFO] - 处理响应，上一个问题字段: None
+2025-02-25 21:21:23,109 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："我这两天胃不太舒服"
+        
+        当前正在询问的信息：未指定
+       ...
+2025-02-25 21:21:23,109 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:21:30,066 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:21:30,078 [INFO] - 信息提取结果: 
+
+主要症状: 胃不太舒服
+持续时间: 两天
+2025-02-25 21:21:30,078 [INFO] - 字段映射: 主要症状 -> 主要症状 = 胃不太舒服
+2025-02-25 21:21:30,078 [INFO] - 字段映射: 持续时间 -> 持续时间 = 两天
+2025-02-25 21:21:30,078 [INFO] - 信息提取结果: extracted=True, current_field=None
+2025-02-25 21:21:30,078 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："我这两天胃不太舒服"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:21:30,078 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:21:40,713 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:21:40,716 [INFO] - 严重程度评估结果: 
+
+3
+2025-02-25 21:21:40,716 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："我这两天胃不太舒服"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 3
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:21:40,716 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:21:46,755 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:21:46,757 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:21:46,758 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:21:46,758 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:21:55,561 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:21:55,563 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:21:55,564 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 3
+  ...
+2025-02-25 21:21:55,564 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:22:06,314 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:22:06,316 [INFO] - LLM生成结果: 
+
+FIELD: associated
+QUESTION: 除了胃不舒服，您还有其他伴随的症状吗？比如恶心、呕吐或者腹泻？
+2025-02-25 21:22:06,316 [INFO] - 下一个问题字段: associated
+2025-02-25 21:22:06,316 [INFO] - 下一个问题: 除了胃不舒服，您还有其他伴随的症状吗？比如恶心、呕吐或者腹泻？
+2025-02-25 21:22:06,317 [INFO] - [处理结果] {"response": "除了胃不舒服，您还有其他伴随的症状吗？比如恶心、呕吐或者腹泻？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:22:06,317 [INFO] - [字段变化] {"持续时间": {"change_type": "added", "new_value": "两天"}, "severity": {"change_type": "added", "new_value": "3"}, "主要症状": {"change_type": "added", "new_value": "胃不太舒服"}}
+2025-02-25 21:22:06,317 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:22:06,317 [INFO] - [严重程度评估] {"severity": "3", "severity_numeric": 3}
+2025-02-25 21:23:09,233 [INFO] - [用户输入] {"message": "没什么特别的，就是这两天感觉有点累，可能是因为胃不舒服，晚上睡眠也不是很好。偶尔会觉得有点反酸，但不是很明显。"}
+2025-02-25 21:23:09,233 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 2, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "3"}}
+2025-02-25 21:23:09,234 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:23:09,234 [INFO] - 处理消息: 没什么特别的，就是这两天感觉有点累，可能是因为胃不舒服，晚上睡眠也不是很好。偶尔会觉得有点反酸，但不是很明显。, 当前轮次: 3, 当前状态: collecting_combined_info
+2025-02-25 21:23:09,234 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:23:09,234 [INFO] - 处理响应，上一个问题字段: associated
+2025-02-25 21:23:09,234 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："没什么特别的，就是这两天感觉有点累，可能是因为胃不舒服，晚上睡眠也不是很好。偶尔会觉得有点反酸，但...
+2025-02-25 21:23:09,234 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:24:31,096 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:24:31,097 [INFO] - 信息提取结果: 
+
+主要症状: 胃不舒服，反酸  
+伴随症状: 感觉有点累，晚上睡眠不好  
+持续时间: 这两天
+2025-02-25 21:24:31,098 [INFO] - 字段映射: 主要症状 -> associated = 胃不舒服，反酸
+2025-02-25 21:24:31,098 [INFO] - 字段映射: 伴随症状 -> associated = 感觉有点累，晚上睡眠不好
+2025-02-25 21:24:31,098 [INFO] - 字段映射: 持续时间 -> associated = 这两天
+2025-02-25 21:24:31,098 [INFO] - 信息提取结果: extracted=True, current_field=associated
+2025-02-25 21:24:31,098 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："没什么特别的，就是这两天感觉有点累，可能是因为胃不舒服，晚上睡眠也不是很好。偶尔会觉得有点反酸，但不是很明显。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:24:31,098 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:24:38,789 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:24:38,790 [INFO] - 严重程度评估结果: 
+
+4
+2025-02-25 21:24:38,791 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："没什么特别的，就是这两天感觉有点累，可能是因为胃不舒服，晚上睡眠也不是很好。偶尔会觉得有点反酸，但不是很明显。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+associated: 这两天
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:24:38,791 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:24:45,333 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:24:45,334 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:24:45,334 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:24:45,335 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:24:51,589 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:24:51,591 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:24:51,591 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+as...
+2025-02-25 21:24:51,591 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:25:04,404 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:25:04,405 [INFO] - LLM生成结果: 
+
+FIELD: age  
+QUESTION: 请问您的年龄是多少？
+2025-02-25 21:25:04,406 [INFO] - 下一个问题字段: age
+2025-02-25 21:25:04,406 [INFO] - 下一个问题: 请问您的年龄是多少？
+2025-02-25 21:25:04,406 [INFO] - [处理结果] {"response": "请问您的年龄是多少？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:25:04,406 [INFO] - [字段变化] {"severity": {"change_type": "modified", "old_value": "3", "new_value": "4"}, "associated": {"change_type": "added", "new_value": "这两天"}}
+2025-02-25 21:25:04,406 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:25:04,406 [INFO] - [严重程度评估] {"severity": "4", "severity_numeric": 4}
+2025-02-25 21:25:43,826 [INFO] - [用户输入] {"message": "我今年35了，马上要36了，属猪的。"}
+2025-02-25 21:25:43,827 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 3, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "4", "associated": "这两天"}}
+2025-02-25 21:25:43,827 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:25:43,827 [INFO] - 处理消息: 我今年35了，马上要36了，属猪的。, 当前轮次: 4, 当前状态: collecting_combined_info
+2025-02-25 21:25:43,827 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:25:43,827 [INFO] - 处理响应，上一个问题字段: age
+2025-02-25 21:25:43,827 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："我今年35了，马上要36了，属猪的。"
+        
+        当前正在询问的信息：ag...
+2025-02-25 21:25:43,827 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:25:51,698 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:25:51,700 [INFO] - 信息提取结果: 
+
+年龄: 35岁
+2025-02-25 21:25:51,700 [INFO] - 字段映射: 年龄 -> age = 35岁
+2025-02-25 21:25:51,701 [INFO] - 信息提取结果: extracted=True, current_field=age
+2025-02-25 21:25:51,701 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："我今年35了，马上要36了，属猪的。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:25:51,701 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:25:56,199 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:25:56,201 [INFO] - 严重程度评估结果: 
+
+1
+2025-02-25 21:25:56,201 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："我今年35了，马上要36了，属猪的。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+associated: 这两天
+age: 35岁
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:25:56,201 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:26:01,166 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:26:01,168 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:26:01,168 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:26:01,168 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:26:11,155 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:26:11,157 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:26:11,157 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+as...
+2025-02-25 21:26:11,157 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:26:33,676 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:26:33,678 [INFO] - LLM生成结果: 
+
+FIELD: pattern  
+QUESTION: 您的胃部不适是持续性的还是间歇性的？有没有伴随烧心或反酸的感觉？
+2025-02-25 21:26:33,678 [INFO] - 下一个问题字段: pattern
+2025-02-25 21:26:33,678 [INFO] - 下一个问题: 您的胃部不适是持续性的还是间歇性的？有没有伴随烧心或反酸的感觉？
+2025-02-25 21:26:33,678 [INFO] - [处理结果] {"response": "您的胃部不适是持续性的还是间歇性的？有没有伴随烧心或反酸的感觉？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:26:33,678 [INFO] - [字段变化] {"severity": {"change_type": "modified", "old_value": "4", "new_value": "1"}, "age": {"change_type": "added", "new_value": "35岁"}}
+2025-02-25 21:26:33,678 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:26:33,679 [INFO] - [严重程度评估] {"severity": "1", "severity_numeric": 1}
+2025-02-25 21:28:37,425 [INFO] - [用户输入] {"message": "嗯，不是一直都疼，主要是吃完饭后会难受一会儿，饿的时候反而好一些。有时候晚上睡觉前也会有点不舒服。"}
+2025-02-25 21:28:37,426 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 4, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁"}}
+2025-02-25 21:28:37,426 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:28:37,426 [INFO] - 处理消息: 嗯，不是一直都疼，主要是吃完饭后会难受一会儿，饿的时候反而好一些。有时候晚上睡觉前也会有点不舒服。, 当前轮次: 5, 当前状态: collecting_combined_info
+2025-02-25 21:28:37,426 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:28:37,426 [INFO] - 处理响应，上一个问题字段: pattern
+2025-02-25 21:28:37,426 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："嗯，不是一直都疼，主要是吃完饭后会难受一会儿，饿的时候反而好一些。有时候晚上睡觉前也会有点不舒服。...
+2025-02-25 21:28:37,426 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:28:51,046 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:28:51,048 [INFO] - 信息提取结果: 
+
+pattern: 饭后难受，饥饿时缓解，睡前不适
+2025-02-25 21:28:51,048 [INFO] - 字段映射: pattern -> pattern = 饭后难受，饥饿时缓解，睡前不适
+2025-02-25 21:28:51,048 [INFO] - 信息提取结果: extracted=True, current_field=pattern
+2025-02-25 21:28:51,048 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："嗯，不是一直都疼，主要是吃完饭后会难受一会儿，饿的时候反而好一些。有时候晚上睡觉前也会有点不舒服。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:28:51,049 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:00,423 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:00,425 [INFO] - 严重程度评估结果: 
+
+4
+2025-02-25 21:29:00,425 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："嗯，不是一直都疼，主要是吃完饭后会难受一会儿，饿的时候反而好一些。有时候晚上睡觉前也会有点不舒服。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:29:00,425 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:06,568 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:06,570 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:29:06,570 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:29:06,570 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:15,476 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:15,478 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:29:15,478 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+as...
+2025-02-25 21:29:15,478 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:24,080 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:24,082 [INFO] - LLM生成结果: 
+
+FIELD: gender
+QUESTION: 请问您的性别是？
+2025-02-25 21:29:24,082 [INFO] - 下一个问题字段: gender
+2025-02-25 21:29:24,082 [INFO] - 下一个问题: 请问您的性别是？
+2025-02-25 21:29:24,082 [INFO] - [处理结果] {"response": "请问您的性别是？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:29:24,082 [INFO] - [字段变化] {"pattern": {"change_type": "added", "new_value": "饭后难受，饥饿时缓解，睡前不适"}, "severity": {"change_type": "modified", "old_value": "1", "new_value": "4"}}
+2025-02-25 21:29:24,083 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:29:24,083 [INFO] - [严重程度评估] {"severity": "4", "severity_numeric": 4}
+2025-02-25 21:29:24,083 [INFO] - [用户输入] {"message": ""}
+2025-02-25 21:29:24,083 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 5, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "4", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适"}}
+2025-02-25 21:29:24,083 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:29:24,083 [INFO] - 处理消息: , 当前轮次: 6, 当前状态: collecting_combined_info
+2025-02-25 21:29:24,083 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:29:24,083 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:29:24,083 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:30,120 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:30,122 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:29:30,123 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+as...
+2025-02-25 21:29:30,123 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:46,606 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:46,608 [INFO] - LLM生成结果: 
+
+FIELD: factors  
+QUESTION: 除了饭后和饥饿时的情况，有没有其他因素会让您的症状加重或减轻？比如特定食物、姿势变化或情绪波动？
+2025-02-25 21:29:46,608 [INFO] - 下一个问题字段: factors
+2025-02-25 21:29:46,608 [INFO] - 下一个问题: 除了饭后和饥饿时的情况，有没有其他因素会让您的症状加重或减轻？比如特定食物、姿势变化或情绪波动？
+2025-02-25 21:29:46,608 [INFO] - [处理结果] {"response": "除了饭后和饥饿时的情况，有没有其他因素会让您的症状加重或减轻？比如特定食物、姿势变化或情绪波动？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:29:46,608 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:29:46,609 [INFO] - [用户输入] {"message": "女的，我是女的。"}
+2025-02-25 21:29:46,609 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 6, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "4", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适"}}
+2025-02-25 21:29:46,609 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:29:46,609 [INFO] - 处理消息: 女的，我是女的。, 当前轮次: 7, 当前状态: collecting_combined_info
+2025-02-25 21:29:46,609 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:29:46,609 [INFO] - 处理响应，上一个问题字段: factors
+2025-02-25 21:29:46,609 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："女的，我是女的。"
+        
+        当前正在询问的信息：factors
+    ...
+2025-02-25 21:29:46,609 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:52,136 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:52,137 [INFO] - 信息提取结果: 
+
+性别: 女性
+2025-02-25 21:29:52,138 [INFO] - 字段映射: 性别 -> factors = 女性
+2025-02-25 21:29:52,138 [INFO] - 信息提取结果: extracted=True, current_field=factors
+2025-02-25 21:29:52,138 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："女的，我是女的。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:29:52,138 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:29:55,310 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:29:55,311 [INFO] - 严重程度评估结果: 
+
+1
+2025-02-25 21:29:55,312 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："女的，我是女的。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+factors: 女性
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:29:55,312 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:30:03,195 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:30:03,197 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:30:03,197 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:30:03,198 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:30:11,797 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:30:11,799 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:30:11,799 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+as...
+2025-02-25 21:30:11,799 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:30:16,917 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:30:16,919 [INFO] - LLM生成结果: 
+
+FIELD: medication
+QUESTION: 请问您目前正在服用哪些药物或补充剂？
+2025-02-25 21:30:16,919 [INFO] - 下一个问题字段: medication
+2025-02-25 21:30:16,919 [INFO] - 下一个问题: 请问您目前正在服用哪些药物或补充剂？
+2025-02-25 21:30:16,919 [INFO] - [处理结果] {"response": "请问您目前正在服用哪些药物或补充剂？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:30:16,919 [INFO] - [字段变化] {"factors": {"change_type": "added", "new_value": "女性"}, "severity": {"change_type": "modified", "old_value": "4", "new_value": "1"}}
+2025-02-25 21:30:16,919 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:30:16,920 [INFO] - [严重程度评估] {"severity": "1", "severity_numeric": 1}
+2025-02-25 21:30:34,730 [INFO] - [用户输入] {"message": "最近没吃什么药，就前两天胃疼了，自己去药店买了点胃舒平，吃了一天。"}
+2025-02-25 21:30:34,730 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 7, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性"}}
+2025-02-25 21:30:34,731 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:30:34,731 [INFO] - 处理消息: 最近没吃什么药，就前两天胃疼了，自己去药店买了点胃舒平，吃了一天。, 当前轮次: 8, 当前状态: collecting_combined_info
+2025-02-25 21:30:34,731 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:30:34,731 [INFO] - 处理响应，上一个问题字段: medication
+2025-02-25 21:30:34,731 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："最近没吃什么药，就前两天胃疼了，自己去药店买了点胃舒平，吃了一天。"
+        
+     ...
+2025-02-25 21:30:34,731 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:31:24,401 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:31:24,403 [INFO] - 信息提取结果: 
+
+medication: 胃舒平（使用一天）
+2025-02-25 21:31:24,403 [INFO] - 字段映射: medication -> medication = 胃舒平（使用一天）
+2025-02-25 21:31:24,403 [INFO] - 信息提取结果: extracted=True, current_field=medication
+2025-02-25 21:31:24,403 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："最近没吃什么药，就前两天胃疼了，自己去药店买了点胃舒平，吃了一天。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:31:24,403 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:31:38,735 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:31:38,737 [INFO] - 严重程度评估结果: 
+
+3
+2025-02-25 21:31:38,738 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："最近没吃什么药，就前两天胃疼了，自己去药店买了点胃舒平，吃了一天。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 3
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+factors: 女性
+medication: 胃舒平（使用一天）
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:31:38,738 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:31:45,391 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:31:45,392 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:31:45,393 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:31:45,393 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:31:54,096 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:31:54,098 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:31:54,098 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 3
+as...
+2025-02-25 21:31:54,098 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:32:00,752 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:32:00,753 [INFO] - LLM生成结果: 
+
+FIELD: medical_history
+QUESTION: 请问您过去是否有过胃溃疡、胃炎或其他消化系统疾病的病史呢？
+2025-02-25 21:32:00,753 [INFO] - 下一个问题字段: medical_history
+2025-02-25 21:32:00,754 [INFO] - 下一个问题: 请问您过去是否有过胃溃疡、胃炎或其他消化系统疾病的病史呢？
+2025-02-25 21:32:00,754 [INFO] - [处理结果] {"response": "请问您过去是否有过胃溃疡、胃炎或其他消化系统疾病的病史呢？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:32:00,754 [INFO] - [字段变化] {"severity": {"change_type": "modified", "old_value": "1", "new_value": "3"}, "medication": {"change_type": "added", "new_value": "胃舒平（使用一天）"}}
+2025-02-25 21:32:00,754 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:32:00,754 [INFO] - [严重程度评估] {"severity": "3", "severity_numeric": 3}
+2025-02-25 21:32:26,952 [INFO] - [用户输入] {"message": "我啊，之前身体还不错，没有什么大病，就是有点轻微的甲状腺问题，医生说是亚健康，也没怎么吃药。哦对了，十年前做过一个阑尾炎手术，不是很大的手术。"}
+2025-02-25 21:32:26,952 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 8, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "3", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）"}}
+2025-02-25 21:32:26,952 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:32:26,952 [INFO] - 处理消息: 我啊，之前身体还不错，没有什么大病，就是有点轻微的甲状腺问题，医生说是亚健康，也没怎么吃药。哦对了，十年前做过一个阑尾炎手术，不是很大的手术。, 当前轮次: 9, 当前状态: collecting_combined_info
+2025-02-25 21:32:26,953 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:32:26,953 [INFO] - 处理响应，上一个问题字段: medical_history
+2025-02-25 21:32:26,953 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："我啊，之前身体还不错，没有什么大病，就是有点轻微的甲状腺问题，医生说是亚健康，也没怎么吃药。哦对了...
+2025-02-25 21:32:26,953 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:32:34,657 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:32:34,659 [INFO] - 信息提取结果: 
+
+medical_history: 轻微的甲状腺问题，十年前阑尾炎手术
+2025-02-25 21:32:34,660 [INFO] - 字段映射: medical_history -> medical_history = 轻微的甲状腺问题，十年前阑尾炎手术
+2025-02-25 21:32:34,660 [INFO] - 信息提取结果: extracted=True, current_field=medical_history
+2025-02-25 21:32:34,660 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："我啊，之前身体还不错，没有什么大病，就是有点轻微的甲状腺问题，医生说是亚健康，也没怎么吃药。哦对了，十年前做过一个阑尾炎手术，不是很大的手术。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:32:34,660 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:32:48,791 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:32:48,793 [INFO] - 严重程度评估结果: 
+
+2
+2025-02-25 21:32:48,793 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："我啊，之前身体还不错，没有什么大病，就是有点轻微的甲状腺问题，医生说是亚健康，也没怎么吃药。哦对了，十年前做过一个阑尾炎手术，不是很大的手术。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 2
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+factors: 女性
+medication: 胃舒平（使用一天）
+medical_history: 轻微的甲状腺问题，十年前阑尾炎手术
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:32:48,793 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:32:56,471 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:32:56,473 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:32:56,474 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:32:56,474 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:33:10,810 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:33:10,812 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:33:10,812 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 2
+as...
+2025-02-25 21:33:10,812 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:33:33,328 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:33:33,330 [INFO] - LLM生成结果: 
+
+FIELD: allergy  
+QUESTION: 请问您是否有药物或食物过敏史？
+2025-02-25 21:33:33,330 [INFO] - 下一个问题字段: allergy
+2025-02-25 21:33:33,330 [INFO] - 下一个问题: 请问您是否有药物或食物过敏史？
+2025-02-25 21:33:33,330 [INFO] - [处理结果] {"response": "请问您是否有药物或食物过敏史？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:33:33,330 [INFO] - [字段变化] {"severity": {"change_type": "modified", "old_value": "3", "new_value": "2"}, "medical_history": {"change_type": "added", "new_value": "轻微的甲状腺问题，十年前阑尾炎手术"}}
+2025-02-25 21:33:33,330 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:33:33,330 [INFO] - [严重程度评估] {"severity": "2", "severity_numeric": 2}
+2025-02-25 21:34:03,716 [INFO] - [用户输入] {"message": "青霉素过敏，吃了会起疹子，挺难受的。还有海鲜不能吃太多，吃多了也容易过敏。"}
+2025-02-25 21:34:03,717 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 9, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "2", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术"}}
+2025-02-25 21:34:03,717 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:34:03,717 [INFO] - 处理消息: 青霉素过敏，吃了会起疹子，挺难受的。还有海鲜不能吃太多，吃多了也容易过敏。, 当前轮次: 10, 当前状态: collecting_combined_info
+2025-02-25 21:34:03,717 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:34:03,717 [INFO] - 处理响应，上一个问题字段: allergy
+2025-02-25 21:34:03,717 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："青霉素过敏，吃了会起疹子，挺难受的。还有海鲜不能吃太多，吃多了也容易过敏。"
+        
+ ...
+2025-02-25 21:34:03,717 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:34:16,656 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:34:16,658 [INFO] - 信息提取结果: 
+
+过敏史: 青霉素，海鲜
+2025-02-25 21:34:16,658 [INFO] - 字段映射: 过敏史 -> allergy = 青霉素，海鲜
+2025-02-25 21:34:16,658 [INFO] - 信息提取结果: extracted=True, current_field=allergy
+2025-02-25 21:34:16,658 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："青霉素过敏，吃了会起疹子，挺难受的。还有海鲜不能吃太多，吃多了也容易过敏。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:34:16,658 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:34:23,924 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:34:23,925 [INFO] - 严重程度评估结果: 
+
+4
+2025-02-25 21:34:23,926 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："青霉素过敏，吃了会起疹子，挺难受的。还有海鲜不能吃太多，吃多了也容易过敏。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+factors: 女性
+medication: 胃舒平（使用一天）
+medical_history: 轻微的甲状腺问题，十年前阑尾炎手术
+allergy: 青霉素，海鲜
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:34:23,926 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:34:32,245 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:34:32,247 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:34:32,247 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:34:32,247 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:34:43,790 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:34:43,792 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:34:43,793 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 4
+as...
+2025-02-25 21:34:43,793 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:35:05,911 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:35:05,913 [INFO] - LLM生成结果: 
+
+FIELD: main  
+QUESTION: 您能具体描述一下胃不舒服的感觉吗？比如是隐痛、灼烧感还是胀闷感？
+2025-02-25 21:35:05,913 [INFO] - 下一个问题字段: main
+2025-02-25 21:35:05,914 [INFO] - 下一个问题: 您能具体描述一下胃不舒服的感觉吗？比如是隐痛、灼烧感还是胀闷感？
+2025-02-25 21:35:05,914 [INFO] - [处理结果] {"response": "您能具体描述一下胃不舒服的感觉吗？比如是隐痛、灼烧感还是胀闷感？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:35:05,914 [INFO] - [字段变化] {"severity": {"change_type": "modified", "old_value": "2", "new_value": "4"}, "allergy": {"change_type": "added", "new_value": "青霉素，海鲜"}}
+2025-02-25 21:35:05,914 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:35:05,914 [INFO] - [严重程度评估] {"severity": "4", "severity_numeric": 4}
+2025-02-25 21:35:24,345 [INFO] - [用户输入] {"message": "就是这里，胃这个位置，吃东西的时候有点隐隐作痛，不是很剧烈，但挺不舒服的，有时候还会胀胀的。"}
+2025-02-25 21:35:24,345 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 10, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "4", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜"}}
+2025-02-25 21:35:24,345 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:35:24,345 [INFO] - 处理消息: 就是这里，胃这个位置，吃东西的时候有点隐隐作痛，不是很剧烈，但挺不舒服的，有时候还会胀胀的。, 当前轮次: 11, 当前状态: collecting_combined_info
+2025-02-25 21:35:24,345 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:35:24,345 [INFO] - 处理响应，上一个问题字段: main
+2025-02-25 21:35:24,346 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："就是这里，胃这个位置，吃东西的时候有点隐隐作痛，不是很剧烈，但挺不舒服的，有时候还会胀胀的。"
+ ...
+2025-02-25 21:35:24,346 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:35:35,535 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:35:35,537 [INFO] - 信息提取结果: 
+
+主要症状: 胃部隐痛  
+伴随症状: 腹胀  
+疼痛强度: 隐隐作痛，不剧烈  
+发生时间/诱因: 吃东西时
+2025-02-25 21:35:35,537 [INFO] - 字段映射: 主要症状 -> main = 胃部隐痛
+2025-02-25 21:35:35,537 [INFO] - 字段映射: 伴随症状 -> main = 腹胀
+2025-02-25 21:35:35,537 [INFO] - 字段映射: 疼痛强度 -> main = 隐隐作痛，不剧烈
+2025-02-25 21:35:35,537 [INFO] - 字段映射: 发生时间/诱因 -> main = 吃东西时
+2025-02-25 21:35:35,537 [INFO] - 信息提取结果: extracted=True, current_field=main
+2025-02-25 21:35:35,537 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："就是这里，胃这个位置，吃东西的时候有点隐隐作痛，不是很剧烈，但挺不舒服的，有时候还会胀胀的。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:35:35,537 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:35:46,664 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:35:46,666 [INFO] - 严重程度评估结果: 
+
+3
+2025-02-25 21:35:46,666 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："就是这里，胃这个位置，吃东西的时候有点隐隐作痛，不是很剧烈，但挺不舒服的，有时候还会胀胀的。"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 3
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+factors: 女性
+medication: 胃舒平（使用一天）
+medical_history: 轻微的甲状腺问题，十年前阑尾炎手术
+allergy: 青霉素，海鲜
+main: 吃东西时
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:35:46,666 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:35:53,116 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:35:53,118 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:35:53,118 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:35:53,118 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:36:02,810 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:36:02,811 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:36:02,811 [INFO] - 下一个问题: None
+2025-02-25 21:36:02,811 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:36:02,811 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:36:17,876 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:36:17,877 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:36:17,877 [INFO] - 是否应该转换状态: False
+2025-02-25 21:36:17,878 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:36:17,878 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:36:41,858 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:36:41,861 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:36:41,861 [INFO] - 状态转换后的下一个问题: None
+2025-02-25 21:36:41,861 [INFO] - [处理结果] {"response": "已收集到您的信息，正在生成下一阶段建议，输入任意内容继续", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:36:41,861 [INFO] - [字段变化] {"severity": {"change_type": "modified", "old_value": "4", "new_value": "3"}, "main": {"change_type": "added", "new_value": "吃东西时"}}
+2025-02-25 21:36:41,861 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:36:41,862 [INFO] - [严重程度评估] {"severity": "3", "severity_numeric": 3}
+2025-02-25 21:37:07,411 [INFO] - [用户输入] {"message": ""}
+2025-02-25 21:37:07,411 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 11, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "3", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时"}}
+2025-02-25 21:37:07,412 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:37:07,412 [INFO] - 处理消息: , 当前轮次: 12, 当前状态: collecting_combined_info
+2025-02-25 21:37:07,412 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:37:07,412 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:37:07,412 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:37:14,115 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:37:14,117 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:37:14,117 [INFO] - 下一个问题: None
+2025-02-25 21:37:14,117 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:37:14,117 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:37:47,499 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:37:47,501 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:37:47,501 [INFO] - 是否应该转换状态: False
+2025-02-25 21:37:47,502 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:37:47,502 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:38:02,581 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:38:02,583 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:38:02,583 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 3
+as...
+2025-02-25 21:38:02,583 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:38:39,724 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:38:39,725 [INFO] - LLM生成结果: 
+
+FIELD: 2. gender  
+QUESTION: 为了更准确评估您的状况，请问您的性别是男性还是女性？
+2025-02-25 21:38:39,725 [INFO] - 下一个问题字段: gender
+2025-02-25 21:38:39,726 [INFO] - 状态转换后的下一个问题: 为了更准确评估您的状况，请问您的性别是男性还是女性？
+2025-02-25 21:38:39,726 [INFO] - [处理结果] {"response": "为了更准确评估您的状况，请问您的性别是男性还是女性？", "state_changed": false, "before_state": "collecting_combined_info", "after_state": "collecting_combined_info"}
+2025-02-25 21:38:39,726 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:38:58,447 [INFO] - [用户输入] {"message": "女的，我是女性"}
+2025-02-25 21:38:58,448 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 12, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "3", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时"}}
+2025-02-25 21:38:58,448 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:38:58,448 [INFO] - 处理消息: 女的，我是女性, 当前轮次: 13, 当前状态: collecting_combined_info
+2025-02-25 21:38:58,448 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:38:58,448 [INFO] - 处理响应，上一个问题字段: gender
+2025-02-25 21:38:58,448 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："女的，我是女性"
+        
+        当前正在询问的信息：gender
+      ...
+2025-02-25 21:38:58,448 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:39:05,732 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:39:05,734 [INFO] - 信息提取结果: 
+
+性别: 女性
+2025-02-25 21:39:05,734 [INFO] - 字段映射: 性别 -> gender = 女性
+2025-02-25 21:39:05,734 [INFO] - 信息提取结果: extracted=True, current_field=gender
+2025-02-25 21:39:05,734 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："女的，我是女性"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:39:05,734 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:39:09,624 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:39:09,626 [INFO] - 严重程度评估结果: 
+
+1
+2025-02-25 21:39:09,626 [INFO] - 紧急情况评估提示词: 
+    你是一个专业的医疗助手，需要评估患者是否处于紧急医疗状况。
+
+    基于患者的描述："女的，我是女性"
+    以及已收集的信息：
+    主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+associated: 这两天
+age: 35岁
+pattern: 饭后难受，饥饿时缓解，睡前不适
+factors: 女性
+medication: 胃舒平（使用一天）
+medical_history: 轻微的甲状腺问题，十年前阑尾炎手术
+allergy: 青霉素，海鲜
+main: 吃东西时
+gender: 女性
+
+    紧急医疗状况包括但不限于：
+    - 剧烈胸痛或胸部压迫感
+    - 严重呼吸困难
+    - 意识不清或意识改变
+    - 大量出血
+    - 严重过敏反应（如喉咙肿胀、呼吸急促）
+    - 严重头痛伴随视力变化或意识改变
+    - 严重烧伤或外伤
+    - 抽搐或癫痫发作
+
+    请评估是否存在紧急情况，仅回答"是"或"否"。
+    
+2025-02-25 21:39:09,626 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:39:16,643 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:39:16,645 [INFO] - 紧急情况评估结果: 
+
+否
+2025-02-25 21:39:16,646 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:39:16,646 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:39:35,942 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:39:35,943 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:39:35,943 [INFO] - 下一个问题: None
+2025-02-25 21:39:35,943 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:39:35,943 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:39:44,849 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:39:44,851 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:39:44,851 [INFO] - 是否应该转换状态: True
+2025-02-25 21:39:44,852 [INFO] - 状态转换: collecting_combined_info -> life_style
+2025-02-25 21:39:44,852 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:39:44,852 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:39:57,343 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:39:57,345 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:39:57,346 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的生活习惯信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: ...
+2025-02-25 21:39:57,346 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:40:07,370 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:40:07,372 [INFO] - LLM生成结果: 
+
+FIELD: diet (饮食习惯)
+QUESTION: 您最近的饮食规律吗？比如有没有经常吃辛辣、油腻的食物，或者经常外出就餐？
+2025-02-25 21:40:07,372 [INFO] - 下一个问题字段: diet
+2025-02-25 21:40:07,372 [INFO] - 状态转换后的下一个问题: 您最近的饮食规律吗？比如有没有经常吃辛辣、油腻的食物，或者经常外出就餐？
+2025-02-25 21:40:07,373 [INFO] - [处理结果] {"response": "您最近的饮食规律吗？比如有没有经常吃辛辣、油腻的食物，或者经常外出就餐？", "state_changed": true, "before_state": "collecting_combined_info", "after_state": "life_style"}
+2025-02-25 21:40:07,373 [INFO] - [字段变化] {"gender": {"change_type": "added", "new_value": "女性"}, "severity": {"change_type": "modified", "old_value": "3", "new_value": "1"}}
+2025-02-25 21:40:07,373 [INFO] - [更新后Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:40:07,373 [INFO] - [严重程度评估] {"severity": "1", "severity_numeric": 1}
+2025-02-25 21:40:18,684 [INFO] - [用户输入] {"message": "说实话，我饮食不太规律，工作忙起来经常忘记吃饭，有时候中午就随便吃个快餐，晚上回家太晚了，也懒得做饭，就点个外卖，经常吃些烧烤啊火锅啊这些。平时也爱喝咖啡，提提神。"}
+2025-02-25 21:40:18,684 [INFO] - [处理前状态] {"state": "life_style", "turn_count": 13, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性"}}
+2025-02-25 21:40:18,685 [INFO] - [当前Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:40:18,685 [INFO] - 处理消息: 说实话，我饮食不太规律，工作忙起来经常忘记吃饭，有时候中午就随便吃个快餐，晚上回家太晚了，也懒得做饭，就点个外卖，经常吃些烧烤啊火锅啊这些。平时也爱喝咖啡，提提神。, 当前轮次: 14, 当前状态: life_style
+2025-02-25 21:40:18,685 [INFO] - 当前Flow: LifeStyleFlow, use_llm_flow=True
+2025-02-25 21:40:18,685 [INFO] - 处理响应，上一个问题字段: diet
+2025-02-25 21:40:18,685 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取生活习惯相关信息。
+
+        患者回复："说实话，我饮食不太规律，工作忙起来经常忘记吃饭，有时候中午就随便吃个快餐，晚上回家太晚了，...
+2025-02-25 21:40:18,685 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:40:41,375 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:40:41,377 [INFO] - 信息提取结果: 
+
+饮食习惯: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡
+工作情况: 工作忙
+
+解析：患者明确提到饮食不规律、快餐外卖为主的饮食模式以及咖啡饮用习惯，符合diet字段要求。同时提及"工作忙"属于work字段的工作强度描述，需要一并提取。其他习惯如睡眠、运动、烟酒在对话中未提及具体信息。
+2025-02-25 21:40:41,377 [INFO] - 字段映射: 饮食习惯 -> diet = 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡
+2025-02-25 21:40:41,377 [INFO] - 字段映射: 工作情况 -> work = 工作忙
+2025-02-25 21:40:41,377 [INFO] - 信息提取结果: extracted=True, current_field=diet
+2025-02-25 21:40:41,377 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:40:41,377 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:40:47,008 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:40:47,009 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:40:47,010 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的生活习惯信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: ...
+2025-02-25 21:40:47,010 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:40:53,254 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:40:53,256 [INFO] - LLM生成结果: 
+
+FIELD: smoke_drink (烟酒习惯)
+QUESTION: 您平时有吸烟或饮酒的习惯吗？如果有的话，大概的频率是怎样的呢？
+2025-02-25 21:40:53,256 [INFO] - 下一个问题字段: smoke_drink
+2025-02-25 21:40:53,256 [INFO] - 下一个问题: 您平时有吸烟或饮酒的习惯吗？如果有的话，大概的频率是怎样的呢？
+2025-02-25 21:40:53,256 [INFO] - [处理结果] {"response": "您平时有吸烟或饮酒的习惯吗？如果有的话，大概的频率是怎样的呢？", "state_changed": false, "before_state": "life_style", "after_state": "life_style"}
+2025-02-25 21:40:53,257 [INFO] - [字段变化] {"diet": {"change_type": "added", "new_value": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡"}, "work": {"change_type": "added", "new_value": "工作忙"}}
+2025-02-25 21:40:53,257 [INFO] - [更新后Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:41:17,725 [INFO] - [用户输入] {"message": "我不抽烟，但偶尔会喝点酒，特别是和客户应酬的时候，一周可能有一两次吧，不过不会喝很多。"}
+2025-02-25 21:41:17,725 [INFO] - [处理前状态] {"state": "life_style", "turn_count": 14, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性", "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡", "work": "工作忙"}}
+2025-02-25 21:41:17,725 [INFO] - [当前Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:41:17,725 [INFO] - 处理消息: 我不抽烟，但偶尔会喝点酒，特别是和客户应酬的时候，一周可能有一两次吧，不过不会喝很多。, 当前轮次: 15, 当前状态: life_style
+2025-02-25 21:41:17,725 [INFO] - 当前Flow: LifeStyleFlow, use_llm_flow=True
+2025-02-25 21:41:17,725 [INFO] - 处理响应，上一个问题字段: smoke_drink
+2025-02-25 21:41:17,726 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取生活习惯相关信息。
+
+        患者回复："我不抽烟，但偶尔会喝点酒，特别是和客户应酬的时候，一周可能有一两次吧，不过不会喝很多。"
+...
+2025-02-25 21:41:17,726 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:41:51,008 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:41:51,010 [INFO] - 信息提取结果: 
+
+烟酒习惯: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）
+2025-02-25 21:41:51,010 [INFO] - 字段映射: 烟酒习惯 -> smoke_drink = 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）
+2025-02-25 21:41:51,010 [INFO] - 信息提取结果: extracted=True, current_field=smoke_drink
+2025-02-25 21:41:51,010 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:41:51,011 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:42:01,248 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:42:01,250 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:42:01,251 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的生活习惯信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: ...
+2025-02-25 21:42:01,251 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:42:10,424 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:42:10,425 [INFO] - LLM生成结果: 
+
+FIELD: sleep (睡眠情况)
+QUESTION: 您最近的睡眠情况怎么样？比如每天睡几个小时，有没有入睡困难或者多梦的情况？
+2025-02-25 21:42:10,426 [INFO] - 下一个问题字段: sleep
+2025-02-25 21:42:10,426 [INFO] - 下一个问题: 您最近的睡眠情况怎么样？比如每天睡几个小时，有没有入睡困难或者多梦的情况？
+2025-02-25 21:42:10,426 [INFO] - [处理结果] {"response": "您最近的睡眠情况怎么样？比如每天睡几个小时，有没有入睡困难或者多梦的情况？", "state_changed": false, "before_state": "life_style", "after_state": "life_style"}
+2025-02-25 21:42:10,426 [INFO] - [字段变化] {"smoke_drink": {"change_type": "added", "new_value": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"}}
+2025-02-25 21:42:10,426 [INFO] - [更新后Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:42:16,256 [INFO] - [用户输入] {"message": "最近睡得不太好，工作比较忙，通常半夜12点多才睡，早上7点就得起，大概六个小时吧。有时候半夜会醒一下，可能是胃不舒服的原因。"}
+2025-02-25 21:42:16,256 [INFO] - [处理前状态] {"state": "life_style", "turn_count": 15, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性", "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡", "work": "工作忙", "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"}}
+2025-02-25 21:42:16,256 [INFO] - [当前Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:42:16,256 [INFO] - 处理消息: 最近睡得不太好，工作比较忙，通常半夜12点多才睡，早上7点就得起，大概六个小时吧。有时候半夜会醒一下，可能是胃不舒服的原因。, 当前轮次: 16, 当前状态: life_style
+2025-02-25 21:42:16,256 [INFO] - 当前Flow: LifeStyleFlow, use_llm_flow=True
+2025-02-25 21:42:16,256 [INFO] - 处理响应，上一个问题字段: sleep
+2025-02-25 21:42:16,257 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取生活习惯相关信息。
+
+        患者回复："最近睡得不太好，工作比较忙，通常半夜12点多才睡，早上7点就得起，大概六个小时吧。有时候半...
+2025-02-25 21:42:16,257 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:42:33,505 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:42:33,507 [INFO] - 信息提取结果: 
+
+睡眠情况: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒
+工作情况: 比较忙
+2025-02-25 21:42:33,507 [INFO] - 字段映射: 睡眠情况 -> sleep = 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒
+2025-02-25 21:42:33,508 [INFO] - 字段映射: 工作情况 -> work = 比较忙
+2025-02-25 21:42:33,508 [INFO] - 信息提取结果: extracted=True, current_field=sleep
+2025-02-25 21:42:33,508 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:42:33,508 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:42:45,178 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:42:45,180 [INFO] - 完整性检查结果: 
+
+不完整
+2025-02-25 21:42:45,180 [INFO] - 生成问题提示词: 
+        你是一个专业的医疗助手，正在收集患者的生活习惯信息。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: ...
+2025-02-25 21:42:45,180 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:42:55,931 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:42:55,933 [INFO] - LLM生成结果: 
+
+FIELD: exercise  
+QUESTION: 您平时有没有规律运动的习惯？比如每周会做些跑步、游泳之类的锻炼吗？
+2025-02-25 21:42:55,933 [INFO] - 下一个问题字段: exercise
+2025-02-25 21:42:55,933 [INFO] - 下一个问题: 您平时有没有规律运动的习惯？比如每周会做些跑步、游泳之类的锻炼吗？
+2025-02-25 21:42:55,933 [INFO] - [处理结果] {"response": "您平时有没有规律运动的习惯？比如每周会做些跑步、游泳之类的锻炼吗？", "state_changed": false, "before_state": "life_style", "after_state": "life_style"}
+2025-02-25 21:42:55,933 [INFO] - [字段变化] {"work": {"change_type": "modified", "old_value": "工作忙", "new_value": "比较忙"}, "sleep": {"change_type": "added", "new_value": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒"}}
+2025-02-25 21:42:55,933 [INFO] - [更新后Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:43:15,540 [INFO] - [用户输入] {"message": "平时挺少运动的，主要是没什么时间。偶尔周末会去公园走走，但是很不规律，最近一个月好像都没怎么运动了。"}
+2025-02-25 21:43:15,540 [INFO] - [处理前状态] {"state": "life_style", "turn_count": 16, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性", "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡", "work": "比较忙", "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）", "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒"}}
+2025-02-25 21:43:15,540 [INFO] - [当前Flow信息] {"flow_type": "LifeStyleFlow", "required_info": ["sleep", "diet", "exercise", "work", "smoke_drink"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:43:15,541 [INFO] - 处理消息: 平时挺少运动的，主要是没什么时间。偶尔周末会去公园走走，但是很不规律，最近一个月好像都没怎么运动了。, 当前轮次: 17, 当前状态: life_style
+2025-02-25 21:43:15,541 [INFO] - 当前Flow: LifeStyleFlow, use_llm_flow=True
+2025-02-25 21:43:15,541 [INFO] - 处理响应，上一个问题字段: exercise
+2025-02-25 21:43:15,541 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取生活习惯相关信息。
+
+        患者回复："平时挺少运动的，主要是没什么时间。偶尔周末会去公园走走，但是很不规律，最近一个月好像都没怎...
+2025-02-25 21:43:15,541 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:43:27,576 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:43:27,576 [INFO] - 信息提取结果: 
+
+exercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）
+2025-02-25 21:43:27,576 [INFO] - 字段映射: exercise -> exercise = 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）
+2025-02-25 21:43:27,577 [INFO] - 信息提取结果: extracted=True, current_field=exercise
+2025-02-25 21:43:27,577 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:43:27,577 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:43:35,269 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:43:35,271 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:43:35,271 [INFO] - 下一个问题: None
+2025-02-25 21:43:35,271 [INFO] - 完整性检查提示词: 
+        你是一个专业的医疗助手，需要严格评估患者信息是否收集完整。
+        
+        已收集的信息：
+        主要症状: 胃不太舒服
+持续时间: 两天
+severit...
+2025-02-25 21:43:35,271 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:43:46,121 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:43:46,123 [INFO] - 完整性检查结果: 
+
+完整
+2025-02-25 21:43:46,123 [INFO] - 是否应该转换状态: True
+2025-02-25 21:43:46,123 [INFO] - 状态转换: life_style -> diagnosis
+2025-02-25 21:43:46,123 [INFO] - 生成分析结果提示词: 
+        你是一个专业的医疗助手，需要提供诊断分析。
+
+        患者情况:
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+associated: 这...
+2025-02-25 21:43:46,123 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:44:10,102 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:44:10,104 [INFO] - LLM生成结果: 
+
+### 1. 症状详细分析  
+患者以**餐后胃部不适**为主诉，症状在**进食后加重、空腹时缓解**，且**夜间睡前加重**，符合**消化性溃疡（尤其是十二指肠溃疡）**的典型疼痛节律。结合以下特点：  
+- **饮食因素**：长期摄入高脂、辛辣食物（外卖、烧烤、火锅）及咖啡，可能刺激胃酸分泌、损伤胃黏膜。  
+- **作息紊乱**：睡眠不足、缺乏运动、工作压力大，可能加重胃肠功能紊乱。  
+- **药物使用**：胃舒平（抗酸药）短期使用可能暂时缓解症状，但未针对潜在病因（如幽门螺杆菌感染或溃疡）治疗。  
+
+### 2. 可能的病因  
+- **消化性溃疡**（十二指肠溃疡可能性大）：饥饿痛、夜间痛是典型表现，需排查幽门螺杆菌感染。  
+- **
+2025-02-25 21:44:10,104 [INFO] - 状态转换后的下一个问题: 
+
+### 1. 症状详细分析  
+患者以**餐后胃部不适**为主诉，症状在**进食后加重、空腹时缓解**，且**夜间睡前加重**，符合**消化性溃疡（尤其是十二指肠溃疡）**的典型疼痛节律。结合以下特点：  
+- **饮食因素**：长期摄入高脂、辛辣食物（外卖、烧烤、火锅）及咖啡，可能刺激胃酸分泌、损伤胃黏膜。  
+- **作息紊乱**：睡眠不足、缺乏运动、工作压力大，可能加重胃肠功能紊乱。  
+- **药物使用**：胃舒平（抗酸药）短期使用可能暂时缓解症状，但未针对潜在病因（如幽门螺杆菌感染或溃疡）治疗。  
+
+### 2. 可能的病因  
+- **消化性溃疡**（十二指肠溃疡可能性大）：饥饿痛、夜间痛是典型表现，需排查幽门螺杆菌感染。  
+- **
+2025-02-25 21:44:10,104 [INFO] - [处理结果] {"response": "\n\n### 1. 症状详细分析  \n患者以**餐后胃部不适**为主诉，症状在**进食后加重、空腹时缓解**，且**夜间睡前加重**，符合**消化性溃疡（尤其是十二指肠溃疡）**的典型疼痛节律。结合以下特点：  \n- **饮食因素**：长期摄入高脂、辛辣食物（外卖、烧烤、火锅）及咖啡，可能刺激胃酸分泌、损伤胃黏膜。  \n- **作息紊乱**：睡眠不足、缺乏运动、工作压力大，可能加重胃肠功能紊乱。  \n- **药物使用**：胃舒平（抗酸药）短期使用可能暂时缓解症状，但未针对潜在病因（如幽门螺杆菌感染或溃疡）治疗。  \n\n### 2. 可能的病因  \n- **消化性溃疡**（十二指肠溃疡可能性大）：饥饿痛、夜间痛是典型表现，需排查幽门螺杆菌感染。  \n- **", "state_changed": true, "before_state": "life_style", "after_state": "diagnosis"}
+2025-02-25 21:44:10,104 [INFO] - [字段变化] {"exercise": {"change_type": "added", "new_value": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）"}}
+2025-02-25 21:44:10,104 [INFO] - [更新后Flow信息] {"flow_type": "DiagnosisFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:44:30,165 [INFO] - [用户输入] {"message": "继续"}
+2025-02-25 21:44:30,165 [INFO] - [处理前状态] {"state": "diagnosis", "turn_count": 17, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性", "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡", "work": "比较忙", "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）", "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒", "exercise": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）"}}
+2025-02-25 21:44:30,165 [INFO] - [当前Flow信息] {"flow_type": "DiagnosisFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:44:30,165 [INFO] - 处理消息: 继续, 当前轮次: 18, 当前状态: diagnosis
+2025-02-25 21:44:30,166 [INFO] - 当前Flow: DiagnosisFlow, use_llm_flow=True
+2025-02-25 21:44:30,166 [INFO] - 当前阶段 diagnosis 不需要信息提取，只记录用户回复
+2025-02-25 21:44:30,290 [INFO] - 生成回复: 状态=diagnosis, 模板=diagnosis_template
+2025-02-25 21:45:03,216 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:45:03,219 [INFO] - 状态转换: diagnosis -> medical_advice
+2025-02-25 21:45:03,219 [INFO] - 生成分析结果提示词: 
+        你是一个专业的医疗助手，需要提供医疗建议。
+
+        患者情况:
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+associated: 这...
+2025-02-25 21:45:03,219 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:45:27,678 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:45:27,679 [INFO] - LLM生成结果: 
+
+1. 用药注意事项和药物相互作用  
+- 胃舒平（铝碳酸镁）需餐后1-2小时或睡前嚼服，避免与以下药物同服：  
+  - **四环素类抗生素**（如多西环素）、**铁剂**、**喹诺酮类**（如左氧氟沙星）：需间隔2小时以上服用  
+  - **甲状腺激素**（如左甲状腺素钠）：铝剂可能影响吸收，需间隔4小时  
+- 长期使用可能引起低磷血症（需监测血磷）和便秘，连续使用不超过14天  
+- 避免与酸性饮料（如果汁）同服  
+
+2. 生活方式调整建议  
+**饮食**：  
+- 规律三餐，少量多餐（每餐6-7分饱）  
+- 避免辛辣、高脂（烧烤/火锅）、过烫食物及咖啡因（尤其空腹时）  
+- 
+2025-02-25 21:45:27,679 [INFO] - 状态转换后的下一个问题: 
+
+1. 用药注意事项和药物相互作用  
+- 胃舒平（铝碳酸镁）需餐后1-2小时或睡前嚼服，避免与以下药物同服：  
+  - **四环素类抗生素**（如多西环素）、**铁剂**、**喹诺酮类**（如左氧氟沙星）：需间隔2小时以上服用  
+  - **甲状腺激素**（如左甲状腺素钠）：铝剂可能影响吸收，需间隔4小时  
+- 长期使用可能引起低磷血症（需监测血磷）和便秘，连续使用不超过14天  
+- 避免与酸性饮料（如果汁）同服  
+
+2. 生活方式调整建议  
+**饮食**：  
+- 规律三餐，少量多餐（每餐6-7分饱）  
+- 避免辛辣、高脂（烧烤/火锅）、过烫食物及咖啡因（尤其空腹时）  
+- 
+2025-02-25 21:45:27,679 [INFO] - [处理结果] {"response": "\n\n1. 用药注意事项和药物相互作用  \n- 胃舒平（铝碳酸镁）需餐后1-2小时或睡前嚼服，避免与以下药物同服：  \n  - **四环素类抗生素**（如多西环素）、**铁剂**、**喹诺酮类**（如左氧氟沙星）：需间隔2小时以上服用  \n  - **甲状腺激素**（如左甲状腺素钠）：铝剂可能影响吸收，需间隔4小时  \n- 长期使用可能引起低磷血症（需监测血磷）和便秘，连续使用不超过14天  \n- 避免与酸性饮料（如果汁）同服  \n\n2. 生活方式调整建议  \n**饮食**：  \n- 规律三餐，少量多餐（每餐6-7分饱）  \n- 避免辛辣、高脂（烧烤/火锅）、过烫食物及咖啡因（尤其空腹时）  \n- ", "state_changed": true, "before_state": "diagnosis", "after_state": "medical_advice"}
+2025-02-25 21:45:27,679 [INFO] - [字段变化] {"formatted_info": {"change_type": "added", "new_value": "基本信息:\nage: 35岁\ngender: 女性\n\n病史信息:\nmedical_history: 轻微的甲状腺问题，十年前阑尾炎手术\nallergy: 青霉素，海鲜\nmedication: 胃舒平（使用一天）\n\n症状信息:\nmain: 吃东西时\nseverity: 1\npattern: 饭后难受，饥饿时缓解，睡前不适\nfactors: 女性\nassociated: 这两天\n\n生活习惯:\nsleep: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒\ndiet: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡\nexercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）\nwork: 比较忙\nsmoke_drink: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"}, "relevant_knowledge": {"change_type": "added", "new_value": "科室：消化科 主题：为什么饭时会胃胀呢? 问：当吃晚饭吃到一定程度时，就会胃胀，吃不下饭的了，其实根本还没吃饱，但就是因胃胀，吃不下...这样的情况已有一段时间了 答：你好！你的情况拥有胃动力不足。你可以试试看以下方法来调养：1.菊苣根、宽叶莴苣或菊莴苣。都是传统的缓胃秘方。堪用这些蔬菜加水煮10分钟熬水喝2.吃水果。葡萄、橙子、木瓜和菠萝都是健康水果，大街上也很容易买到食用这种水果对于缓胃利吸收都有良好的效用\n科室：消化科 主题：胃胀饭后想吐怎么办？ 问：胃胀吃了一粒晚上吃的西餐感觉想吐吃了了能吃健胃消食片吗 答：根据你的情况，胃胀气，吃了，可以再吃健胃消食片，不干扰。建议你平时留意恰当饮食，吃易消化食物，防止吃太多，增强体育锻炼，动态仔细观察。胃胀患者在及时救治之外，患者在生活中还需要有留意始终保持恰当饮食的好习惯，消化身体营养。此外还需要建议多加注意休息不能吃辛辣刺激的食物。\n科室：消化科 主题：吃了饭后就胃胀怎么办？ 问：只要吃点东西胃就胀，饿一餐下餐再吃就好点但也只好吃3成饱。如果每餐都吃的话胃就特别张如这时不停餐胃就又胀还有点疼不想吃晚饭也不觉着饿。口气特别重自己都能感觉到。您好是何病 答：您好！根据您的叙述，吃点东西胃就胀，应该是由于胃炎或消化不良引来的，在中医相信可能与脾虚夹气滞关于的，胃炎症状有上腹饱闷感、嗳气、反酸、恶心、烧心、隐痛、食欲下降等。建议您最好是做下胃镜仔细检查，此外，胃胀患者在救治期间，患者的饮食状况和护理也是很重要的，患者一定要消化维生素，预防工作闹肚子，并且清淡饮食，以免引发不必要的伤害"}}
+2025-02-25 21:45:27,679 [INFO] - [更新后Flow信息] {"flow_type": "MedicalAdviceFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:46:22,758 [INFO] - [用户输入] {"message": "继续"}
+2025-02-25 21:46:22,758 [INFO] - [处理前状态] {"state": "medical_advice", "turn_count": 18, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性", "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡", "work": "比较忙", "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）", "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒", "exercise": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）", "relevant_knowledge": "科室：消化科 主题：为什么饭时会胃胀呢? 问：当吃晚饭吃到一定程度时，就会胃胀，吃不下饭的了，其实根本还没吃饱，但就是因胃胀，吃不下...这样的情况已有一段时间了 答：你好！你的情况拥有胃动力不足。你可以试试看以下方法来调养：1.菊苣根、宽叶莴苣或菊莴苣。都是传统的缓胃秘方。堪用这些蔬菜加水煮10分钟熬水喝2.吃水果。葡萄、橙子、木瓜和菠萝都是健康水果，大街上也很容易买到食用这种水果对于缓胃利吸收都有良好的效用\n科室：消化科 主题：胃胀饭后想吐怎么办？ 问：胃胀吃了一粒晚上吃的西餐感觉想吐吃了了能吃健胃消食片吗 答：根据你的情况，胃胀气，吃了，可以再吃健胃消食片，不干扰。建议你平时留意恰当饮食，吃易消化食物，防止吃太多，增强体育锻炼，动态仔细观察。胃胀患者在及时救治之外，患者在生活中还需要有留意始终保持恰当饮食的好习惯，消化身体营养。此外还需要建议多加注意休息不能吃辛辣刺激的食物。\n科室：消化科 主题：吃了饭后就胃胀怎么办？ 问：只要吃点东西胃就胀，饿一餐下餐再吃就好点但也只好吃3成饱。如果每餐都吃的话胃就特别张如这时不停餐胃就又胀还有点疼不想吃晚饭也不觉着饿。口气特别重自己都能感觉到。您好是何病 答：您好！根据您的叙述，吃点东西胃就胀，应该是由于胃炎或消化不良引来的，在中医相信可能与脾虚夹气滞关于的，胃炎症状有上腹饱闷感、嗳气、反酸、恶心、烧心、隐痛、食欲下降等。建议您最好是做下胃镜仔细检查，此外，胃胀患者在救治期间，患者的饮食状况和护理也是很重要的，患者一定要消化维生素，预防工作闹肚子，并且清淡饮食，以免引发不必要的伤害", "formatted_info": "基本信息:\nage: 35岁\ngender: 女性\n\n病史信息:\nmedical_history: 轻微的甲状腺问题，十年前阑尾炎手术\nallergy: 青霉素，海鲜\nmedication: 胃舒平（使用一天）\n\n症状信息:\nmain: 吃东西时\nseverity: 1\npattern: 饭后难受，饥饿时缓解，睡前不适\nfactors: 女性\nassociated: 这两天\n\n生活习惯:\nsleep: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒\ndiet: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡\nexercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）\nwork: 比较忙\nsmoke_drink: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"}}
+2025-02-25 21:46:22,758 [INFO] - [当前Flow信息] {"flow_type": "MedicalAdviceFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:46:22,758 [INFO] - 处理消息: 继续, 当前轮次: 19, 当前状态: medical_advice
+2025-02-25 21:46:22,758 [INFO] - 当前Flow: MedicalAdviceFlow, use_llm_flow=True
+2025-02-25 21:46:22,759 [INFO] - 当前阶段 medical_advice 不需要信息提取，只记录用户回复
+2025-02-25 21:46:22,816 [INFO] - 生成回复: 状态=medical_advice, 模板=medical_advice_template
+2025-02-25 21:46:53,734 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:46:53,735 [INFO] - 状态转换: medical_advice -> education
+2025-02-25 21:46:53,736 [INFO] - 生成分析结果提示词: 
+        你是一个专业的医疗助手，需要提供健康教育。
+
+        患者情况:
+        主要症状: 胃不太舒服
+持续时间: 两天
+severity: 1
+associated: 这...
+2025-02-25 21:46:53,736 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=200
+2025-02-25 21:47:15,216 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:47:15,218 [INFO] - LLM生成结果: 
+
+### 一、预防和保健建议  
+1. **饮食调整**：  
+   - **规律进食**：每日定时定量进餐，避免过饥过饱，可采用“少量多餐”（每餐5-7分饱，每日4-5餐）。  
+   - **减少刺激**：避免辛辣、油腻（如烧烤、火锅）、高咖啡因（咖啡）、过冷过热食物；减少产气食物（如豆类、碳酸饮料）。  
+   - **易消化饮食**：选择粥、面条、蒸煮蔬菜、低脂蛋白质（如鱼肉、鸡胸肉）等。  
+   - **餐后管理**：进食后避免立即平卧或剧烈运动，可散步10-15分钟促进胃肠蠕动。  
+
+2. **生活习惯改善**：  
+   - **睡眠优化**：提前至23:00前入睡，保证7小时睡眠，避免睡前2小时进食。  
+   - **运动建议**
+2025-02-25 21:47:15,218 [INFO] - 状态转换后的下一个问题: 
+
+### 一、预防和保健建议  
+1. **饮食调整**：  
+   - **规律进食**：每日定时定量进餐，避免过饥过饱，可采用“少量多餐”（每餐5-7分饱，每日4-5餐）。  
+   - **减少刺激**：避免辛辣、油腻（如烧烤、火锅）、高咖啡因（咖啡）、过冷过热食物；减少产气食物（如豆类、碳酸饮料）。  
+   - **易消化饮食**：选择粥、面条、蒸煮蔬菜、低脂蛋白质（如鱼肉、鸡胸肉）等。  
+   - **餐后管理**：进食后避免立即平卧或剧烈运动，可散步10-15分钟促进胃肠蠕动。  
+
+2. **生活习惯改善**：  
+   - **睡眠优化**：提前至23:00前入睡，保证7小时睡眠，避免睡前2小时进食。  
+   - **运动建议**
+2025-02-25 21:47:15,218 [INFO] - [处理结果] {"response": "\n\n### 一、预防和保健建议  \n1. **饮食调整**：  \n   - **规律进食**：每日定时定量进餐，避免过饥过饱，可采用“少量多餐”（每餐5-7分饱，每日4-5餐）。  \n   - **减少刺激**：避免辛辣、油腻（如烧烤、火锅）、高咖啡因（咖啡）、过冷过热食物；减少产气食物（如豆类、碳酸饮料）。  \n   - **易消化饮食**：选择粥、面条、蒸煮蔬菜、低脂蛋白质（如鱼肉、鸡胸肉）等。  \n   - **餐后管理**：进食后避免立即平卧或剧烈运动，可散步10-15分钟促进胃肠蠕动。  \n\n2. **生活习惯改善**：  \n   - **睡眠优化**：提前至23:00前入睡，保证7小时睡眠，避免睡前2小时进食。  \n   - **运动建议**", "state_changed": true, "before_state": "medical_advice", "after_state": "education"}
+2025-02-25 21:47:15,218 [INFO] - [更新后Flow信息] {"flow_type": "EducationFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:48:09,383 [INFO] - [用户输入] {"message": "继续"}
+2025-02-25 21:48:09,385 [INFO] - [处理前状态] {"state": "education", "turn_count": 19, "collected_info": {"主要症状": "胃不太舒服", "持续时间": "两天", "severity": "1", "associated": "这两天", "age": "35岁", "pattern": "饭后难受，饥饿时缓解，睡前不适", "factors": "女性", "medication": "胃舒平（使用一天）", "medical_history": "轻微的甲状腺问题，十年前阑尾炎手术", "allergy": "青霉素，海鲜", "main": "吃东西时", "gender": "女性", "diet": "饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡", "work": "比较忙", "smoke_drink": "不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）", "sleep": "睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒", "exercise": "平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）", "relevant_knowledge": "科室：消化科 主题：为什么饭时会胃胀呢? 问：当吃晚饭吃到一定程度时，就会胃胀，吃不下饭的了，其实根本还没吃饱，但就是因胃胀，吃不下...这样的情况已有一段时间了 答：你好！你的情况拥有胃动力不足。你可以试试看以下方法来调养：1.菊苣根、宽叶莴苣或菊莴苣。都是传统的缓胃秘方。堪用这些蔬菜加水煮10分钟熬水喝2.吃水果。葡萄、橙子、木瓜和菠萝都是健康水果，大街上也很容易买到食用这种水果对于缓胃利吸收都有良好的效用\n科室：消化科 主题：胃胀饭后想吐怎么办？ 问：胃胀吃了一粒晚上吃的西餐感觉想吐吃了了能吃健胃消食片吗 答：根据你的情况，胃胀气，吃了，可以再吃健胃消食片，不干扰。建议你平时留意恰当饮食，吃易消化食物，防止吃太多，增强体育锻炼，动态仔细观察。胃胀患者在及时救治之外，患者在生活中还需要有留意始终保持恰当饮食的好习惯，消化身体营养。此外还需要建议多加注意休息不能吃辛辣刺激的食物。\n科室：消化科 主题：吃了饭后就胃胀怎么办？ 问：只要吃点东西胃就胀，饿一餐下餐再吃就好点但也只好吃3成饱。如果每餐都吃的话胃就特别张如这时不停餐胃就又胀还有点疼不想吃晚饭也不觉着饿。口气特别重自己都能感觉到。您好是何病 答：您好！根据您的叙述，吃点东西胃就胀，应该是由于胃炎或消化不良引来的，在中医相信可能与脾虚夹气滞关于的，胃炎症状有上腹饱闷感、嗳气、反酸、恶心、烧心、隐痛、食欲下降等。建议您最好是做下胃镜仔细检查，此外，胃胀患者在救治期间，患者的饮食状况和护理也是很重要的，患者一定要消化维生素，预防工作闹肚子，并且清淡饮食，以免引发不必要的伤害", "formatted_info": "基本信息:\nage: 35岁\ngender: 女性\n\n病史信息:\nmedical_history: 轻微的甲状腺问题，十年前阑尾炎手术\nallergy: 青霉素，海鲜\nmedication: 胃舒平（使用一天）\n\n症状信息:\nmain: 吃东西时\nseverity: 1\npattern: 饭后难受，饥饿时缓解，睡前不适\nfactors: 女性\nassociated: 这两天\n\n生活习惯:\nsleep: 睡得不太好，通常半夜12点多睡，早上7点起（约6小时），有时半夜会醒\ndiet: 饮食不规律，常吃快餐、外卖、烧烤、火锅，爱喝咖啡\nexercise: 平时挺少运动，偶尔周末去公园走走（不规律），最近一个月没怎么运动（因没时间）\nwork: 比较忙\nsmoke_drink: 不抽烟，偶尔饮酒（应酬时，每周1-2次，量不多）"}}
+2025-02-25 21:48:09,385 [INFO] - [当前Flow信息] {"flow_type": "EducationFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:48:09,385 [INFO] - 处理消息: 继续, 当前轮次: 20, 当前状态: education
+2025-02-25 21:48:09,385 [INFO] - 当前Flow: EducationFlow, use_llm_flow=True
+2025-02-25 21:48:09,389 [INFO] - 当前阶段 education 不需要信息提取，只记录用户回复
+2025-02-25 21:48:09,444 [INFO] - 生成回复: 状态=education, 模板=education_template
+2025-02-25 21:48:38,054 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:48:38,056 [INFO] - 状态转换: education -> ended
+2025-02-25 21:48:38,056 [INFO] - [处理结果] {"response": "\n\n根据您描述的餐后胃胀、食欲下降、口气重等症状，结合医学知识库信息为您整理以下指导建议：\n\n【日常调养指南】\n1. 饮食可尝试\"三三原则\"：每餐吃三成饱，每日分三次加餐（如上午10点、下午3点、睡前1小时）\n2. 烹饪时加入陈皮、山楂片（各3克）煮水作汤底，帮助食物消化\n3. 饭后半小时内避免平躺，建议采取靠墙站立法（脚跟离墙10cm，后脑勺贴墙）\n\n【需要警惕的预警信号】\n当出现以下情况时建议24小时内就诊：\n□ 夜间胀醒超过3次/周\n□ 晨起口苦伴随咽喉灼热\n□ 大便出现未消化的菜叶/肉粒\n□ 体重每月下降超过2公斤\n\n【简单自测方法】\n试试\"苹果试验\"：晨起空腹吃半个苹果（不去皮），若1小时后仍感觉胃部发胀，可能存在胃排空障碍。此测试每周不超过2次，连续2次阳性应就诊。\n\n您目前最困扰的是餐后饱胀影响正常进食，请问这种情况在吃流质食物（如粥、汤面）时也会出现吗？这有助于判断是功能性消化不良还是器质性问题。\n 正在生成下一阶段建议，输入任意内容继续", "state_changed": true, "before_state": "education", "after_state": "ended"}
+2025-02-25 21:50:24,611 [INFO] - Use pytorch device_name: mps
+2025-02-25 21:50:24,611 [INFO] - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-02-25 21:50:26,967 [INFO] - 成功加载知识库索引
+2025-02-25 21:50:26,967 [INFO] - 设置use_llm_flow=True
+2025-02-25 21:50:39,805 [INFO] - [用户输入] {"message": "你好"}
+2025-02-25 21:50:39,806 [INFO] - [处理前状态] {"state": "initial", "turn_count": 0, "collected_info": {}}
+2025-02-25 21:50:39,806 [INFO] - 处理消息: 你好, 当前轮次: 1, 当前状态: initial
+2025-02-25 21:50:39,806 [INFO] - 从初始状态转换到基本信息收集状态
+2025-02-25 21:50:39,806 [INFO] - 初始化Flow: CombinedInfoFlow
+2025-02-25 21:50:39,806 [INFO] - [处理结果] {"response": "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？", "state_changed": true, "before_state": "initial", "after_state": "collecting_combined_info"}
+2025-02-25 21:50:39,807 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:51:00,942 [INFO] - [用户输入] {"message": "我今天胸口这里特别难受，感觉像是被什么东西压着一样，喘不上气来，已经持续了好几个小时了，越来越严重，现在连说话都有点费劲，感觉出汗也比平时多。"}
+2025-02-25 21:51:00,943 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 1, "collected_info": {}}
+2025-02-25 21:51:00,943 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:51:00,943 [INFO] - 处理消息: 我今天胸口这里特别难受，感觉像是被什么东西压着一样，喘不上气来，已经持续了好几个小时了，越来越严重，现在连说话都有点费劲，感觉出汗也比平时多。, 当前轮次: 2, 当前状态: collecting_combined_info
+2025-02-25 21:51:00,943 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 21:51:00,943 [INFO] - 处理响应，上一个问题字段: None
+2025-02-25 21:51:00,943 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："我今天胸口这里特别难受，感觉像是被什么东西压着一样，喘不上气来，已经持续了好几个小时了，越来越严重...
+2025-02-25 21:51:00,943 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=1000
+2025-02-25 21:51:11,660 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:51:11,672 [INFO] - 信息提取结果: 
+
+主要症状: 胸口难受、感觉被压、喘不上气、说话费劲
+持续时间: 几个小时
+加重/缓解因素: 越来越严重
+伴随症状: 出汗比平时多
+2025-02-25 21:51:11,672 [INFO] - 字段映射: 主要症状 -> 主要症状 = 胸口难受、感觉被压、喘不上气、说话费劲
+2025-02-25 21:51:11,672 [INFO] - 字段映射: 持续时间 -> 持续时间 = 几个小时
+2025-02-25 21:51:11,672 [INFO] - 字段映射: 加重/缓解因素 -> 加重/缓解因素 = 越来越严重
+2025-02-25 21:51:11,672 [INFO] - 字段映射: 伴随症状 -> 伴随症状 = 出汗比平时多
+2025-02-25 21:51:11,672 [INFO] - 信息提取结果: extracted=True, current_field=None
+2025-02-25 21:51:11,672 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："我今天胸口这里特别难受，感觉像是被什么东西压着一样，喘不上气来，已经持续了好几个小时了，越来越严重，现在连说话都有点费劲，感觉出汗也比平时多。"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 21:51:11,672 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=1000
+2025-02-25 21:51:18,211 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:51:18,213 [INFO] - 严重程度评估结果: 
+
+9
+2025-02-25 21:51:18,214 [INFO] - 检测到紧急情况，转换到转诊流程
+2025-02-25 21:51:18,459 [INFO] - 生成回复: 状态=referral, 模板=referral_template
+2025-02-25 21:51:37,848 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:51:37,850 [INFO] - 状态转换: referral -> education
+2025-02-25 21:51:37,851 [INFO] - 生成分析结果提示词: 
+        你是一个专业的医疗助手，需要提供健康教育。
+
+        患者情况:
+        主要症状: 胸口难受、感觉被压、喘不上气、说话费劲
+持续时间: 几个小时
+加重/缓解因素: ...
+2025-02-25 21:51:37,851 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=1000
+2025-02-25 21:52:01,013 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:52:01,014 [INFO] - LLM生成结果: 
+
+1. 预防和保健建议
+- 立即停止所有活动保持静息体位，避免任何体力消耗
+- 立即联系急救中心（120）或前往急诊科就诊，严重程度评分提示需紧急医学评估
+- 避免自行用药或采取非专业处置措施
+- 保持环境通风，解开紧身衣物减少胸腔压迫
+- 既往有心血管疾病史者需随身携带硝酸甘油等急救药物
+
+2. 相关健康知识科普
+- 急性胸痛综合征：持续加重的胸骨后压迫感伴呼吸困难、多汗为典型心源性胸痛特征，可能提示急性冠脉综合征或主动脉夹层等危重症
+- 自主神经代偿反应：异常多汗（冷汗）是机体对缺氧/缺血的应激反应，常伴随心输出量下降
+- 劳力性呼吸困难：进行性加重的呼吸费力可能反映左心功能不全或肺循环障碍
+
+3. 需要警惕的症状
+- 胸痛放射至左肩/下颌/背部
+- 意识状态改变（晕厥/意识模糊）
+- 皮肤湿冷伴口唇紫绀
+- 血压骤降（收缩压<90mmHg）
+- 心律失常表现（心悸/脉搏不规则）
+- 突发剧烈撕裂样胸痛
+
+4. 日常自我监测建议
+- 建立症状日记：记录胸痛发作时间、持续时间、诱发/缓解因素
+- 定期监测晨起静息心率及血压（建议使用医用级设备）
+- 进行心血管风险评估：包括血脂、血糖、hs-CRP检测
+- 学习识别心绞痛与心肌梗死的临床差异（后者常伴持续不缓解的疼痛）
+- 掌握基础生命体征测量方法（呼吸频率、脉搏质量）
+- 高危人群建议随身携带心电图监测设备（如智能手环的ECG功能）
+
+注：当前临床表现已符合急诊就诊标准（严重程度评分≥7分），上述建议不替代即刻医疗干预。所有处置应在专业医疗人员指导下进行。
+2025-02-25 21:52:01,015 [INFO] - 状态转换后的下一个问题: 
+
+1. 预防和保健建议
+- 立即停止所有活动保持静息体位，避免任何体力消耗
+- 立即联系急救中心（120）或前往急诊科就诊，严重程度评分提示需紧急医学评估
+- 避免自行用药或采取非专业处置措施
+- 保持环境通风，解开紧身衣物减少胸腔压迫
+- 既往有心血管疾病史者需随身携带硝酸甘油等急救药物
+
+2. 相关健康知识科普
+- 急性胸痛综合征：持续加重的胸骨后压迫感伴呼吸困难、多汗为典型心源性胸痛特征，可能提示急性冠脉综合征或主动脉夹层等危重症
+- 自主神经代偿反应：异常多汗（冷汗）是机体对缺氧/缺血的应激反应，常伴随心输出量下降
+- 劳力性呼吸困难：进行性加重的呼吸费力可能反映左心功能不全或肺循环障碍
+
+3. 需要警惕的症状
+- 胸痛放射至左肩/下颌/背部
+- 意识状态改变（晕厥/意识模糊）
+- 皮肤湿冷伴口唇紫绀
+- 血压骤降（收缩压<90mmHg）
+- 心律失常表现（心悸/脉搏不规则）
+- 突发剧烈撕裂样胸痛
+
+4. 日常自我监测建议
+- 建立症状日记：记录胸痛发作时间、持续时间、诱发/缓解因素
+- 定期监测晨起静息心率及血压（建议使用医用级设备）
+- 进行心血管风险评估：包括血脂、血糖、hs-CRP检测
+- 学习识别心绞痛与心肌梗死的临床差异（后者常伴持续不缓解的疼痛）
+- 掌握基础生命体征测量方法（呼吸频率、脉搏质量）
+- 高危人群建议随身携带心电图监测设备（如智能手环的ECG功能）
+
+注：当前临床表现已符合急诊就诊标准（严重程度评分≥7分），上述建议不替代即刻医疗干预。所有处置应在专业医疗人员指导下进行。
+2025-02-25 21:52:01,015 [INFO] - [处理结果] {"response": "\n\n1. 预防和保健建议\n- 立即停止所有活动保持静息体位，避免任何体力消耗\n- 立即联系急救中心（120）或前往急诊科就诊，严重程度评分提示需紧急医学评估\n- 避免自行用药或采取非专业处置措施\n- 保持环境通风，解开紧身衣物减少胸腔压迫\n- 既往有心血管疾病史者需随身携带硝酸甘油等急救药物\n\n2. 相关健康知识科普\n- 急性胸痛综合征：持续加重的胸骨后压迫感伴呼吸困难、多汗为典型心源性胸痛特征，可能提示急性冠脉综合征或主动脉夹层等危重症\n- 自主神经代偿反应：异常多汗（冷汗）是机体对缺氧/缺血的应激反应，常伴随心输出量下降\n- 劳力性呼吸困难：进行性加重的呼吸费力可能反映左心功能不全或肺循环障碍\n\n3. 需要警惕的症状\n- 胸痛放射至左肩/下颌/背部\n- 意识状态改变（晕厥/意识模糊）\n- 皮肤湿冷伴口唇紫绀\n- 血压骤降（收缩压<90mmHg）\n- 心律失常表现（心悸/脉搏不规则）\n- 突发剧烈撕裂样胸痛\n\n4. 日常自我监测建议\n- 建立症状日记：记录胸痛发作时间、持续时间、诱发/缓解因素\n- 定期监测晨起静息心率及血压（建议使用医用级设备）\n- 进行心血管风险评估：包括血脂、血糖、hs-CRP检测\n- 学习识别心绞痛与心肌梗死的临床差异（后者常伴持续不缓解的疼痛）\n- 掌握基础生命体征测量方法（呼吸频率、脉搏质量）\n- 高危人群建议随身携带心电图监测设备（如智能手环的ECG功能）\n\n注：当前临床表现已符合急诊就诊标准（严重程度评分≥7分），上述建议不替代即刻医疗干预。所有处置应在专业医疗人员指导下进行。", "state_changed": true, "before_state": "collecting_combined_info", "after_state": "education"}
+2025-02-25 21:52:01,015 [INFO] - [字段变化] {"relevant_knowledge": {"change_type": "added", "new_value": "科室：消化科 主题：胃胀痛不止怎么办？ 问：今天吃了点瓜。然后恐怕冷了，胃胀痛的很厉害，痛的我都叫出的了。然后放了个屁舒服些了。到现在过了3小时，胃还是隐隐的作痛，绝不会是胀伤掉了吧。。。 答：根据您的叙述，考虑是气胀，根据是发涨，而且您矢气后觉舒，这些是气胀的表现出。应该是寒邪僵滞，气机不畅引来的，同时与情志也是有关系的。建议您到正规中医院消化科复诊，服食中草药7剂就可以明显起效的，同时不要吃生冷食物，始终保持心情舒畅。此外还需要建议患者多加注意休息，不要吃辛辣刺激的食物。\n科室：消化科 主题：右胸口痛疼是怎么了? 问：右胸口经常有点疼痛，侧着睡觉时胸腔里面好象是吊着痛 答：平时多喝水，郭吃新鲜的水果跟蔬菜，建议不要吃肉类，容易上火的比如说辛辣打击的食物。先仔细观察几下必要时用通便的药物。通过你的叙述，这种传染的可能性是很小的，不必过分的忧心，如果你还是放心不下的话。寻到一一对应的治疗方法，早日逃离的疾病的困恼，最后祝你早日康复。除了服药救治胃病外，患者还需要有看重饮食方面，比如日常清淡饮食，多出外活动。与此同时患者还要留意决定一家三甲医院诊病，这样才能获得良好的治疗效果。\n科室：心血管科 主题：阴虚阳亢是什么症状？ 问：最近已经开始身体逐渐不太对，不知晓是什么原因，经常晚上睡午觉的时候还会流汗，吃晚饭也没什么胃口，胸口还会时常发闷，有朋友和我说可能会是有点阴虚阳亢，但是我不太确认，所以我想问一下阴虚阳亢是什么症状？ 答：一阴虚阳亢的症状，其实表现出为热症，就是感觉闹肚子，而且有燥热烦闷，五心烦热等症状的，如果说您睡午觉的时候会有流汗，这种情况下要考虑是拥有烦渴，烦渴是拥有阴虚的一种典型的症状，吃晚饭没胃口，而胸口时常发闷，要考虑是拥有有胃的问题，比如说有胃炎引来的，建议及时到当地的正规医院进行复诊。"}, "主要症状": {"change_type": "added", "new_value": "胸口难受、感觉被压、喘不上气、说话费劲"}, "持续时间": {"change_type": "added", "new_value": "几个小时"}, "伴随症状": {"change_type": "added", "new_value": "出汗比平时多"}, "formatted_info": {"change_type": "added", "new_value": "症状信息:\nseverity: 9"}, "加重/缓解因素": {"change_type": "added", "new_value": "越来越严重"}, "severity": {"change_type": "added", "new_value": "9"}}
+2025-02-25 21:52:01,015 [INFO] - [更新后Flow信息] {"flow_type": "EducationFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:52:01,015 [INFO] - [严重程度评估] {"severity": "9", "severity_numeric": 9}
+2025-02-25 21:52:28,304 [INFO] - [用户输入] {"message": "继续"}
+2025-02-25 21:52:28,305 [INFO] - [处理前状态] {"state": "education", "turn_count": 2, "collected_info": {"主要症状": "胸口难受、感觉被压、喘不上气、说话费劲", "持续时间": "几个小时", "加重/缓解因素": "越来越严重", "伴随症状": "出汗比平时多", "severity": "9", "relevant_knowledge": "科室：消化科 主题：胃胀痛不止怎么办？ 问：今天吃了点瓜。然后恐怕冷了，胃胀痛的很厉害，痛的我都叫出的了。然后放了个屁舒服些了。到现在过了3小时，胃还是隐隐的作痛，绝不会是胀伤掉了吧。。。 答：根据您的叙述，考虑是气胀，根据是发涨，而且您矢气后觉舒，这些是气胀的表现出。应该是寒邪僵滞，气机不畅引来的，同时与情志也是有关系的。建议您到正规中医院消化科复诊，服食中草药7剂就可以明显起效的，同时不要吃生冷食物，始终保持心情舒畅。此外还需要建议患者多加注意休息，不要吃辛辣刺激的食物。\n科室：消化科 主题：右胸口痛疼是怎么了? 问：右胸口经常有点疼痛，侧着睡觉时胸腔里面好象是吊着痛 答：平时多喝水，郭吃新鲜的水果跟蔬菜，建议不要吃肉类，容易上火的比如说辛辣打击的食物。先仔细观察几下必要时用通便的药物。通过你的叙述，这种传染的可能性是很小的，不必过分的忧心，如果你还是放心不下的话。寻到一一对应的治疗方法，早日逃离的疾病的困恼，最后祝你早日康复。除了服药救治胃病外，患者还需要有看重饮食方面，比如日常清淡饮食，多出外活动。与此同时患者还要留意决定一家三甲医院诊病，这样才能获得良好的治疗效果。\n科室：心血管科 主题：阴虚阳亢是什么症状？ 问：最近已经开始身体逐渐不太对，不知晓是什么原因，经常晚上睡午觉的时候还会流汗，吃晚饭也没什么胃口，胸口还会时常发闷，有朋友和我说可能会是有点阴虚阳亢，但是我不太确认，所以我想问一下阴虚阳亢是什么症状？ 答：一阴虚阳亢的症状，其实表现出为热症，就是感觉闹肚子，而且有燥热烦闷，五心烦热等症状的，如果说您睡午觉的时候会有流汗，这种情况下要考虑是拥有烦渴，烦渴是拥有阴虚的一种典型的症状，吃晚饭没胃口，而胸口时常发闷，要考虑是拥有有胃的问题，比如说有胃炎引来的，建议及时到当地的正规医院进行复诊。", "formatted_info": "症状信息:\nseverity: 9"}}
+2025-02-25 21:52:28,305 [INFO] - [当前Flow信息] {"flow_type": "EducationFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 21:52:28,305 [INFO] - 处理消息: 继续, 当前轮次: 3, 当前状态: education
+2025-02-25 21:52:28,305 [INFO] - 当前Flow: EducationFlow, use_llm_flow=True
+2025-02-25 21:52:28,305 [INFO] - 当前阶段 education 不需要信息提取，只记录用户回复
+2025-02-25 21:52:28,395 [INFO] - 生成回复: 状态=education, 模板=education_template
+2025-02-25 21:52:50,487 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 21:52:50,488 [INFO] - 状态转换: education -> ended
+2025-02-25 21:52:50,488 [INFO] - [处理结果] {"response": "\n\n**预防和保健建议**  \n1. 务必遵医嘱坚持服药（如卡马西平、丙戊酸钠等），不可自行减药或停药，即使症状缓解也需医生评估后再调整。  \n2. 保持规律作息，避免熬夜、过度疲劳或情绪剧烈波动（如生气、紧张）。  \n3. 饮食清淡均衡，避免酒精、咖啡因等刺激性饮品，忌暴饮暴食。  \n4. 日常活动需注意安全，避免游泳、高空作业等高风险行为，发作频繁时需有人陪同。  \n\n**相关健康知识科普**  \n- 癫痫分为**原发性**（病因不明）和**继发性**（由脑外伤、肿瘤、感染等引发）。  \n- 目前主要治疗方式是长期药物控制，若药物效果不佳可评估手术，但手术并非100%有效，需与医生充分沟通风险。  \n\n**需要警惕的症状**（立即就医）  \n❗ 发作时间超过5分钟或连续多次发作（癫痫持续状态）  \n❗ 发作后长时间意识模糊、呼吸困难或受伤  \n❗ 出现发热、剧烈头痛等新发症状  \n\n**日常自我监测建议**  \n- 记录每次发作的**时间、诱因、表现和持续时间**（可用手机备忘录或笔记本）。  \n- 观察是否有药物副作用（如皮疹、头晕），及时反馈医生调整用药。  \n- 每3-6个月复查脑电图、血药浓度等指标，评估病情控制情况。  \n\n**提示**：若患者发作频繁或出现异常表现，建议尽早就诊神经科调整治疗方案。\n 正在生成下一阶段建议，输入任意内容继续", "state_changed": true, "before_state": "education", "after_state": "ended"}
+2025-02-25 21:52:50,488 [INFO] - [字段变化] {"relevant_knowledge": {"change_type": "modified", "old_value": "科室：消化科 主题：胃胀痛不止怎么办？ 问：今天吃了点瓜。然后恐怕冷了，胃胀痛的很厉害，痛的我都叫出的了。然后放了个屁舒服些了。到现在过了3小时，胃还是隐隐的作痛，绝不会是胀伤掉了吧。。。 答：根据您的叙述，考虑是气胀，根据是发涨，而且您矢气后觉舒，这些是气胀的表现出。应该是寒邪僵滞，气机不畅引来的，同时与情志也是有关系的。建议您到正规中医院消化科复诊，服食中草药7剂就可以明显起效的，同时不要吃生冷食物，始终保持心情舒畅。此外还需要建议患者多加注意休息，不要吃辛辣刺激的食物。\n科室：消化科 主题：右胸口痛疼是怎么了? 问：右胸口经常有点疼痛，侧着睡觉时胸腔里面好象是吊着痛 答：平时多喝水，郭吃新鲜的水果跟蔬菜，建议不要吃肉类，容易上火的比如说辛辣打击的食物。先仔细观察几下必要时用通便的药物。通过你的叙述，这种传染的可能性是很小的，不必过分的忧心，如果你还是放心不下的话。寻到一一对应的治疗方法，早日逃离的疾病的困恼，最后祝你早日康复。除了服药救治胃病外，患者还需要有看重饮食方面，比如日常清淡饮食，多出外活动。与此同时患者还要留意决定一家三甲医院诊病，这样才能获得良好的治疗效果。\n科室：心血管科 主题：阴虚阳亢是什么症状？ 问：最近已经开始身体逐渐不太对，不知晓是什么原因，经常晚上睡午觉的时候还会流汗，吃晚饭也没什么胃口，胸口还会时常发闷，有朋友和我说可能会是有点阴虚阳亢，但是我不太确认，所以我想问一下阴虚阳亢是什么症状？ 答：一阴虚阳亢的症状，其实表现出为热症，就是感觉闹肚子，而且有燥热烦闷，五心烦热等症状的，如果说您睡午觉的时候会有流汗，这种情况下要考虑是拥有烦渴，烦渴是拥有阴虚的一种典型的症状，吃晚饭没胃口，而胸口时常发闷，要考虑是拥有有胃的问题，比如说有胃炎引来的，建议及时到当地的正规医院进行复诊。", "new_value": "科室：神经科 主题：我想了解癫痫病是怎么引起的？ 问：同事最近有突然抽动的情去仔细检查后说是癫所以我想问一下癫痫病是怎么引来的？ 答：癫痫患者应持乐观立树起打败疾病的信念信一定要坚持长期救缓解年限长些再停常用药物有卡马西平、丙戊酸钠和癫健安片等。癫痫是一种慢性疾如不及时有效地实施救可致成数所以癫痫患者一定要积极互相配合医生救遵从医嘱实施救完全有只求自愈的。致使患上癫痫病的病因有良无明确病因者为原发性癫继发于颅内肿瘤、外伤、传染、寄生虫病、脑血管病、全身分解代谢病等引来者为继发性癫痫。\n科室：肝病科 主题：肝硬化用什么药? 问：三系减低后转院，经过20多天救治后转好出院。 答：从你的讲述来看你拥有肝硬化引发脾大令得食道静脉血管曲张引来大出血而实施了食管套扎术和切脾术，目前肝硬化还没有特效药，一般需要有精神调养，平时不要生气，不要疲劳，保持良好的精神状态并且一定要愉快。其次要留意饮食调养，总的原则是食用含有维生素，高蛋白，低脂肪，低淀粉的食物，食用许多杂粮如黑米，小米，豆浆，如果条件容许最好每天能食用许多蛋白粉。特别注意不要吃极冷油腻和辛辣刺激的食物。\n科室：神经科 主题：癫痫病治疗的比较好方法是什么？ 问：阿姨患癫痫病已经4，5年用了许多方法都自愈不好。这两个月经常复发。我您好一下癫痫病治疗的最好方法是什么？严不严重? 答：你好，从你提供的资料你是个热心肠好同首先癫痫病的救首先是口服药物压当然药物治疗是不能治愈只好长期服药压除了假如有前提可以去大型综合评价病院手术救当然手术费也比较除了治愈率的题有时手术做了病不一定自当然这些你可以与患者家属交流几不要对病人说太多。"}}
+2025-02-25 22:33:42,981 [INFO] - Use pytorch device_name: mps
+2025-02-25 22:33:42,981 [INFO] - Load pretrained SentenceTransformer: paraphrase-multilingual-MiniLM-L12-v2
+2025-02-25 22:33:45,124 [INFO] - 成功加载知识库索引
+2025-02-25 22:33:45,125 [INFO] - 设置use_llm_flow=True
+2025-02-25 22:33:53,598 [INFO] - [用户输入] {"message": "你好"}
+2025-02-25 22:33:53,599 [INFO] - [处理前状态] {"state": "initial", "turn_count": 0, "collected_info": {}}
+2025-02-25 22:33:53,599 [INFO] - 处理消息: 你好, 当前轮次: 1, 当前状态: initial
+2025-02-25 22:33:53,599 [INFO] - 从初始状态转换到基本信息收集状态
+2025-02-25 22:33:53,599 [INFO] - 初始化Flow: CombinedInfoFlow
+2025-02-25 22:33:53,599 [INFO] - [处理结果] {"response": "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？", "state_changed": true, "before_state": "initial", "after_state": "collecting_combined_info"}
+2025-02-25 22:33:53,599 [INFO] - [更新后Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 22:34:12,258 [INFO] - [用户输入] {"message": "我现在在吐血"}
+2025-02-25 22:34:12,258 [INFO] - [处理前状态] {"state": "collecting_combined_info", "turn_count": 1, "collected_info": {}}
+2025-02-25 22:34:12,259 [INFO] - [当前Flow信息] {"flow_type": "CombinedInfoFlow", "required_info": ["main", "duration", "severity", "age", "gender", "pattern", "factors", "associated", "medical_history", "allergy", "medication"], "current_index": 0, "use_llm_flow": true}
+2025-02-25 22:34:12,259 [INFO] - 处理消息: 我现在在吐血, 当前轮次: 2, 当前状态: collecting_combined_info
+2025-02-25 22:34:12,259 [INFO] - 当前Flow: CombinedInfoFlow, use_llm_flow=True
+2025-02-25 22:34:12,259 [INFO] - 处理响应，上一个问题字段: None
+2025-02-25 22:34:12,259 [INFO] - 信息提取提示词: 
+        你是一个专业医疗助手，需要从患者回复中提取关键信息。
+
+        患者回复："我现在在吐血"
+        
+        当前正在询问的信息：未指定
+        当前...
+2025-02-25 22:34:12,259 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=1000
+2025-02-25 22:34:16,842 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 22:34:16,854 [INFO] - 信息提取结果: 
+
+主要症状: 吐血
+2025-02-25 22:34:16,854 [INFO] - 字段映射: 主要症状 -> 主要症状 = 吐血
+2025-02-25 22:34:16,854 [INFO] - 信息提取结果: extracted=True, current_field=None
+2025-02-25 22:34:16,854 [INFO] - 严重程度评估提示词: 
+    你是一个专业的医疗助手，需要评估患者症状的严重程度。
+
+    基于患者的描述："我现在在吐血"
+
+    请评估症状的严重程度，使用1-10的数字评分，其中:
+    1-2: 非常轻微，不影响日常生活
+    3-4: 轻微，略有影响但可忍受
+    5-6: 中等，明显影响日常活动
+    7-8: 严重，显著影响生活和工作
+    9-10: 非常严重，可能需要紧急医疗干预
+
+    仅返回一个数字（1-10）。
+    
+2025-02-25 22:34:16,854 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=1000
+2025-02-25 22:34:20,696 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 22:34:20,699 [INFO] - 严重程度评估结果: 
+
+10
+2025-02-25 22:34:20,699 [INFO] - 检测到紧急情况，转换到转诊流程
+2025-02-25 22:34:21,079 [INFO] - 生成回复: 状态=referral, 模板=referral_template
+2025-02-25 22:34:45,103 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 22:34:45,105 [INFO] - 状态转换: referral -> education
+2025-02-25 22:34:45,105 [INFO] - 生成分析结果提示词: 
+        你是一个专业的医疗助手，需要提供健康教育。
+
+        患者情况:
+        主要症状: 吐血
+severity: 10
+relevant_knowledge: 科室：消...
+2025-02-25 22:34:45,105 [INFO] - 简单LLM调用: temperature=0.1, max_tokens=1000
+2025-02-25 22:35:19,817 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 22:35:19,820 [INFO] - LLM生成结果: 
+
+### 1. 预防和保健建议  
+- **饮食管理**：严格避免辛辣、油腻、过热或过冷食物，减少胃黏膜刺激；选择易消化、富含纤维的软食（如粥类、蒸煮蔬菜）。  
+- **禁忌物质**：绝对禁烟戒酒，避免咖啡因及非甾体抗炎药（如阿司匹林、布洛芬），以防加重消化道出血风险。  
+- **情绪调节**：保持情绪稳定，避免焦虑或剧烈情绪波动，以减少胃酸分泌异常和胃肠痉挛。  
+- **药物规范**：若存在肝硬化或食管静脉曲张病史，需严格遵医嘱使用降门脉压药物（如普萘洛尔）及护胃药物（如质子泵抑制剂）。  
+
+---
+
+### 2. 相关健康知识科普  
+**上消化道出血的常见病因**：  
+- **消化性溃疡**：胃酸侵蚀胃/十二指肠黏膜深层，导致血管破裂。  
+- **食管静脉曲张破裂**：肝硬化患者门静脉高压引起食管静脉扩张，破裂后引发大出血（呕血常呈鲜红色或咖啡渣样）。  
+- **凝血功能障碍**：慢性肝病或血液系统疾病可能影响凝血因子合成，加重出血风险。  
+
+**肝硬化与呕血的关联**：  
+乙肝病毒感染可进展为肝硬化，导致门脉高压和侧支循环开放（如食管胃底静脉曲张）。此类患者呕血常为突发性、量大且伴随休克体征（如冷汗、意识模糊）。  
+
+---
+
+### 3. 需要警惕的症状  
+- **呕血特征**：新鲜血液或咖啡渣样物质，伴头晕、心悸、面色苍白（提示急性失血）。  
+- **黑便或柏油样便**：提示上消化道出血量≥50ml，需紧急评估。  
+- **肝病恶化征象**：黄疸加重、腹水、意识障碍（肝性脑病）或凝血时间延长。  
+- **循环衰竭表现**：收缩压<90mmHg、心率>120次/分、尿量减少，提示失血性休克。  
+
+---
+
+### 4. 日常自我监测建议  
+- **出血量评估**：记录呕血频率、颜色（鲜红/咖啡色）及总量（以汤匙或毫升计量）。  
+- **大便观察**：每日检查粪便颜色，黑便或暗红色血便需立即就医。  
+- **生命体征监测**：每日测量血压、心率，若血压下降≥20mmHg或静息心率持续>100次/分需警惕。  
+- **症状日记**：记录腹痛部位、性质（绞痛/隐痛）及与进食/体位的关联性，避免腹部按压或剧烈运动。  
+
+**注**：吐血（hematemesis）属于急症，需立即至急诊科就诊，完善胃镜、血常规及凝血功能检查，排除致命性出血（如食管静脉破裂或溃疡穿孔）。延误诊治可能引发失血性休克或多器官衰竭。
+2025-02-25 22:35:19,820 [INFO] - 状态转换后的下一个问题: 
+
+### 1. 预防和保健建议  
+- **饮食管理**：严格避免辛辣、油腻、过热或过冷食物，减少胃黏膜刺激；选择易消化、富含纤维的软食（如粥类、蒸煮蔬菜）。  
+- **禁忌物质**：绝对禁烟戒酒，避免咖啡因及非甾体抗炎药（如阿司匹林、布洛芬），以防加重消化道出血风险。  
+- **情绪调节**：保持情绪稳定，避免焦虑或剧烈情绪波动，以减少胃酸分泌异常和胃肠痉挛。  
+- **药物规范**：若存在肝硬化或食管静脉曲张病史，需严格遵医嘱使用降门脉压药物（如普萘洛尔）及护胃药物（如质子泵抑制剂）。  
+
+---
+
+### 2. 相关健康知识科普  
+**上消化道出血的常见病因**：  
+- **消化性溃疡**：胃酸侵蚀胃/十二指肠黏膜深层，导致血管破裂。  
+- **食管静脉曲张破裂**：肝硬化患者门静脉高压引起食管静脉扩张，破裂后引发大出血（呕血常呈鲜红色或咖啡渣样）。  
+- **凝血功能障碍**：慢性肝病或血液系统疾病可能影响凝血因子合成，加重出血风险。  
+
+**肝硬化与呕血的关联**：  
+乙肝病毒感染可进展为肝硬化，导致门脉高压和侧支循环开放（如食管胃底静脉曲张）。此类患者呕血常为突发性、量大且伴随休克体征（如冷汗、意识模糊）。  
+
+---
+
+### 3. 需要警惕的症状  
+- **呕血特征**：新鲜血液或咖啡渣样物质，伴头晕、心悸、面色苍白（提示急性失血）。  
+- **黑便或柏油样便**：提示上消化道出血量≥50ml，需紧急评估。  
+- **肝病恶化征象**：黄疸加重、腹水、意识障碍（肝性脑病）或凝血时间延长。  
+- **循环衰竭表现**：收缩压<90mmHg、心率>120次/分、尿量减少，提示失血性休克。  
+
+---
+
+### 4. 日常自我监测建议  
+- **出血量评估**：记录呕血频率、颜色（鲜红/咖啡色）及总量（以汤匙或毫升计量）。  
+- **大便观察**：每日检查粪便颜色，黑便或暗红色血便需立即就医。  
+- **生命体征监测**：每日测量血压、心率，若血压下降≥20mmHg或静息心率持续>100次/分需警惕。  
+- **症状日记**：记录腹痛部位、性质（绞痛/隐痛）及与进食/体位的关联性，避免腹部按压或剧烈运动。  
+
+**注**：吐血（hematemesis）属于急症，需立即至急诊科就诊，完善胃镜、血常规及凝血功能检查，排除致命性出血（如食管静脉破裂或溃疡穿孔）。延误诊治可能引发失血性休克或多器官衰竭。
+2025-02-25 22:35:19,820 [INFO] - [处理结果] {"response": "\n\n### 1. 预防和保健建议  \n- **饮食管理**：严格避免辛辣、油腻、过热或过冷食物，减少胃黏膜刺激；选择易消化、富含纤维的软食（如粥类、蒸煮蔬菜）。  \n- **禁忌物质**：绝对禁烟戒酒，避免咖啡因及非甾体抗炎药（如阿司匹林、布洛芬），以防加重消化道出血风险。  \n- **情绪调节**：保持情绪稳定，避免焦虑或剧烈情绪波动，以减少胃酸分泌异常和胃肠痉挛。  \n- **药物规范**：若存在肝硬化或食管静脉曲张病史，需严格遵医嘱使用降门脉压药物（如普萘洛尔）及护胃药物（如质子泵抑制剂）。  \n\n---\n\n### 2. 相关健康知识科普  \n**上消化道出血的常见病因**：  \n- **消化性溃疡**：胃酸侵蚀胃/十二指肠黏膜深层，导致血管破裂。  \n- **食管静脉曲张破裂**：肝硬化患者门静脉高压引起食管静脉扩张，破裂后引发大出血（呕血常呈鲜红色或咖啡渣样）。  \n- **凝血功能障碍**：慢性肝病或血液系统疾病可能影响凝血因子合成，加重出血风险。  \n\n**肝硬化与呕血的关联**：  \n乙肝病毒感染可进展为肝硬化，导致门脉高压和侧支循环开放（如食管胃底静脉曲张）。此类患者呕血常为突发性、量大且伴随休克体征（如冷汗、意识模糊）。  \n\n---\n\n### 3. 需要警惕的症状  \n- **呕血特征**：新鲜血液或咖啡渣样物质，伴头晕、心悸、面色苍白（提示急性失血）。  \n- **黑便或柏油样便**：提示上消化道出血量≥50ml，需紧急评估。  \n- **肝病恶化征象**：黄疸加重、腹水、意识障碍（肝性脑病）或凝血时间延长。  \n- **循环衰竭表现**：收缩压<90mmHg、心率>120次/分、尿量减少，提示失血性休克。  \n\n---\n\n### 4. 日常自我监测建议  \n- **出血量评估**：记录呕血频率、颜色（鲜红/咖啡色）及总量（以汤匙或毫升计量）。  \n- **大便观察**：每日检查粪便颜色，黑便或暗红色血便需立即就医。  \n- **生命体征监测**：每日测量血压、心率，若血压下降≥20mmHg或静息心率持续>100次/分需警惕。  \n- **症状日记**：记录腹痛部位、性质（绞痛/隐痛）及与进食/体位的关联性，避免腹部按压或剧烈运动。  \n\n**注**：吐血（hematemesis）属于急症，需立即至急诊科就诊，完善胃镜、血常规及凝血功能检查，排除致命性出血（如食管静脉破裂或溃疡穿孔）。延误诊治可能引发失血性休克或多器官衰竭。", "state_changed": true, "before_state": "collecting_combined_info", "after_state": "education"}
+2025-02-25 22:35:19,820 [INFO] - [字段变化] {"severity": {"change_type": "added", "new_value": "10"}, "主要症状": {"change_type": "added", "new_value": "吐血"}, "formatted_info": {"change_type": "added", "new_value": "症状信息:\nseverity: 10"}, "relevant_knowledge": {"change_type": "added", "new_value": "科室：消化科 主题：胃胀痛不止怎么办？ 问：今天吃了点瓜。然后恐怕冷了，胃胀痛的很厉害，痛的我都叫出的了。然后放了个屁舒服些了。到现在过了3小时，胃还是隐隐的作痛，绝不会是胀伤掉了吧。。。 答：根据您的叙述，考虑是气胀，根据是发涨，而且您矢气后觉舒，这些是气胀的表现出。应该是寒邪僵滞，气机不畅引来的，同时与情志也是有关系的。建议您到正规中医院消化科复诊，服食中草药7剂就可以明显起效的，同时不要吃生冷食物，始终保持心情舒畅。此外还需要建议患者多加注意休息，不要吃辛辣刺激的食物。\n科室：肝病科 主题：乙肝复发怎么治疗? 问：我小时候得过乙肝，后来好了就成了乙肝病毒携带者，我这几天嗓子和不舒服总觉着有痰咽不下去也吐不出的，今天早上使劲儿咳了一下发觉痰中带血丝而且从昨天已经开始就有干呕现象，今天已经开始精神不是很好食欲也有点不好，我到小门诊看了一下医生说是急性咽炎，但是我不放心好了我觉着食欲不振干呕精神不好都是乙肝的症状，所以我很难过我是不是又有病发的逆反心理了，我现在已经22岁了我得乙肝是10岁以前的事了 答：乙肝如何需要有救治主要看肝功能和肝炎病毒定量化验检查。建议不定期复检肝炎病毒定量和肝功能，如果肝功能明显异常、肝炎病毒处在高拷贝状态，需要有保肝和抗病毒救治，如果肝功能基本正常，肝炎病毒处在低拷贝状态，不需要特殊救治，停用抗病毒药物，不定期复检就可以了;建议保持良好的生活饮食习惯，戒烟戒酒，低脂饮食，增强营养，适度歇息和锻练。\n科室：消化科 主题：做了胃镜是浅表性胃炎怎么办？ 问：之前胃炎，四联疗法现在停药四天。排便不正常，大前天没上大号，前天一天上了三次大号挺粗的一根一根的。昨天就拉出的一点儿跟羊屎蛋似的比羊屎蛋大许多，今天又上了两次大号。肛门有个肉球一上大号肉球江边好象崩开了一样痛，纸上有血，这几天血比前几天多一点，第二次大便表面有血但是并不多，昨天已经开始上完大号等一会肛门跳痛。肚子偶尔有一点疼，怎么回事？ 答：你所说的尿血，鲜红色肛门有肉球这主要考量是痔疮的情况建议：局部用痔疮膏涂抹，症状不纾解口服药物冶疗。饮食禁辛辣打击的食物，多吃蔬菜水果，严重时可手术冶疗。除此之外，患者在救治胃炎期间，除了要对症救治外，患者的饮食状况和心理状态也是尤为重要，患者一定要饮食清淡，同时要始终保持愉快乐观的心态，以免对胃炎的彻底恢复引发了不必要的干扰。"}}
+2025-02-25 22:35:19,820 [INFO] - [更新后Flow信息] {"flow_type": "EducationFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 22:35:19,820 [INFO] - [严重程度评估] {"severity": "10", "severity_numeric": 10}
+2025-02-25 22:35:58,281 [INFO] - [用户输入] {"message": "继续"}
+2025-02-25 22:35:58,281 [INFO] - [处理前状态] {"state": "education", "turn_count": 2, "collected_info": {"主要症状": "吐血", "severity": "10", "relevant_knowledge": "科室：消化科 主题：胃胀痛不止怎么办？ 问：今天吃了点瓜。然后恐怕冷了，胃胀痛的很厉害，痛的我都叫出的了。然后放了个屁舒服些了。到现在过了3小时，胃还是隐隐的作痛，绝不会是胀伤掉了吧。。。 答：根据您的叙述，考虑是气胀，根据是发涨，而且您矢气后觉舒，这些是气胀的表现出。应该是寒邪僵滞，气机不畅引来的，同时与情志也是有关系的。建议您到正规中医院消化科复诊，服食中草药7剂就可以明显起效的，同时不要吃生冷食物，始终保持心情舒畅。此外还需要建议患者多加注意休息，不要吃辛辣刺激的食物。\n科室：肝病科 主题：乙肝复发怎么治疗? 问：我小时候得过乙肝，后来好了就成了乙肝病毒携带者，我这几天嗓子和不舒服总觉着有痰咽不下去也吐不出的，今天早上使劲儿咳了一下发觉痰中带血丝而且从昨天已经开始就有干呕现象，今天已经开始精神不是很好食欲也有点不好，我到小门诊看了一下医生说是急性咽炎，但是我不放心好了我觉着食欲不振干呕精神不好都是乙肝的症状，所以我很难过我是不是又有病发的逆反心理了，我现在已经22岁了我得乙肝是10岁以前的事了 答：乙肝如何需要有救治主要看肝功能和肝炎病毒定量化验检查。建议不定期复检肝炎病毒定量和肝功能，如果肝功能明显异常、肝炎病毒处在高拷贝状态，需要有保肝和抗病毒救治，如果肝功能基本正常，肝炎病毒处在低拷贝状态，不需要特殊救治，停用抗病毒药物，不定期复检就可以了;建议保持良好的生活饮食习惯，戒烟戒酒，低脂饮食，增强营养，适度歇息和锻练。\n科室：消化科 主题：做了胃镜是浅表性胃炎怎么办？ 问：之前胃炎，四联疗法现在停药四天。排便不正常，大前天没上大号，前天一天上了三次大号挺粗的一根一根的。昨天就拉出的一点儿跟羊屎蛋似的比羊屎蛋大许多，今天又上了两次大号。肛门有个肉球一上大号肉球江边好象崩开了一样痛，纸上有血，这几天血比前几天多一点，第二次大便表面有血但是并不多，昨天已经开始上完大号等一会肛门跳痛。肚子偶尔有一点疼，怎么回事？ 答：你所说的尿血，鲜红色肛门有肉球这主要考量是痔疮的情况建议：局部用痔疮膏涂抹，症状不纾解口服药物冶疗。饮食禁辛辣打击的食物，多吃蔬菜水果，严重时可手术冶疗。除此之外，患者在救治胃炎期间，除了要对症救治外，患者的饮食状况和心理状态也是尤为重要，患者一定要饮食清淡，同时要始终保持愉快乐观的心态，以免对胃炎的彻底恢复引发了不必要的干扰。", "formatted_info": "症状信息:\nseverity: 10"}}
+2025-02-25 22:35:58,281 [INFO] - [当前Flow信息] {"flow_type": "EducationFlow", "required_info": [], "current_index": 0, "use_llm_flow": true}
+2025-02-25 22:35:58,281 [INFO] - 处理消息: 继续, 当前轮次: 3, 当前状态: education
+2025-02-25 22:35:58,281 [INFO] - 当前Flow: EducationFlow, use_llm_flow=True
+2025-02-25 22:35:58,281 [INFO] - 当前阶段 education 不需要信息提取，只记录用户回复
+2025-02-25 22:35:58,365 [INFO] - 生成回复: 状态=education, 模板=education_template
+2025-02-25 22:36:22,692 [INFO] - HTTP Request: POST https://ark.cn-beijing.volces.com/api/v3/chat/completions "HTTP/1.1 200 OK"
+2025-02-25 22:36:22,694 [INFO] - 状态转换: education -> ended
+2025-02-25 22:36:22,694 [INFO] - [处理结果] {"response": "\n\n针对癫痫病，我为您整理以下重要信息：\n\n1. 【需警惕的紧急情况】当出现以下症状请立即就医：\n- 单次发作超过5分钟不缓解\n- 短时间内连续发作2次以上\n- 发作时发生外伤或呼吸困难\n- 意识长时间无法恢复清醒\n- 首次发作后未明确病因\n\n2. 【日常自我监测建议】\n✓ 记录每次发作的时间、持续时长、具体表现\n✓ 注意发作前是否有特殊诱因（如熬夜、饮酒、情绪波动）\n✓ 每月记录药物剩余量，避免断药\n✓ 定期监测药物副作用（如手抖、嗜睡、皮疹）\n\n3. 【预防保健要点】\n◆ 保证每天7-8小时规律睡眠\n◆ 避免玩电子游戏、看强闪光画面\n◆ 随身携带疾病卡片（注明用药信息及紧急联系人）\n◆ 洗澡时保持浴室通风，建议家人陪同\n◆ 饮食避免过量咖啡因摄入\n\n4. 【治疗关键提醒】\n★ 现有药物需持续服用2-5年无发作，经脑电图评估后方可逐步减量\n★ 新型治疗手段包括迷走神经刺激术（VNS）和生酮饮食疗法\n★ 建议每6个月复查脑电图和血药浓度监测\n\n请特别注意：突然自行停药会导致发作加重风险增加3倍，任何用药调整必须经神经专科医生评估。建议患者建立治疗日记，这对医生判断病情进展至关重要。\n 正在生成下一阶段建议，输入任意内容继续", "state_changed": true, "before_state": "education", "after_state": "ended"}
+2025-02-25 22:36:22,694 [INFO] - [字段变化] {"relevant_knowledge": {"change_type": "modified", "old_value": "科室：消化科 主题：胃胀痛不止怎么办？ 问：今天吃了点瓜。然后恐怕冷了，胃胀痛的很厉害，痛的我都叫出的了。然后放了个屁舒服些了。到现在过了3小时，胃还是隐隐的作痛，绝不会是胀伤掉了吧。。。 答：根据您的叙述，考虑是气胀，根据是发涨，而且您矢气后觉舒，这些是气胀的表现出。应该是寒邪僵滞，气机不畅引来的，同时与情志也是有关系的。建议您到正规中医院消化科复诊，服食中草药7剂就可以明显起效的，同时不要吃生冷食物，始终保持心情舒畅。此外还需要建议患者多加注意休息，不要吃辛辣刺激的食物。\n科室：肝病科 主题：乙肝复发怎么治疗? 问：我小时候得过乙肝，后来好了就成了乙肝病毒携带者，我这几天嗓子和不舒服总觉着有痰咽不下去也吐不出的，今天早上使劲儿咳了一下发觉痰中带血丝而且从昨天已经开始就有干呕现象，今天已经开始精神不是很好食欲也有点不好，我到小门诊看了一下医生说是急性咽炎，但是我不放心好了我觉着食欲不振干呕精神不好都是乙肝的症状，所以我很难过我是不是又有病发的逆反心理了，我现在已经22岁了我得乙肝是10岁以前的事了 答：乙肝如何需要有救治主要看肝功能和肝炎病毒定量化验检查。建议不定期复检肝炎病毒定量和肝功能，如果肝功能明显异常、肝炎病毒处在高拷贝状态，需要有保肝和抗病毒救治，如果肝功能基本正常，肝炎病毒处在低拷贝状态，不需要特殊救治，停用抗病毒药物，不定期复检就可以了;建议保持良好的生活饮食习惯，戒烟戒酒，低脂饮食，增强营养，适度歇息和锻练。\n科室：消化科 主题：做了胃镜是浅表性胃炎怎么办？ 问：之前胃炎，四联疗法现在停药四天。排便不正常，大前天没上大号，前天一天上了三次大号挺粗的一根一根的。昨天就拉出的一点儿跟羊屎蛋似的比羊屎蛋大许多，今天又上了两次大号。肛门有个肉球一上大号肉球江边好象崩开了一样痛，纸上有血，这几天血比前几天多一点，第二次大便表面有血但是并不多，昨天已经开始上完大号等一会肛门跳痛。肚子偶尔有一点疼，怎么回事？ 答：你所说的尿血，鲜红色肛门有肉球这主要考量是痔疮的情况建议：局部用痔疮膏涂抹，症状不纾解口服药物冶疗。饮食禁辛辣打击的食物，多吃蔬菜水果，严重时可手术冶疗。除此之外，患者在救治胃炎期间，除了要对症救治外，患者的饮食状况和心理状态也是尤为重要，患者一定要饮食清淡，同时要始终保持愉快乐观的心态，以免对胃炎的彻底恢复引发了不必要的干扰。", "new_value": "科室：神经科 主题：我想了解癫痫病是怎么引起的？ 问：同事最近有突然抽动的情去仔细检查后说是癫所以我想问一下癫痫病是怎么引来的？ 答：癫痫患者应持乐观立树起打败疾病的信念信一定要坚持长期救缓解年限长些再停常用药物有卡马西平、丙戊酸钠和癫健安片等。癫痫是一种慢性疾如不及时有效地实施救可致成数所以癫痫患者一定要积极互相配合医生救遵从医嘱实施救完全有只求自愈的。致使患上癫痫病的病因有良无明确病因者为原发性癫继发于颅内肿瘤、外伤、传染、寄生虫病、脑血管病、全身分解代谢病等引来者为继发性癫痫。\n科室：肝病科 主题：肝硬化用什么药? 问：三系减低后转院，经过20多天救治后转好出院。 答：从你的讲述来看你拥有肝硬化引发脾大令得食道静脉血管曲张引来大出血而实施了食管套扎术和切脾术，目前肝硬化还没有特效药，一般需要有精神调养，平时不要生气，不要疲劳，保持良好的精神状态并且一定要愉快。其次要留意饮食调养，总的原则是食用含有维生素，高蛋白，低脂肪，低淀粉的食物，食用许多杂粮如黑米，小米，豆浆，如果条件容许最好每天能食用许多蛋白粉。特别注意不要吃极冷油腻和辛辣刺激的食物。\n科室：神经科 主题：癫痫病治疗的比较好方法是什么？ 问：阿姨患癫痫病已经4，5年用了许多方法都自愈不好。这两个月经常复发。我您好一下癫痫病治疗的最好方法是什么？严不严重? 答：你好，从你提供的资料你是个热心肠好同首先癫痫病的救首先是口服药物压当然药物治疗是不能治愈只好长期服药压除了假如有前提可以去大型综合评价病院手术救当然手术费也比较除了治愈率的题有时手术做了病不一定自当然这些你可以与患者家属交流几不要对病人说太多。"}}

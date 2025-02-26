@@ -1,21 +1,34 @@
-# src/dialogue/states.py
 from enum import Enum
 from typing import Dict, Optional
 from dataclasses import dataclass
 from datetime import datetime
+from ..config.loader import ConfigLoader
 
-class DialogueState(Enum):
-    """对话状态枚举"""
-    INITIAL = "initial"
-    COLLECTING_COMBINED_INFO = "collecting_combined_info"  # 新增合并状态
-    COLLECTING_BASE_INFO = "collecting_base_info"
-    COLLECTING_SYMPTOMS = "collecting_symptoms"
-    LIFE_STYLE = "life_style"
-    DIAGNOSIS = "diagnosis"
-    MEDICAL_ADVICE = "medical_advice"
-    REFERRAL = "referral"  # 包含紧急和常规转诊
-    EDUCATION = "education"
-    ENDED = "ended"
+# 加载状态配置
+states_config = ConfigLoader.load_json_config('states.json')
+
+# 创建DialogueState枚举
+DialogueState = Enum('DialogueState', {
+    state_name: state_value
+    for state_name, state_value in states_config['dialogue_states'].items()
+})
+
+# 加载状态转换规则
+_raw_transitions = states_config['state_transitions']
+STATE_TRANSITIONS = {}
+
+# 将字符串状态转换为枚举对象
+for state_from_str, states_to_str in _raw_transitions.items():
+    from_state = next((s for s in DialogueState if s.value == state_from_str), None)
+
+    if from_state:
+        to_states = []
+        for state_to_str in states_to_str:
+            to_state = next((s for s in DialogueState if s.value == state_to_str), None)
+            if to_state:
+                to_states.append(to_state)
+
+        STATE_TRANSITIONS[from_state] = to_states
 
 
 @dataclass

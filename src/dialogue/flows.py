@@ -5,9 +5,11 @@ import logging
 from .states import DialogueState, StateContext, STATE_TRANSITIONS
 from .utils import check_emergency
 from ..prompts.medical_prompts import MEDICAL_PROMPTS, LLM_FLOW_PROMPTS
-from ..config import DIALOGUE_CONFIG
+from ..app_config import DIALOGUE_CONFIG
 from ..llm.api import generate_response, generate_simple_response
 from .field_mappings import get_mapping_for_state, format_field_descriptions
+from ..config.loader import ConfigLoader
+
 
 # 设置日志
 logger = logging.getLogger(__name__)
@@ -315,7 +317,7 @@ class BaseFlow:
                 if "未提供" in extraction_result or "未找到" in extraction_result or "无法提取" in extraction_result:
                     return False
 
-                    # 尝试解析结果，找到键值对
+                # 尝试解析结果，找到键值对
                 lines = extraction_result.strip().split('\n')
                 for line in lines:
                     if ':' in line:
@@ -323,49 +325,39 @@ class BaseFlow:
                         key = key.strip()
                         value = value.strip()
 
-                        # 修改这部分：保存有意义的信息，包括"无"、"None"等表示没有的值
-                        # 只排除空白值
-                        if value:  # 只要不是空字符串就保存
-                            # 如果是中文字段名，尝试映射到英文字段名
+                        # 只要不是空字符串就保存
+                        if value:
+                            # 对于中文字段名，尝试映射到英文字段名
                             mapped_key = None
 
-                            # 1. 检查是否与当前问题字段匹配
-                            if current_field and (current_field.lower() in key.lower() or
-                                                  (current_field in self.field_mapping and
-                                                   self.field_mapping[current_field]['zh_name'] in key)):
-                                mapped_key = current_field
-                            else:
-                                # 2. 尝试从字段映射中查找
-                                for field_key, info in self.field_mapping.items():
-                                    if (info['zh_name'] == key or
-                                            info['zh_name'] in key or
-                                            field_key.lower() == key.lower() or
-                                            field_key in key):
-                                        mapped_key = field_key
-                                        break
+                            # 1. 检查是否有对应的字段映射
+                            for field_key, info in self.field_mapping.items():
+                                if (info['zh_name'] == key or
+                                        info['zh_name'] in key or
+                                        field_key.lower() == key.lower() or
+                                        field_key in key):
+                                    mapped_key = field_key
+                                    break
 
-                            # 如果没有找到匹配，使用当前字段
+                            # 2. 如果没有找到匹配，但有当前字段，使用当前字段
                             if not mapped_key and current_field:
                                 mapped_key = current_field
 
-                            # 4. 如果仍然没有找到匹配，保留原始键
+                            # 3. 如果仍然没有找到匹配，保留原始键
                             if not mapped_key:
-                                # 检查是否是required_info的变种或缩写
-                                for field in self.required_info:
-                                    if (field in key or
-                                            key in field or
-                                            key.lower() in field.lower() or
-                                            field.lower() in key.lower()):
-                                        mapped_key = field
-                                        break
+                                mapped_key = key
 
-                                # 如果仍未找到匹配，使用原始键
-                                if not mapped_key:
-                                    mapped_key = key
                             # 记录映射信息并保存
                             logger.info(f"字段映射: {key} -> {mapped_key} = {value}")
                             context.medical_info[mapped_key] = value
                             extracted_anything = True
+
+                # 如果没有成功提取任何信息，并且有明确的当前字段，直接将整个回复映射到该字段
+                if not extracted_anything and current_field:
+                    context.medical_info[current_field] = response
+                    logger.info(f"没有成功提取信息，直接映射整个回复到当前字段: {current_field}={response}")
+                    extracted_anything = True
+
             except Exception as e:
                 logger.error(f"解析提取信息时出错: {e}")
 

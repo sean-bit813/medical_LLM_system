@@ -2,7 +2,7 @@
 from typing import List, Dict, Optional
 import logging
 from openai import OpenAI
-from ..config import LLM_CONFIG
+from ..app_config import LLM_CONFIG
 from ..dialogue.states import DialogueState
 from ..prompts.medical_prompts import SYSTEM_PROMPT, MEDICAL_PROMPTS
 
@@ -76,10 +76,10 @@ def generate_simple_response(prompt: str, system_prompt: Optional[str] = None, t
         system_prompt = "你是一个专业的医疗助手，需要简洁明了地回答问题。"
 
     if temperature is None:
-        temperature = LLM_CONFIG.get("flow_temperature", 0.1)
+        temperature = LLM_CONFIG.get("temperature", 0.1)
 
     if max_tokens is None:
-        max_tokens = LLM_CONFIG.get("flow_max_tokens", 200)
+        max_tokens = LLM_CONFIG.get("max_tokens", 200)
 
     messages = [
         {"role": "system", "content": system_prompt},
