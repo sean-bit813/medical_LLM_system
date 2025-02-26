@@ -1,4 +1,4 @@
-# src/config.py
+# src/app_config.py
 from typing import Dict
 
 # 对话配置

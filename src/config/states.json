@@ -1,0 +1,24 @@
+{
+  "dialogue_states": {
+    "INITIAL": "initial",
+    "COLLECTING_COMBINED_INFO": "collecting_combined_info",
+    "COLLECTING_BASE_INFO": "collecting_base_info",
+    "COLLECTING_SYMPTOMS": "collecting_symptoms",
+    "LIFE_STYLE": "life_style",
+    "DIAGNOSIS": "diagnosis",
+    "MEDICAL_ADVICE": "medical_advice",
+    "REFERRAL": "referral",
+    "EDUCATION": "education",
+    "ENDED": "ended"
+  },
+  "state_transitions": {
+    "initial": ["collecting_combined_info"],
+    "collecting_combined_info": ["life_style", "referral"],
+    "life_style": ["diagnosis"],
+    "diagnosis": ["medical_advice", "referral"],
+    "medical_advice": ["education"],
+    "referral": ["education"],
+    "education": ["ended"],
+    "ended": ["ended"]
+  }
+}
