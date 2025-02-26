@@ -1,6 +1,6 @@
-# 医疗问答大模型系统2.0
+# 医疗问答大模型系统2.1
 
-2.0版本基于LLM的医疗问答系统，集成知识库检索增强生成(RAG)功能，并新增完整的对话管理流程
+2.1版本基于LLM的医疗问答系统，集成知识库检索增强生成(RAG)功能，并新增完整的对话管理流程，优化多轮对话效果
 
 ## 功能特点
 - 完整的问诊流程管理
@@ -10,7 +10,7 @@
 - 分级转诊建议
 - 健康教育知识普及
 - 知识库检索增强
-- 多轮对话支持
+- 多轮对话效果优化
 
 ## 2.0 系统结构
     medical_LLM_system/
@@ -19,9 +19,15 @@
     │   │   ├── manager.py     # 对话管理器
     │   │   ├── flows.py       # 对话流程实现
     │   │   ├── states.py      # 状态定义
-    │   │   └── utils.py       # 工具函数
+    │   │   ├── utils.py       # 工具函数
+    │   │   └── field_mappings.py  # 新增：字段映射定义
     │   ├── knowledge/         # 知识库管理
-    │   │   └── kb.py          # 知识库实现
+    │   │   ├── kb.py          # 知识库实现
+    │   │   └── vector_store.py # 新增：向量存储实现
+    │   ├── config/            # 新增：配置管理
+    │   │   ├── loader.py      # 配置加载器
+    │   │   ├── states.json    # 状态配置
+    │   │   └── field_mappings.json # 字段映射配置
     │   ├── llm/              # LLM接口
     │   │   └── api.py         # API实现
     │   └── prompts/          # 提示词配置
@@ -30,7 +36,8 @@
     │   ├── knowledge_base/    # 医疗知识源数据
     │   └── vector_store/      # 向量数据
     ├── examples/             # 示例代码
-    │   └── main.py           # 主程序示例
+    │   ├── main.py           # 主程序示例
+    │   └── test_llm_flow.py   # 新增：LLM流程测试
     └── test/                 # 测试
 
 ## 系统运行逻辑
@@ -47,27 +54,27 @@
 
 ```mermaid
 stateDiagram-v2
-    [*] --> INITIAL
-    INITIAL --> COLLECTING_BASE_INFO: 开始对话
+    [*] --> INITIAL: 开始对话
     
-    COLLECTING_BASE_INFO --> COLLECTING_SYMPTOMS: 完成基本信息收集
+    INITIAL --> COLLECTING_COMBINED_INFO: 初始化对话
     
-    COLLECTING_SYMPTOMS --> REFERRAL: 检测到紧急情况
-    COLLECTING_SYMPTOMS --> LIFE_STYLE: 非紧急情况
-    note right of COLLECTING_SYMPTOMS
-        紧急情况判断:
-        1. 症状严重度>=8
-        2. 危急症状关键词
+    COLLECTING_COMBINED_INFO --> REFERRAL: 检测到紧急情况
+    note right of COLLECTING_COMBINED_INFO
+        紧急情况判断规则:
+        1. 症状严重程度 >= 8
+        2. LLM识别危急症状关键词
     end note
+    
+    COLLECTING_COMBINED_INFO --> LIFE_STYLE: 信息收集完成
     
     LIFE_STYLE --> DIAGNOSIS: 完成生活习惯收集
     
-    DIAGNOSIS --> MEDICAL_ADVICE: 症状严重度<5
-    DIAGNOSIS --> REFERRAL: 症状严重度>=5
+    DIAGNOSIS --> MEDICAL_ADVICE: 症状严重程度 < 5
+    DIAGNOSIS --> REFERRAL: 症状严重程度 >= 5
     note right of DIAGNOSIS
-        根据严重程度分流:
-        <5: 医疗建议
-        >=5: 转诊
+        分流依据：
+        - <5: 提供医疗建议
+        - >=5: 转诊就医
     end note
     
     MEDICAL_ADVICE --> EDUCATION
@@ -80,24 +87,52 @@ stateDiagram-v2
 系统各状态说明：
 
 1. 初始状态(INITIAL)
-2. 基本信息收集(COLLECTING_BASE_INFO)
-   - 收集年龄、性别、病史等基本信息
-3. 症状信息收集(COLLECTING_SYMPTOMS)
-   - 收集主要症状、持续时间、严重程度等
-   - **紧急情况判断**：若检测到紧急情况，直接转入转诊流程
-4. 生活习惯调查(LIFE_STYLE)
-   - 收集作息、饮食、运动等生活习惯
-5. 诊断分析(DIAGNOSIS)
-   - 基于症状严重程度决定后续流程：
-     - 严重程度>=5：转入转诊流程
-     - 严重程度<5：转入医疗建议
-6. 医疗建议(MEDICAL_ADVICE)
-   - 提供用药建议和生活调整方案
-7. 转诊建议(REFERRAL)
-   - 提供就医科室、等级和注意事项
-8. 健康教育(EDUCATION)
-   - 提供相关健康知识普及
-9. 结束状态(ENDED)
+   - 系统启动，准备开始对话
+   - 自动转换到综合信息收集状态
+   
+2. 综合信息收集状态 (COLLECTING_COMBINED_INFO)
+   - 智能化信息收集阶段，LLM动态引导收集信息的优先级顺序：
+
+     1. 主要症状（最高优先级）
+     2. 症状持续时间
+     3. 症状严重程度
+     4. 基本信息（年龄、性别）
+     5. 额外症状细节
+
+   - 特殊判断机制
+
+     - 实时检测紧急情况 如症状严重程度 >= 8 或 LLM识别到危急症状，直接转入转诊流程
+
+   信息收集完成后进入生活方式收集
+
+3. 生活方式收集 (LIFE_STYLE)
+   - 收集用户生活习惯信息：
+     - 睡眠情况
+     - 饮食习惯
+     - 运动情况
+     - 工作压力
+     - 烟酒习惯
+
+4. 诊断分析 (DIAGNOSIS)
+   - 根据收集的信息进行初步诊断
+   - 评估症状严重程度
+   - 决定后续流程
+
+   - 分流规则：症状严重程度 < 5：进入医疗建议流程， 症状严重程度 >= 5：进入转诊流程
+
+5. 医疗建议 (MEDICAL_ADVICE)
+   - 为轻症患者提供： 用药建议， 生活调整方案， 自我观察指导
+
+6. 转诊建议 (REFERRAL)
+   - 为需要及时就医的患者提供： 就医科室建议 ，就医等级 ，紧急程度说明 ，就医注意事项
+
+7. 健康教育 (EDUCATION)
+   - 相关疾病知识普及
+   - 预防建议
+   - 日常健康管理指导
+
+8. 结束状态 (ENDED)
+
 
 #### 2.2 信息收集和处理
 - 每个状态都有对应的Flow类管理信息收集
@@ -132,7 +167,11 @@ from examples.main import init_system
 def main():
     # 初始化系统
     manager = init_system()
-    print("医疗助手: 您好,我是您的医疗助手。我将按逐步指引您完成问诊流程，接下来会询问您一些基本信息，请回复“开始”（或除“退出”外任何词汇）进行咨询，回复“退出”将离开本次咨询")
+    
+    # 可以通过set_use_llm_flow控制是否使用LLM驱动的流程
+    manager.set_use_llm_flow(True)  # 默认开启
+    
+    print("医疗助手: 您好,我是您的医疗助手。有什么可以帮您？")
     
     # 多轮对话
     while True:
