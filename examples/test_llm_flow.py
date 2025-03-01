@@ -10,11 +10,13 @@ import copy
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.dialogue.manager import DialogueManager
-from src.knowledge.kb import KnowledgeBase
 from src.dialogue.states import DialogueState
 from src.llm.api import generate_simple_response
 from src.prompts.medical_prompts import LLM_FLOW_PROMPTS
 from src.dialogue.field_mappings import format_field_descriptions
+from src.knowledge.factory import KnowledgeBaseFactory
+from src.app_config import RAGFLOW_CONFIG
+
 
 # 为LLM API添加中间件，捕获所有API调用
 original_generate_simple_response = generate_simple_response
@@ -48,24 +50,29 @@ logger = logging.getLogger("test_llm_flow")
 class LLMFlowTester:
     """LLM对话流程测试工具"""
 
-    def __init__(self, debug_mode=True, verbose=True):
+    def __init__(self, debug_mode=True, verbose=True, use_ragflow=True):
         """初始化测试工具"""
         self.debug_mode = debug_mode
         self.verbose = verbose  # 是否打印详细信息
         self.manager = self._init_system()
         self.conversation_log = []
         self.test_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.use_ragflow = use_ragflow
 
+    # LLMFlowTester类中的_init_system方法
     def _init_system(self):
         """初始化系统"""
-        # 初始化知识库（可以使用测试专用的小型知识库）
-        kb = KnowledgeBase()
-        try:
-            kb.load_index('../data/vector_store/sample_IM_5000-6000_utf8.index')
-            logger.info("成功加载知识库索引")
-        except Exception as e:
-            logger.warning(f"加载知识库索引失败: {e}")
-            # 如果需要可以在这里加载数据
+        if self.use_ragflow:
+            # 使用RAGFlow知识库
+            kb = KnowledgeBaseFactory.create_knowledge_base(kb_type="ragflow")
+            logger.info("使用RAGFlow知识库进行测试")
+        else:
+            # 初始化本地知识库
+            kb = KnowledgeBaseFactory.create_knowledge_base(
+                kb_type="local",
+                index_path='../data/vector_store/sample_IM_5000-6000_utf8.index'
+            )
+            logger.info("使用本地知识库进行测试")
 
         # 初始化对话管理器
         manager = DialogueManager(kb)
@@ -410,11 +417,12 @@ if __name__ == "__main__":
     parser.add_argument('--state', choices=['collecting_base_info', 'collecting_symptoms', 'life_style'],
                         default='collecting_symptoms', help='对话状态')
     parser.add_argument('--verbose', action='store_true', help='显示详细信息')
+    parser.add_argument('--ragflow', action='store_true', help='使用RAGFlow知识库')
 
     args = parser.parse_args()
 
     if args.mode == 'interactive':
-        tester = LLMFlowTester(verbose=args.verbose)
+        tester = LLMFlowTester(verbose=args.verbose, use_ragflow=args.ragflow)
         tester.run_interactive_test()
     elif args.mode == 'extract':
         if not args.text:

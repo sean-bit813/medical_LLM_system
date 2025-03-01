@@ -7,9 +7,10 @@ from .utils import format_medical_info
 from ..prompts.medical_prompts import MEDICAL_PROMPTS
 from .states import DialogueState, StateContext
 from .flows import FLOW_MAPPING
-from ..app_config import DIALOGUE_CONFIG
+from ..app_config import DIALOGUE_CONFIG, RAGFLOW_CONFIG
 from ..llm.api import generate_response
-from ..knowledge.kb import KnowledgeBase
+#from ..knowledge.kb import KnowledgeBase
+from ..knowledge.ragflow_kb import RAGFlowKnowledgeBase
 from ..config.loader import ConfigLoader
 
 # 设置日志
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 class DialogueManager:
-    def __init__(self, knowledge_base: KnowledgeBase):
+    def __init__(self, knowledge_base: RAGFlowKnowledgeBase):
         self.context = StateContext(
             state=DialogueState.INITIAL,
             user_info={},
@@ -63,8 +64,17 @@ class DialogueManager:
     def _get_relevant_knowledge(self, query: str) -> str:
         """检索相关知识"""
         try:
-            results = self.kb.search(query, k=3)
-            return "\n".join([doc['text'] for doc in results])
+            results = self.kb.search(query, k=5, similarity_threshold= RAGFLOW_CONFIG["similarity_threshold"], rerank_id=RAGFLOW_CONFIG["rerank_id"])
+
+            # 处理返回结果的格式 - 兼容不同的知识库实现
+            formatted_results = []
+            for doc in results:
+                # 统一处理不同知识库返回的结果格式
+                if isinstance(doc, dict):
+                    text = doc.get('text', '')
+                    if text:
+                        formatted_results.append(text)
+            return "\n".join(formatted_results)
         except Exception as e:
             logger.error(f"知识库检索错误: {e}")
             return ""

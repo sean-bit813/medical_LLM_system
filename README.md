@@ -12,7 +12,29 @@
 - 知识库检索增强
 - 多轮对话效果优化
 
-## 2.0 系统结构
+## 2.1 新增特性：RAGFlow知识库集成
+本版本完成了与RAGFlow知识检索服务的深度集成，相较于2.0版本的本地知识库，提供了更优的医疗领域检索和问答能力。
+
+### RAGFlow技术参数
+
+- 医学元数据标注：针对医学教材进行了专业的元数据标注，支持基于科室、疾病类型等多维度的精准检索
+- 分层医学知识索引：实现了从医学概念到具体临床案例的分层知识索引架构，更符合医学知识组织特点
+- 语义分块：采用BGE嵌入模型进行医学文本的语义表示，保证了医学概念的完整性和连贯性
+- 重排序模型：利用Gte@qainwen 重排序模型对检索结果进行精细排序，大幅提升检索精度
+- 混合检索策略：结合向量相似度和重排序评分的混合检索策略，通过相似度阈值过滤低质量结果
+
+### 知识库集成架构
+```
+对话管理器 --> 知识库工厂 --> 选择知识库实现
+                |                 |
+                v                 v
+          本地FAISS向量存储     RAGFlow API
+                |
+                v
+          本地医疗数据
+```
+
+## 2.1 系统结构
     medical_LLM_system/
     ├── src/
     │   ├── dialogue/           # 对话管理系统
@@ -23,6 +45,8 @@
     │   │   └── field_mappings.py  # 新增：字段映射定义
     │   ├── knowledge/         # 知识库管理
     │   │   ├── kb.py          # 知识库实现
+    │   │   ├── ragflow_kb.py  # 新增：RAGFlow知识库实现
+    │   │   ├── factory.py     # 新增：知识库工厂类
     │   │   └── vector_store.py # 新增：向量存储实现
     │   ├── config/            # 新增：配置管理
     │   │   ├── loader.py      # 配置加载器
@@ -44,7 +68,8 @@
 
 ### 1. 知识库初始化
 系统启动时通过init_knowledge_base()函数初始化知识库:
-- 若存在已保存的向量索引,直接加载
+- 若指定使用RAGFlow，则连接RAGFlow API服务
+- 若使用本地知识库且存在已保存的向量索引，直接加载
 - 否则从数据源构建新的向量索引并保存
 
 ### 2. 问答处理流程
@@ -154,19 +179,19 @@ stateDiagram-v2
     pip install -r requirements.txt
 
 主要依赖：
-- deepseek v3 #LLM api接口
-- faiss-cpu #向量数据存储
-- sentence-transformers #embedding模型
-- langchain #知识库管理
+- deepseek R1 #LLM api接口
+- faiss-cpu/ Ragflow #向量数据存储
+- sentence-transformers/ BGE #embedding模型
+- langchain / Ragflow #知识库管理
 - pandas #数据处理
 
 ## 使用方法
 ```python
 from examples.main import init_system
 
-def main():
-    # 初始化系统
-    manager = init_system()
+def main(use_ragflow=False):
+    # 初始化系统，可选是否使用RAGFlow知识库
+    manager = init_system(use_ragflow=use_ragflow)
     
     # 可以通过set_use_llm_flow控制是否使用LLM驱动的流程
     manager.set_use_llm_flow(True)  # 默认开启
@@ -188,7 +213,12 @@ def main():
             break
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description='医疗问答系统')
+    parser.add_argument('--ragflow', action='store_true', help='使用RAGFlow知识库')
+    args = parser.parse_args()
+    
+    main(use_ragflow=args.ragflow)
 ```
 
 ## 2.0 数据集
@@ -196,10 +226,10 @@ if __name__ == "__main__":
 1. 基础问答数据
    - 来源：开源中文医疗问答数据集
    - 数量：内科sample 7644条QA问答
-2. 医学教材知识 #暂无
-3. 多轮问答语料 #暂无
+2. 医学教材知识 
+3. 多轮问答语料 (Claude  Sonnet 3.7生成)
 
-数据格式示例：
+基础问答数据格式示例：
 
 | department	| title | question | answer |
 |------------|-------|-----------|---------|
