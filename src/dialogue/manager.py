@@ -1,9 +1,10 @@
 # src/dialogue/manager.py
-from typing import Dict, Optional, List
+from typing import Dict, Optional, List, Any, Tuple
 from datetime import datetime
 import logging
 
 from .utils import format_medical_info
+from ..memory import MemoryManager
 from ..prompts.medical_prompts import MEDICAL_PROMPTS
 from .states import DialogueState, StateContext
 from .flows import FLOW_MAPPING
@@ -12,6 +13,8 @@ from ..llm.api import generate_response
 #from ..knowledge.kb import KnowledgeBase
 from ..knowledge.ragflow_kb import RAGFlowKnowledgeBase
 from ..config.loader import ConfigLoader
+from ..auth.user_manager import UserManager
+from ..auth.session_manager import SessionManager
 
 # 设置日志
 logger = logging.getLogger(__name__)
@@ -28,6 +31,141 @@ class DialogueManager:
         self.current_flow = None
         self.kb = knowledge_base
         self.use_llm_flow = True  # 默认启用LLM驱动的对话流程
+        self.memory_manager = MemoryManager()
+        # 初始化用户和会话管理
+        self.user_manager = UserManager()
+        self.session_manager = SessionManager()
+
+        logger.info("DialogueManager初始化完成，已创建记忆管理器")
+
+    def register_user(self, username: str, password: str, user_info: Dict[str, Any] = None) -> Tuple[bool, str]:
+        """注册新用户
+
+        Args:
+            username: 用户ID/用户名
+            password: 密码
+            user_info: 用户个人信息
+
+        Returns:
+            (注册成功标志, 消息)
+        """
+        return self.user_manager.register(username, password, user_info)
+
+    def login_user(self, username: str, password: str) -> Tuple[bool, str, Optional[str]]:
+        """用户登录
+
+        Args:
+            username: 用户ID/用户名
+            password: 密码
+
+        Returns:
+            (登录成功标志, 消息, 会话ID)
+        """
+        # 验证用户凭据
+        auth_result, msg = self.user_manager.authenticate(username, password)
+
+        if auth_result:
+            # 创建新会话
+            session_id = self.session_manager.create_session(username)
+
+            # 设置当前患者ID
+            self.context.user_info['patient_id'] = username
+
+            # 初始化记忆系统
+            self.memory_manager.start_new_consultation(username)
+
+            # 记录用户信息
+            user_info = self.user_manager.get_user_info(username)
+            if user_info:
+                self.memory_manager.add_patient_basic_info(username, user_info)
+
+            return True, "登录成功", session_id
+
+        return False, msg, None
+
+    def validate_session(self, session_id: str) -> bool:
+        """验证会话是否有效
+
+        Args:
+            session_id: 会话ID
+
+        Returns:
+            会话是否有效
+        """
+        is_valid = self.session_manager.validate_session(session_id)
+
+        if is_valid:
+            # 获取用户名并设置为患者ID
+            username = self.session_manager.get_username(session_id)
+            if username:
+                self.context.user_info['patient_id'] = username
+
+        return is_valid
+
+    def logout_user(self, session_id: str) -> bool:
+        """用户登出
+
+        Args:
+            session_id: 会话ID
+
+        Returns:
+            操作是否成功
+        """
+        # 保存当前会话到记忆系统
+        patient_id = self.context.user_info.get('patient_id')
+        if patient_id:
+            self.memory_manager.save_consultation()
+
+        # 结束会话
+        return self.session_manager.end_session(session_id)
+
+    def process_message_with_session(self, message: str, session_id: str) -> Tuple[bool, str]:
+        """处理带会话ID的消息
+
+        Args:
+            message: 用户消息
+            session_id: 会话ID
+
+        Returns:
+            (处理成功标志, 回复消息)
+        """
+        # 验证会话
+        if not self.validate_session(session_id):
+            return False, "会话已过期，请重新登录"
+
+        # 处理消息
+        response = self.process_message(message)
+
+        return True, response
+
+    def _get_or_create_patient_id(self) -> str:
+        """获取患者ID
+
+        优先从会话获取，其次从用户信息获取，最后创建临时ID
+
+        Returns:
+            患者ID字符串
+        """
+        # 优先从会话获取用户名作为患者ID
+        if hasattr(self, 'session_manager') and hasattr(self, 'current_session_id'):
+            username = self.session_manager.get_username(self.current_session_id)
+            if username:
+                # 确保上下文中也保存了患者ID
+                self.context.user_info['patient_id'] = username
+                logger.debug(f"从会话获取患者ID: {username}")
+                return username
+
+        # 其次从上下文用户信息中获取
+        patient_id = self.context.user_info.get('patient_id')
+        if patient_id:
+            logger.debug(f"从上下文获取患者ID: {patient_id}")
+            return patient_id
+
+        # 最后创建临时ID
+        temp_id = f"temp_{datetime.now().strftime('%Y%m%d%H%M%S')}"
+        self.context.user_info['patient_id'] = temp_id
+        logger.debug(f"创建临时患者ID: {temp_id}")
+        return temp_id
 
     def _check_timeout(self) -> bool:
         elapsed = (datetime.now() - self.context.start_time).seconds
@@ -85,27 +223,112 @@ class DialogueManager:
                                   DialogueState.MEDICAL_ADVICE,
                                   DialogueState.REFERRAL,
                                   DialogueState.EDUCATION]:
-            query = f"{self.context.medical_info.get('main', '')} {message}"
+            # 构建更智能的查询
+            main_symptom = self.context.medical_info.get('main', '')
+            patient_id = self._get_or_create_patient_id()
+
+            # 构建增强查询，包含主要症状和当前消息
+            query = f"{main_symptom} {message}"
+
+            # 检索相关知识库信息
             knowledge_content = self._get_relevant_knowledge(query)
+
+            # 检索相关记忆
+            memory_results = self.memory_manager.retrieve_relevant_memory(query, patient_id)
+
+            # 增强查询上下文
+            self._enhance_context_with_memory(memory_results)
+
+            # 格式化医疗信息
             formatted_info = format_medical_info(self.context.medical_info)
 
+            # 提取过去的相关症状和诊断
+            past_symptoms = []
+            past_diagnoses = []
+
+            if 'mid_term' in memory_results and 'consultations' in memory_results['mid_term']:
+                for consult in memory_results['mid_term']['consultations']:
+                    if 'symptoms' in consult:
+                        for symptom in consult['symptoms']:
+                            symptom_name = symptom.get('name', symptom) if isinstance(symptom, dict) else symptom
+                            if symptom_name not in past_symptoms:
+                                past_symptoms.append(symptom_name)
+
+                    if 'diagnosis' in consult and consult['diagnosis']:
+                        if consult['diagnosis'] not in past_diagnoses:
+                            past_diagnoses.append(consult['diagnosis'])
+
+            # 更新上下文医疗信息
             self.context.medical_info.update({
                 'relevant_knowledge': knowledge_content,
-                'formatted_info': formatted_info
+                'formatted_info': formatted_info,
+                'past_symptoms': past_symptoms,
+                'past_diagnoses': past_diagnoses,
+                'consultation_history': memory_results['mid_term'].get('consultations', [])
             })
+
+    def _enhance_context_with_memory(self, memory_data):
+        """使用记忆数据增强上下文"""
+        # 提取短期记忆中的上下文信息
+        if 'short_term' in memory_data and 'context' in memory_data['short_term']:
+            context = memory_data['short_term']['context']
+
+            # 添加过去症状到医疗信息
+            if 'past_symptoms' in context:
+                self.context.medical_info['past_symptoms'] = context['past_symptoms']
+
+            # 添加过去诊断到医疗信息
+            if 'past_diagnoses' in context:
+                self.context.medical_info['past_diagnoses'] = context['past_diagnoses']
+
+        # 提取中期记忆中的最近就诊记录
+        if 'mid_term' in memory_data and 'consultations' in memory_data['mid_term']:
+            consultations = memory_data['mid_term']['consultations']
+            if consultations:
+                # 取最近一次就诊记录中的症状作为参考
+                self.context.medical_info['past_consultation'] = consultations[0]
+
+        # 提取长期记忆中的见解
+        if 'long_term' in memory_data and memory_data['long_term']:
+            insights = []
+            for insight in memory_data['long_term']:
+                content = insight.get('content')
+                if content:
+                    insights.append(content)
+
+            # 添加到医疗信息
+            if insights:
+                self.context.medical_info['long_term_insights'] = insights
+
 
     def process_message(self, message: str) -> str:
         """处理用户消息，返回系统回复"""
+        # 1. 检查是否应该结束对话
         if self._should_end_conversation():
             self.context.state = DialogueState.ENDED
+            # 结束时保存对话到记忆系统
+            patient_id = self._get_or_create_patient_id()
+            self.memory_manager.save_consultation()
             return self._format_final_response()
 
+        # 2. 添加用户消息到短期记忆
+        patient_id = self._get_or_create_patient_id()
+        self.memory_manager.add_dialogue('patient', message)
+
+        # 添加定期保存逻辑
+        if hasattr(self, 'memory_manager'):
+            self.memory_manager.periodic_save(self.context.turn_count)
+
+        # 3. 更新对话轮次
         self.context.turn_count += 1
         logger.info(f"处理消息: {message}, 当前轮次: {self.context.turn_count}, 当前状态: {self.context.state.value}")
 
-        # 初始状态处理
+        # 4. 初始状态处理
         if self.context.state == DialogueState.INITIAL:
             logger.info("从初始状态转换到基本信息收集状态")
+            # 开始新的问诊会话
+            self.memory_manager.start_new_consultation(patient_id)
+
             self.context.state = DialogueState.COLLECTING_COMBINED_INFO
             self.current_flow = FLOW_MAPPING[DialogueState.COLLECTING_COMBINED_INFO]()
             # 设置LLM流程开关
@@ -115,11 +338,22 @@ class DialogueManager:
 
             # 对于第一次交互，直接返回欢迎问题
             if self.context.turn_count == 1:
-                return "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？"
+                # 添加系统回复到短期记忆
+                welcome_msg = "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？"
+                self.memory_manager.add_dialogue('doctor', welcome_msg)
+                return welcome_msg
 
-        # 处理消息
+            # 5. 从记忆系统检索相关信息 (这里是关键步骤)
+            memory_results = self.memory_manager.retrieve_relevant_memory(message, patient_id)
+
+            # 6. 使用记忆数据增强上下文 (这里使用现有方法，不新增方法)
+            self._enhance_context_with_memory(memory_results)
+
+        # 7. 处理消息
+        response = None
         if self.current_flow:
-            logger.info(f"当前Flow: {self.current_flow.__class__.__name__}, use_llm_flow={self.current_flow.use_llm_flow}")
+            logger.info(
+                f"当前Flow: {self.current_flow.__class__.__name__}, use_llm_flow={self.current_flow.use_llm_flow}")
 
             # 处理用户回复
             is_emergency = self.current_flow.process_response(message, self.context)
@@ -133,7 +367,6 @@ class DialogueManager:
                     self.current_flow.use_llm_flow = self.use_llm_flow
 
             # diagnosis, medical_advice, referral, education阶段只需要输出
-            response = None
             if self.context.state in [DialogueState.DIAGNOSIS,
                                       DialogueState.MEDICAL_ADVICE,
                                       DialogueState.REFERRAL,
@@ -150,6 +383,8 @@ class DialogueManager:
 
                 # 如果有下一个问题，直接返回它
                 if next_question:
+                    # 添加系统回复到短期记忆
+                    self.memory_manager.add_dialogue('doctor', next_question)
                     return next_question
 
             # 如果没有下一个问题，才考虑转换状态
@@ -161,11 +396,46 @@ class DialogueManager:
                     next_question = self.current_flow.get_next_question(self.context)
                     logger.info(f"状态转换后的下一个问题: {next_question}")
 
-            if response is None and next_question is None:
-                return "已收集到您的信息，正在生成下一阶段建议，输入任意内容继续"
-            return next_question if next_question else response + "\n 正在生成下一阶段建议，输入任意内容继续"
+            final_response = next_question if next_question else (
+                response + "\n 正在生成下一阶段建议，输入任意内容继续" if response else "已收集到您的信息，正在生成下一阶段建议，输入任意内容继续")
+
+            # 6. 将系统回复添加到短期记忆
+            self.memory_manager.add_dialogue('doctor', final_response)
+
+            # 7. 检查是否有提到新症状，将其添加到记忆系统
+            self._extract_symptoms_from_message(message)
+
+            return final_response
 
         return "抱歉，当前无法处理您的请求。"
+
+    def _extract_symptoms_from_message(self, message: str):
+        """从用户消息中提取症状信息并添加到记忆系统"""
+        # 仅在症状收集阶段处理
+        if self.context.state not in [DialogueState.COLLECTING_COMBINED_INFO,
+                                      DialogueState.COLLECTING_SYMPTOMS]:
+            return
+
+        # 从医疗信息中提取症状
+        current_symptoms = self.context.medical_info.get('current_symptoms', [])
+        main_symptom = self.context.medical_info.get('main')
+
+        # 所有提到的症状
+        if current_symptoms:
+            for symptom in current_symptoms:
+                if isinstance(symptom, dict):
+                    self.memory_manager.add_symptom(symptom)
+                else:
+                    self.memory_manager.add_symptom({'name': symptom})
+
+        # 主要症状
+        if main_symptom and isinstance(main_symptom, str):
+            self.memory_manager.add_symptom({'name': main_symptom, 'is_main': True})
+
+        # 如果有临时诊断，也添加到记忆系统
+        diagnosis = self.context.medical_info.get('temp_diagnosis') or self.context.medical_info.get('diagnosis')
+        if diagnosis:
+            self.memory_manager.set_temp_diagnosis(diagnosis)
 
     def set_use_llm_flow(self, use_llm: bool) -> None:
         """设置是否使用LLM驱动的流程"""
