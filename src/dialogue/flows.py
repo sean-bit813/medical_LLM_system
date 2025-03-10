@@ -9,6 +9,8 @@ from ..app_config import DIALOGUE_CONFIG
 from ..llm.api import generate_response, generate_simple_response
 from .field_mappings import get_mapping_for_state, format_field_descriptions
 from ..config.loader import ConfigLoader
+from ..nlu.entity_recognition import symptom_entity_recognition, medical_entity_recognition
+from ..nlu.intent_detection import detect_intent, is_emergency_intent
 
 
 # 设置日志
@@ -224,14 +226,64 @@ class BaseFlow:
             current_field = context.last_question_field if hasattr(context, 'last_question_field') else None
             logger.info(f"处理响应，上一个问题字段: {current_field}")
 
-            # 提取信息
-            extracted = self.extract_info_with_llm(response, context, current_field)
-            logger.info(f"信息提取结果: extracted={extracted}, current_field={current_field}")
+            # 使用NLU模块提取信息
+            if self.state in [DialogueState.COLLECTING_SYMPTOMS, DialogueState.COLLECTING_COMBINED_INFO]:
+                # 提取症状相关实体
+                extracted_entities = symptom_entity_recognition(response)
+                symptoms = extracted_entities.get("symptoms", [])
 
-            # 如果没有成功提取任何信息，并且有明确的当前字段，直接将整个回复映射到该字段
+                # 处理提取的症状
+                for symptom in symptoms:
+                    if isinstance(symptom, dict) and "name" in symptom:
+                        # 如果当前字段与症状相关，直接映射
+                        if current_field and (current_field == "main_symptoms" or current_field == "main"):
+                            context.medical_info[current_field] = symptom["name"]
+
+                        # 添加到当前症状列表
+                        if "current_symptoms" not in context.medical_info:
+                            context.medical_info["current_symptoms"] = []
+
+                        context.medical_info["current_symptoms"].append(symptom)
+                    elif isinstance(symptom, str):
+                        # 如果症状是字符串
+                        if current_field and (current_field == "main_symptoms" or current_field == "main"):
+                            context.medical_info[current_field] = symptom
+
+                        # 添加到当前症状列表
+                        if "current_symptoms" not in context.medical_info:
+                            context.medical_info["current_symptoms"] = []
+
+                        if symptom not in context.medical_info["current_symptoms"]:
+                            context.medical_info["current_symptoms"].append(symptom)
+
+            else:
+                # 提取其他医疗实体
+                entity_types = ["medications", "diseases", "tests"]
+                if self.state == DialogueState.LIFE_STYLE:
+                    entity_types.append("lifestyle")
+
+                extracted_entities = medical_entity_recognition(response, entity_types)
+
+                # 处理各类型实体
+                for entity_type, entities in extracted_entities.items():
+                    if entities and entity_type != "context":
+                        # 将实体保存到相应字段
+                        if entity_type not in context.medical_info:
+                            context.medical_info[entity_type] = []
+
+                        for entity in entities:
+                            if entity not in context.medical_info[entity_type]:
+                                context.medical_info[entity_type].append(entity)
+
+            # 如果没有成功提取任何信息，并且有明确的当前字段，使用传统方法
+            extracted = False
+            for key, value in context.medical_info.items():
+                if value and key not in ["patient_id", "start_time", "last_update"]:
+                    extracted = True
+                    break
+
             if not extracted and current_field:
-                context.medical_info[current_field] = response
-                logger.info(f"没有成功提取信息，直接映射整个回复到当前字段: {current_field}={response}")
+                extracted = self.extract_info_with_llm(response, context, current_field)
 
             # 检测严重程度 (只在症状收集阶段进行)
             if self.state in [DialogueState.COLLECTING_SYMPTOMS, DialogueState.COLLECTING_COMBINED_INFO]:
@@ -244,7 +296,9 @@ class BaseFlow:
 
         # 检查是否需要紧急处理 (只在相关阶段进行)
         if self.state in [DialogueState.COLLECTING_SYMPTOMS, DialogueState.COLLECTING_COMBINED_INFO]:
-            return self.check_emergency_with_llm(response, context)
+            # 使用NLU的紧急意图检测，而不是仅依赖关键词匹配
+            emergency_result = is_emergency_intent(response)
+            return emergency_result.get("is_emergency", False)
 
         return False
 

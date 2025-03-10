@@ -15,6 +15,9 @@ from ..knowledge.ragflow_kb import RAGFlowKnowledgeBase
 from ..config.loader import ConfigLoader
 from ..auth.user_manager import UserManager
 from ..auth.session_manager import SessionManager
+from ..nlu.entity_recognition import symptom_entity_recognition
+from ..nlu.intent_detection import detect_intent, is_emergency_intent
+from ..nlu.context_analyzer import ContextAnalyzer
 
 # 设置日志
 logger = logging.getLogger(__name__)
@@ -35,6 +38,8 @@ class DialogueManager:
         # 初始化用户和会话管理
         self.user_manager = UserManager()
         self.session_manager = SessionManager()
+        # 添加NLU组件：初始化上下文分析器
+        self.context_analyzer = ContextAnalyzer(self.memory_manager)
 
         logger.info("DialogueManager初始化完成，已创建记忆管理器")
 
@@ -303,7 +308,7 @@ class DialogueManager:
 
     def process_message(self, message: str) -> str:
         """处理用户消息，返回系统回复"""
-        # 1. 检查是否应该结束对话
+        # 1. 检查是否应该结束对话 (保持原有代码不变)
         if self._should_end_conversation():
             self.context.state = DialogueState.ENDED
             # 结束时保存对话到记忆系统
@@ -311,19 +316,54 @@ class DialogueManager:
             self.memory_manager.save_consultation()
             return self._format_final_response()
 
-        # 2. 添加用户消息到短期记忆
+        # 2. 添加用户消息到短期记忆 (保持原有代码不变)
         patient_id = self._get_or_create_patient_id()
         self.memory_manager.add_dialogue('patient', message)
 
-        # 添加定期保存逻辑
+        # 添加定期保存逻辑 (保持原有代码不变)
         if hasattr(self, 'memory_manager'):
             self.memory_manager.periodic_save(self.context.turn_count)
 
-        # 3. 更新对话轮次
+        # 3. 更新对话轮次 (保持原有代码不变)
         self.context.turn_count += 1
         logger.info(f"处理消息: {message}, 当前轮次: {self.context.turn_count}, 当前状态: {self.context.state.value}")
 
-        # 4. 初始状态处理
+        # 【新增 NLU 处理】在初始状态处理前添加
+        # 1. 检测用户意图
+        intent_result = detect_intent(message, {
+            "dialogue": self.memory_manager.short_term.get_current_dialogue(),
+            "medical_info": self.context.medical_info
+        })
+        logger.info(f"意图检测结果: {intent_result.get('primary_intent')}, 置信度: {intent_result.get('confidence')}")
+
+        # 2. 分析上下文关联信息
+        context_analysis = self.context_analyzer.analyze_context(
+            message,
+            {
+                "dialogue": self.memory_manager.short_term.get_current_dialogue(),
+                "medical_info": self.context.medical_info
+            }
+        )
+
+        # 3. 如果是紧急情况意图，立即处理
+        primary_intent = intent_result.get("primary_intent", "other")
+        intent_confidence = intent_result.get("confidence", 0)
+
+        if primary_intent == "emergency" and intent_confidence > 0.7:
+            emergency_result = is_emergency_intent(message)
+            if emergency_result.get("is_emergency", False) and emergency_result.get("confidence", 0) > 0.7:
+                # 设置紧急情况，直接转到转诊流程
+                logger.info(f"NLU检测到紧急情况: {emergency_result.get('reason')}")
+                self.context.medical_info['emergency_advice'] = emergency_result.get("reason", "检测到紧急情况")
+                self.context.medical_info['severity'] = str(emergency_result.get("severity", 8))
+                self.context.state = DialogueState.REFERRAL
+                self.context.medical_info['referral_urgency'] = "urgent"
+                self.current_flow = FLOW_MAPPING[DialogueState.REFERRAL]()
+                # 设置LLM流程开关
+                if hasattr(self.current_flow, "use_llm_flow"):
+                    self.current_flow.use_llm_flow = self.use_llm_flow
+
+        # 4. 初始状态处理 (保持原有逻辑，略微调整)
         if self.context.state == DialogueState.INITIAL:
             logger.info("从初始状态转换到基本信息收集状态")
             # 开始新的问诊会话
@@ -343,11 +383,55 @@ class DialogueManager:
                 self.memory_manager.add_dialogue('doctor', welcome_msg)
                 return welcome_msg
 
-            # 5. 从记忆系统检索相关信息 (这里是关键步骤)
+            # 5. 从记忆系统检索相关信息 (保持原有代码不变)
             memory_results = self.memory_manager.retrieve_relevant_memory(message, patient_id)
-
-            # 6. 使用记忆数据增强上下文 (这里使用现有方法，不新增方法)
             self._enhance_context_with_memory(memory_results)
+
+        # 【新增 NLU 处理】提取症状和实体
+        # 如果是报告症状意图，直接提取症状实体
+        if primary_intent == "report_symptom" and self.context.state in [
+            DialogueState.COLLECTING_COMBINED_INFO,
+            DialogueState.COLLECTING_SYMPTOMS
+        ]:
+            symptom_result = symptom_entity_recognition(message)
+            symptoms = symptom_result.get("symptoms", [])
+
+            # 处理症状实体
+            if symptoms:
+                logger.info(f"检测到症状实体: {symptoms}")
+                # 通过上下文分析器进行交叉引用
+                enriched_symptoms = self.context_analyzer.cross_reference_symptoms(
+                    symptoms,
+                    {
+                        "past_symptoms": self.context.medical_info.get("past_symptoms", []),
+                        "medical_history": self.context.medical_info.get("medical_history", "")
+                    }
+                )
+
+                # 添加到当前症状
+                for symptom in enriched_symptoms:
+                    if isinstance(symptom, dict):
+                        self.memory_manager.add_symptom(symptom)
+                    else:
+                        self.memory_manager.add_symptom({"name": symptom})
+
+                # 更新主要症状字段
+                if len(symptoms) > 0 and "main" not in self.context.medical_info:
+                    main_symptom = symptoms[0]
+                    if isinstance(main_symptom, dict):
+                        self.context.medical_info["main"] = main_symptom.get("name", "")
+                    else:
+                        self.context.medical_info["main"] = main_symptom
+
+        # 检测矛盾信息
+        if self.context.turn_count > 1:  # 不是第一次交互
+            contradictions = self.context_analyzer.detect_contradiction(message, self.context.medical_info)
+            if contradictions.get("has_contradiction", False):
+                logger.info(f"检测到矛盾信息: {contradictions.get('contradictions', {})}")
+                # 记录矛盾信息
+                if "contradictions" not in self.context.medical_info:
+                    self.context.medical_info["contradictions"] = {}
+                self.context.medical_info["contradictions"].update(contradictions.get("contradictions", {}))
 
         # 7. 处理消息
         response = None
@@ -416,7 +500,18 @@ class DialogueManager:
                                       DialogueState.COLLECTING_SYMPTOMS]:
             return
 
-        # 从医疗信息中提取症状
+        # 使用NLU模块提取症状
+        symptom_result = symptom_entity_recognition(message)
+        extracted_symptoms = symptom_result.get("symptoms", [])
+
+        # 添加提取的症状到记忆
+        for symptom in extracted_symptoms:
+            if isinstance(symptom, dict):
+                self.memory_manager.add_symptom(symptom)
+            else:
+                self.memory_manager.add_symptom({'name': symptom})
+
+        # 从医疗信息中提取已存储的症状
         current_symptoms = self.context.medical_info.get('current_symptoms', [])
         main_symptom = self.context.medical_info.get('main')
 
@@ -444,3 +539,36 @@ class DialogueManager:
         # 更新当前Flow的设置
         if self.current_flow and hasattr(self.current_flow, "use_llm_flow"):
             self.current_flow.use_llm_flow = use_llm
+
+    def _handle_contradiction(self, contradictions: Dict[str, Any]):
+        """处理检测到的矛盾信息
+
+        Args:
+            contradictions: 矛盾信息字典
+        """
+        if not contradictions or not contradictions.get("has_contradiction", False):
+            return
+
+        logger.info(f"处理矛盾信息: {contradictions}")
+
+        # 记录矛盾到医疗信息中
+        if "contradictions" not in self.context.medical_info:
+            self.context.medical_info["contradictions"] = {}
+
+        # 更新矛盾信息
+        self.context.medical_info["contradictions"].update(
+            contradictions.get("contradictions", {})
+        )
+
+        # 如果当前处于信息收集阶段，可以生成澄清问题
+        if self.context.state in [
+            DialogueState.COLLECTING_COMBINED_INFO,
+            DialogueState.COLLECTING_SYMPTOMS,
+            DialogueState.COLLECTING_BASE_INFO
+        ]:
+            # 这里可以设置一个标志，让当前Flow在下一个问题中询问澄清
+            if hasattr(self.current_flow, "needs_clarification"):
+                self.current_flow.needs_clarification = True
+                self.current_flow.contradiction_fields = list(
+                    contradictions.get("contradictions", {}).keys()
+                )

@@ -446,3 +446,131 @@ LLM_FLOW_PROMPTS = {
         """
     }
 }
+
+"""
+NLU相关的提示词模板
+"""
+
+NLU_PROMPTS = {
+    # 症状实体识别提示词
+    "symptom_entity_recognition": """你是一个专业的医疗信息处理助手。请从用户输入的文本中识别并提取所有提到的症状实体。
+    要求：
+    1. 只返回JSON格式结果，仅包含symptoms数组
+    2. 症状实体必须在用户输入文本中出现
+    3. 排除非症状描述（如药品、检查项目等）
+    4. 如果描述了症状的特性（如位置、程度、持续时间等），将其一并提取
+
+    格式示例：
+    {
+        "symptoms": [
+            {"name": "头痛", "location": "额头", "pattern": "搏动性"},
+            {"name": "发热", "degree": "38.5度"},
+            {"name": "疲劳", "duration": "一周"}
+        ]
+    }
+    """,
+
+    # 药物实体识别提示词
+    "medication_entity_recognition": """你是一个专业的医疗信息处理助手。请从用户输入的文本中识别并提取所有提到的药物实体。
+    要求：
+    1. 只返回JSON格式结果，包含medications数组
+    2. 药物实体必须在用户输入文本中出现
+    3. 如果描述了药物的剂量、使用方法等信息，将其一并提取
+    4. 区分处方药和非处方药
+
+    格式示例：
+    {
+        "medications": [
+            {"name": "布洛芬", "dosage": "400mg", "frequency": "每日三次", "type": "非处方药"},
+            {"name": "阿莫西林", "dosage": "500mg", "duration": "5天", "type": "处方药"}
+        ]
+    }
+    """,
+
+    # 意图检测提示词
+    "intent_detection": """你是一个专业的医疗对话意图分析助手。请分析以下用户输入的主要意图和可能的次要意图。
+
+    可能的意图类型包括：
+    - report_symptom(报告症状)
+    - ask_question(咨询问题)
+    - request_info(请求信息)
+    - express_concern(表达担忧)
+    - share_history(分享病史)
+    - request_advice(请求建议)
+    - emergency(紧急求助)
+    - greeting(问候)
+    - farewell(道别)
+    - gratitude(表达感谢)
+    - clarification(请求澄清)
+    - confirmation(确认信息)
+    - rejection(拒绝建议)
+    - follow_up(随访)
+    - other(其他)
+
+    请分析用户输入，判断主要意图和可能的次要意图，并提取相关实体（如症状、药物等）。
+
+    格式示例：
+    {
+        "primary_intent": "report_symptom",
+        "confidence": 0.85,
+        "secondary_intents": [
+            {"intent": "request_advice", "confidence": 0.45}
+        ],
+        "entities": {
+            "symptoms": ["头痛", "发热"]
+        }
+    }
+    """,
+
+    # 矛盾检测提示词
+    "contradiction_detection": """你是一个专业的医疗信息一致性检查助手。请检查用户消息是否与已收集的医疗信息存在矛盾。
+
+    请特别关注:
+    1. 时间信息的矛盾（如症状持续时间不一致）
+    2. 症状描述的矛盾（如严重程度、性质的前后不一致）
+    3. 个人信息的矛盾（如年龄、性别的前后不一致）
+    4. 医疗史的矛盾（如病史、用药史的前后不一致）
+
+    格式示例：
+    {
+        "has_contradiction": true,
+        "contradictions": {
+            "symptom_duration": {
+                "original": "头痛持续三天",
+                "new": "昨天开始头痛",
+                "description": "症状持续时间描述不一致"
+            }
+        }
+    }
+    """,
+
+    # 症状交叉引用提示词
+    "symptom_cross_reference": """你是一个专业的医疗症状分析助手。请分析当前症状与患者病史和过去症状的关系。
+
+    对于每个当前症状，请确定:
+    1. 这是新出现的症状，还是之前就有的症状
+    2. 症状是否与已知病史相关
+    3. 症状是否有加重或改善
+    4. 是否需要特别关注的症状
+
+    格式示例：
+    [
+        {
+            "name": "头痛",
+            "is_new": false,
+            "related_to_history": true,
+            "changes": "worsened",
+            "attention_needed": true,
+            "notes": "与既往偏头痛病史相关，但频率增加"
+        },
+        {
+            "name": "恶心",
+            "is_new": true,
+            "related_to_history": false,
+            "changes": "unknown",
+            "attention_needed": false,
+            "notes": "新出现症状，需要进一步评估"
+        }
+    ]
+    """
+}
