@@ -18,6 +18,7 @@ from ..auth.session_manager import SessionManager
 from ..nlu.entity_recognition import symptom_entity_recognition
 from ..nlu.intent_detection import detect_intent, is_emergency_intent
 from ..nlu.context_analyzer import ContextAnalyzer
+from ..personalization import PersonalizationManager
 
 # 设置日志
 logger = logging.getLogger(__name__)
@@ -40,6 +41,8 @@ class DialogueManager:
         self.session_manager = SessionManager()
         # 添加NLU组件：初始化上下文分析器
         self.context_analyzer = ContextAnalyzer(self.memory_manager)
+        # 新增：初始化个性化管理器
+        self.personalization_manager = PersonalizationManager()
 
         logger.info("DialogueManager初始化完成，已创建记忆管理器")
 
@@ -54,7 +57,16 @@ class DialogueManager:
         Returns:
             (注册成功标志, 消息)
         """
-        return self.user_manager.register(username, password, user_info)
+        result = self.user_manager.register(username, password, user_info)
+
+        # 新增：如果注册成功，同时创建用户画像
+        success, message = result
+        if success and user_info:
+            profile = self.personalization_manager.get_user_profile(username)
+            profile.update_basic_info(user_info)
+            self.personalization_manager.save_profile(username)
+
+        return result
 
     def login_user(self, username: str, password: str) -> Tuple[bool, str, Optional[str]]:
         """用户登录
@@ -83,6 +95,11 @@ class DialogueManager:
             user_info = self.user_manager.get_user_info(username)
             if user_info:
                 self.memory_manager.add_patient_basic_info(username, user_info)
+
+            # 新增：同步用户信息到个性化模块
+            profile = self.personalization_manager.get_user_profile(username)
+            profile.update_basic_info(user_info)
+            self.personalization_manager.save_profile(username)
 
             return True, "登录成功", session_id
 
@@ -120,6 +137,9 @@ class DialogueManager:
         patient_id = self.context.user_info.get('patient_id')
         if patient_id:
             self.memory_manager.save_consultation()
+
+            # 新增：保存用户画像
+            self.personalization_manager.save_profile(patient_id)
 
         # 结束会话
         return self.session_manager.end_session(session_id)
@@ -305,30 +325,40 @@ class DialogueManager:
             if insights:
                 self.context.medical_info['long_term_insights'] = insights
 
-
     def process_message(self, message: str) -> str:
         """处理用户消息，返回系统回复"""
-        # 1. 检查是否应该结束对话 (保持原有代码不变)
+        # 1. 检查是否应该结束对话
         if self._should_end_conversation():
             self.context.state = DialogueState.ENDED
             # 结束时保存对话到记忆系统
             patient_id = self._get_or_create_patient_id()
             self.memory_manager.save_consultation()
+
+            # 新增：保存用户画像
+            self.personalization_manager.save_profile(patient_id)
+
             return self._format_final_response()
 
-        # 2. 添加用户消息到短期记忆 (保持原有代码不变)
+        # 2. 添加用户消息到短期记忆
         patient_id = self._get_or_create_patient_id()
         self.memory_manager.add_dialogue('patient', message)
 
-        # 添加定期保存逻辑 (保持原有代码不变)
+        # 新增：更新用户画像
+        self.personalization_manager.update_profile_from_message(
+            patient_id,
+            message,
+            self.memory_manager.short_term.get_current_dialogue()
+        )
+
+        # 添加定期保存逻辑
         if hasattr(self, 'memory_manager'):
             self.memory_manager.periodic_save(self.context.turn_count)
 
-        # 3. 更新对话轮次 (保持原有代码不变)
+        # 3. 更新对话轮次
         self.context.turn_count += 1
         logger.info(f"处理消息: {message}, 当前轮次: {self.context.turn_count}, 当前状态: {self.context.state.value}")
 
-        # 【新增 NLU 处理】在初始状态处理前添加
+        # 【NLU 处理】
         # 1. 检测用户意图
         intent_result = detect_intent(message, {
             "dialogue": self.memory_manager.short_term.get_current_dialogue(),
@@ -363,7 +393,7 @@ class DialogueManager:
                 if hasattr(self.current_flow, "use_llm_flow"):
                     self.current_flow.use_llm_flow = self.use_llm_flow
 
-        # 4. 初始状态处理 (保持原有逻辑，略微调整)
+        # 4. 初始状态处理
         if self.context.state == DialogueState.INITIAL:
             logger.info("从初始状态转换到基本信息收集状态")
             # 开始新的问诊会话
@@ -379,15 +409,17 @@ class DialogueManager:
             # 对于第一次交互，直接返回欢迎问题
             if self.context.turn_count == 1:
                 # 添加系统回复到短期记忆
-                welcome_msg = "您好，我是您的医疗助手。请问您有什么不舒服的地方吗？"
+                # 新增：使用个性化问候
+                profile = self.personalization_manager.get_user_profile(patient_id)
+                welcome_msg = self.personalization_manager.response_generator.personalize_greeting(profile)
                 self.memory_manager.add_dialogue('doctor', welcome_msg)
                 return welcome_msg
 
-            # 5. 从记忆系统检索相关信息 (保持原有代码不变)
+            # 5. 从记忆系统检索相关信息
             memory_results = self.memory_manager.retrieve_relevant_memory(message, patient_id)
             self._enhance_context_with_memory(memory_results)
 
-        # 【新增 NLU 处理】提取症状和实体
+        # 【NLU 处理】提取症状和实体
         # 如果是报告症状意图，直接提取症状实体
         if primary_intent == "report_symptom" and self.context.state in [
             DialogueState.COLLECTING_COMBINED_INFO,
@@ -456,7 +488,14 @@ class DialogueManager:
                                       DialogueState.REFERRAL,
                                       DialogueState.EDUCATION]:
                 self._prepare_response_context(message)
-                response = generate_response(self.context)
+                base_response = generate_response(self.context)
+
+                # 新增：应用个性化处理
+                response = self.personalization_manager.generate_personalized_response(
+                    patient_id,
+                    base_response,
+                    self.context.medical_info
+                )
 
             # 获取下一个问题
             next_question = None
@@ -469,7 +508,14 @@ class DialogueManager:
                 if next_question:
                     # 添加系统回复到短期记忆
                     self.memory_manager.add_dialogue('doctor', next_question)
-                    return next_question
+
+                    # 新增：个性化处理下一个问题
+                    profile = self.personalization_manager.get_user_profile(patient_id)
+                    personalized_question = self.personalization_manager.response_generator.adapt_response_style(
+                        next_question, profile
+                    )
+
+                    return personalized_question
 
             # 如果没有下一个问题，才考虑转换状态
             if not next_question:
@@ -479,6 +525,13 @@ class DialogueManager:
                 if self.current_flow:
                     next_question = self.current_flow.get_next_question(self.context)
                     logger.info(f"状态转换后的下一个问题: {next_question}")
+
+                    # 新增：个性化处理转换后的问题
+                    if next_question:
+                        profile = self.personalization_manager.get_user_profile(patient_id)
+                        next_question = self.personalization_manager.response_generator.adapt_response_style(
+                            next_question, profile
+                        )
 
             final_response = next_question if next_question else (
                 response + "\n 正在生成下一阶段建议，输入任意内容继续" if response else "已收集到您的信息，正在生成下一阶段建议，输入任意内容继续")
